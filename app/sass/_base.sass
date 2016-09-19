@@ -1,0 +1,116 @@
+@import "bourbon"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #80a0b7
+	opacity: 1
+
+*:-moz-placeholder
+	color: #80a0b7
+	opacity: 1
+
+*::-moz-placeholder
+	color: #80a0b7
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #80a0b7
+	opacity: 1
+
+.white_placeholder
+	&::-webkit-input-placeholder
+		color: #fff
+	&:-moz-placeholder
+		color: #fff
+	&::-moz-placeholder
+		color: #fff
+	&:-ms-input-placeholder
+		color: #fff
+	&:focus,
+	&:valid
+		color: #fff
+		border-color: #fff
+	&:required:valid,
+	&:focus:required:invalid
+		color: #fff
+
+.brown_placeholder
+	&::-webkit-input-placeholder
+		color: #917B76
+	&:-moz-placeholder
+		color: #917B76
+	&::-moz-placeholder
+		color: #917B76
+	&:-ms-input-placeholder
+		color: #917B76
+	&:focus,
+	&:valid
+		color: #705F5A
+		border-color: #705F5A
+	&:required:valid,
+	&:focus:required:invalid
+		color: #705F5A
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #EC1C24
+body input:required:valid,
+body textarea:required:valid
+	color: #6d6d6d
+
+
+
+
+body input,
+body textarea
+	font-weight: lighter
+	font-size: 18px
+	border: none
+	border: 2px solid #A0B8C9
+	outline: none
+	padding: 6px 12px
+	width: 100%
+	margin-bottom: 13px
+body input:focus,
+body textarea:focus
+	border-color: #6280BF
+	color: #6d6d6d
+.btn
+	display: inline-block
+	transition: 0.2s
+	svg
+		transition: 0.2s
+.t-right
+	text-align: right
+.t-lighter
+	font-weight: lighter
+.link_reverse
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	font-family: $f-add
+	line-height: 1.6
+	overflow-x: hidden
+	color: $c-default
+
+
+.accent-header
+	font-size: 70px
+	font-family: $f-add
+	color: $c-accent
+	text-transform: uppercase
+
+h4
+	font-size: 14px
+	font-weight: lighter
+	font-family: $f-default
+
+label
+	color: #404041
+	font-size: 15px
+	line-height: 2.2

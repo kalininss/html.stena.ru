@@ -1,0 +1,356 @@
+//First screen styles
+@import "bourbon"
+@import "sass/vars"
+@import "sass/base"
+
+
+// скрытие svg (подставляется js)
+svg
+	opacity: 0
+body > svg
+	display: none
+
+
+// верхняя линия и лого
+.topline
+	background: rgba(0, 0, 0, 0.43)
+	color: $c-white 
+	position: absolute
+	left: 0
+	right: 0
+	top: 0
+	z-index: 3
+.logo__svg 
+	width: 170px
+	height: 43px
+.logo
+	line-height: 1
+	display: inline-block
+.topline__logo
+	margin-top: 14px
+.logo__text
+	font-size: 17px
+	font-weight: 500
+	margin-bottom: 0
+	padding: 6px 0
+
+
+// меню в шапке
+.list
+	list-style-type: none
+	margin: 0
+	padding: 0
+.list__item
+	display: inline-block
+.text-center
+	text-align: center
+.flex
+	display: flex
+.flex_center
+	justify-content: center
+.menu-link
+	color: $c-white
+	text-decoration: none
+	display: inline-block
+	font-size: 15px
+	font-weight: bold
+	font-family: $f-head
+	text-transform: uppercase
+	line-height: 1.4
+	margin: 0 6px
+.menu-link:hover,
+.menu-link:focus
+	color: $c-white
+	border-bottom: 2px solid
+	text-decoration: none
+.topline__nav
+	padding: 31px 0
+
+
+// extra
+.extra__svg
+	width: 19px
+	height: 19px
+.img-button
+	display: inline-block
+.svg_06
+	width: 24px
+	height: 24px
+.img-button_personal svg
+	fill: #F1F1F2
+.img-button_cabinet svg
+	width: 36px
+	height: 28px
+.img-button_favorites svg
+	width: 25px
+	height: 32px
+.img-button_personal svg
+	margin-top: 3px
+	width: 30px
+	height: 21px
+.extra__item
+	display: inline-block
+	margin-left: 5px
+	vertical-align: middle
+	line-height: 0
+	position: relative
+.extra
+	margin: 24px 0
+	text-align: right
+.img-button_favorites__text,
+.img-button_cabinet__text
+	position: absolute
+	color: #fff
+	font-weight: bold
+	font-size: 12px
+	display: inline-block
+	top: 8px
+	left: 2px
+.img-button_favorites__text
+	top: 8px
+	left: 8px
+.collapsed-search
+	width: 0
+
+
+// слайдер
+.owl-dots
+	position: absolute
+	bottom: 26px
+	text-align: center
+	display: block
+	width: 100%
+.owl-dot
+	width: 21px
+	height: 21px
+	display: inline-block
+	border-radius: 50%
+	border: 2px solid $c-white
+	margin: 0 14px
+.owl-dot.active
+	background: $c-white
+.owl-nav
+	& > div
+		top: 50%
+		position: absolute
+		width: 30px
+		height: 69px
+		display: inline-block
+		opacity: 0.4
+		cursor: pointer
+		&:hover
+			opacity: 0.8
+		svg
+			width: 30px
+			height: 69px
+			fill: #fff
+	.disabled
+		display: none
+.owl-next
+	transform: rotate(180deg)
+	right: 15px
+.owl-prev
+	left: 15px
+.owl-dot.active
+	cursor: default !important
+// загрузка изображения вместо слайдера
+.owl-carousel
+	display: block
+	img
+		width: 100%
+		height: auto
+		display: none
+		max-width: 100%
+	picture:first-of-type img
+		display: block
+.owl-loaded
+	img
+		display: block
+		
+
+
+
+
+.topline-scroll__logo
+	width: 58px
+	height: 26px
+	margin-top: 3px
+.topline-scroll
+	position: fixed
+	z-index: 15
+	background: #2F4259
+	width: 100%
+	left: 0
+	right: 0	
+	padding: 3px 0 0
+	top: -100px
+	transition: 0.5s
+	max-height: 0
+	overflow: hidden
+	box-shadow: 0px 3px 6px rgba(0,0,0,0.4)
+	&.opened
+		top: 0
+		max-height: 200px
+.topline-scroll__contact
+	text-align: center
+	a
+		font-size: 17px
+		font-weight: 500
+		margin: 0 14px
+		color: #E6E7E8
+		display: inline-block
+		vertical-align: middle
+		svg
+			fill: #E6E7E8
+		&:hover
+			text-decoration: none
+			svg
+				fill: #E6E7E8
+.topline-scroll__menu-btn
+	width: 25px
+	height: 21px
+	fill: #E6E7E8
+	cursor: pointer
+	float: right
+	margin-top: 5px
+	display: inline-block
+.logo-menu
+	display: none
+// меню в видвижной линии
+.scroll-menu
+	background: #E6E7E8
+	position: fixed
+	top: 0
+	min-width: 340px
+	right: -500px
+	transition: right 0.5s
+	z-index: 500
+	max-height: 100vh
+	overflow: auto
+	&.opened
+		right: 0px
+		& + .bg-dark
+			display: block
+.scroll-menu__nav
+	a
+		color: #705f5a
+		padding: 8px 27px
+		display: block
+		font-family: $f-head
+		&:hover,
+		&:active,
+		&:focus
+			background: #D7D3D2
+			text-decoration: none
+			color: #705f5a
+.bg-dark
+	position: fixed
+	width: 100%
+	height: 100%
+	left: 0
+	top: 0
+	z-index: 22
+	background: rgba(0,0,0, 0.2)
+	display: none	
+.scroll-menu--close
+	fill: #404041
+	width: 20px
+	height: 19px
+	float: right
+	margin-top: 9px
+	margin-right: 5px
+	cursor: pointer
+.scroll-menu__header
+	padding: 0 27px 0 10px
+	.logo__svg
+		margin-top: 5px
+.scroll-search
+	overflow: hidden
+	max-height: 0
+	transition: 0.3s
+	padding: 0 27px 0 35px
+	&.opened
+		max-height: 100px
+.scroll-search__input
+	border: none
+	background: none
+	color: #705F5A
+	width: 81%
+	padding-left: 0
+	width: calc(100% - 65px)
+	font-size: 16px
+	font-family: $f-head
+	vertical-align: middle
+	margin-bottom: 0
+	border-bottom: 1px solid
+.scroll-search__sumbit
+	border: none
+	margin-top: 5px
+	vertical-align: middle
+	outline: none
+	background: none
+	fill: #705F5A
+	display: inline-block
+	margin-left: 10px
+.svg_10
+	width: 24px
+	height: 24px
+.header__slider
+	z-index: 1
+	position: relative
+main
+	position: relative
+	z-index: 10
+.s-front-text
+	text-align: center
+.front-h1
+	font-size: 72px
+	font-family: $f-default
+	font: lighter 72px $f-default
+	line-height: 1.2
+	color: #4C6591
+.front-p
+	color: #404041
+	font: lighter 22px $f-default
+	margin: 2em 0
+.input-button__submit
+	float: right
+	background: none
+	outline: none
+	border: none
+	display: inline-block
+	vertical-align: middle
+	svg
+		width: 35px
+		height: 35px
+.img-button_search
+	position: relative
+.collapsed-search
+	vertical-align: middle
+	position: absolute
+	right: -6px
+	top: -1px
+	transition: width 0.5s
+	overflow: hidden
+	&.opened
+		width: 165px
+	input
+		border: none
+		border-bottom: 1px solid #fff
+		background: none
+		display: inline-block
+		width: 100%
+		padding-left: 0
+		color: #fff
+		padding-right: 40px
+		padding-bottom: 3px
+		padding-top: 3px
+	button
+		border: none
+		background: none
+		display: inline-block
+		position: absolute
+		top: 0
+		right: 0
+		&:focus
+			outline: none

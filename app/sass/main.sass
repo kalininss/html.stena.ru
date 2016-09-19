@@ -1,0 +1,435 @@
+@import "bourbon"
+@import "vars"
+@import "libs"
+
+// линия сверху, появляется при скролле
+svg
+	opacity: 1
+
+
+body
+	font-family: $f-default
+	font-weight: lighter
+.s-image-list
+	text-align: center
+	background: #F4F4F4
+.icon-plus
+	display: inline-block
+	width: 14px
+	height: 14px
+	float: right
+	vertical-align: middle
+	margin-top: 3px
+	position: relative
+	&:after
+		content: ''
+		display: inline-block
+		width: 2px
+		height: 14px
+		background: #705F5A
+		position: absolute
+		left: 50%
+		margin-left: -1px
+		top: 50%
+		margin-top: -7px
+		transition: 0.3s
+	&:before
+		content: ''
+		display: inline-block
+		width: 14px
+		height: 2px
+		background: #705F5A
+		position: absolute
+		left: 50%
+		margin-left: -7px
+		top: 50%
+		transition: 0.3s
+		margin-top: -1px
+.icon-plus__animate-minus
+	&:after
+		transform: rotate(-90deg)
+	&:before
+		transform: rotate(-180deg)
+.list__item-svg
+	width: 14px
+	height: 14px
+	fill: #705F5A
+	float: right
+	vertical-align: middle
+	margin-top: 5px
+.hover-lines
+	display: flex
+	position: relative
+	height: 305px
+	width: 305px
+	font-family: $f-head
+	font-size: 26px
+	color: #fff
+	overflow: hidden
+	&:hover 
+		text-decoration: none
+.hover-lines__line
+	transition: 0.3s ease-out
+	position: absolute
+	background: #fff
+	z-index: 1
+	&:nth-of-type(1)
+		top: 10%
+		height: 0
+		width: 1px
+		left: 14px
+	&:nth-of-type(2)
+		bottom: 10%
+		height: 0
+		width: 1px
+		right: 14px
+	&:nth-of-type(3)
+		right: 10%
+		height: 1px
+		width: 0
+		top: 14px
+	&:nth-of-type(4)
+		left: 10%
+		height: 1px
+		width: 0
+		bottom: 14px
+.hover-lines_content
+	margin: auto
+	position: relative
+	z-index: 1
+	font-size: 26px
+	transform: scale(0)
+	transition: 0.3s ease-out
+	padding: 25px
+.image-list
+	padding-bottom: 15px
+.image-list__item
+	margin-bottom: 30px
+	&:nth-child(1) .wow
+		animation-delay: 0s;
+	&:nth-child(2) .wow
+		animation-delay: 0.2s;
+	&:nth-child(3) .wow
+		animation-delay: 0.4s;
+	&:nth-child(4) .wow
+		animation-delay: 0.6s;
+	&:nth-child(5) .wow
+		animation-delay: 0.8s;
+	&:nth-child(6) .wow
+		animation-delay: 1s;
+	&:nth-child(7) .wow
+		animation-delay: 1.2s;
+	&:nth-child(8) .wow
+		animation-delay: 1.4s;
+
+
+
+
+// Параллакс
+section
+	position: relative
+.s-parallax
+	padding: 15px 0
+.s-parallax_right
+	text-align: right
+.parallax-container
+	width: 100%
+	max-width: 1720px
+	padding-left: 85px
+	padding-right: 85px
+.container-lg-static
+	max-width: 1354px
+.link_head
+	text-transform: uppercase
+	font-size: 64px
+	font-weight: 500
+.s-parallax
+	padding: 230px 0 100px
+.parallax-service
+	position: absolute
+	z-index: -1
+	top: -100px
+	left: 0
+	width: 100%
+	height: auto
+.parallax-slider
+	max-width: 100% !important
+	left: 0 !important
+.panel_right,
+.panel_left
+	background: rgba(0,0,0,0.4)
+	display: inline-block
+	float: right
+	text-align: right
+	color: #fff
+	padding: 25px 60px 25px 95px
+.panel_left
+	float: left
+	text-align: left
+.panel__head
+	display: inline-block
+	font-size: 64px
+	text-transform: uppercase
+.panel__descr
+	font-weight: 500
+	font-size: 36px
+div.gm-style div div div div div div div
+	color: #fff !important
+	font-size: 13px !important
+	font-weight: bold !important
+	margin-right: -41px !important
+	margin-top: 18px !important
+	font-family: $f-default !important
+
+// 
+#map
+	height: 415px
+	background: #333
+.link_white
+	color: #fff
+.panel_white
+	background: #FFF
+	border: 1px solid #707070
+	padding: 0 10px
+	margin-top: 30px
+	.accent-header
+		margin: 5px 0
+.s-front-contact
+	background: #D8D8D8
+	padding-bottom: 28px
+.input-button__input
+	float: left
+	width: 80%
+	width: calc(100% - 52px)
+	margin-right: 5px
+	vertical-align: middle
+.accent-header_small
+	font-size: 56px
+	line-height: 1
+	margin: 5px 0
+textarea
+	max-width: 100%
+input[type="submit"]
+	display: inline-block
+	width: auto
+	border-radius: 3px
+	background: #E25D77
+	text-transform: uppercase
+	font-size: 18px
+	color: #fff
+	border: none
+	padding: 10px 30px
+	&:hover,
+	&:active
+		background: #e23d5d
+.t-center
+	text-align: center
+.pink
+	color: #BC5C85
+.front_news__item
+	line-height: 1.2
+	font-size: 18px
+	margin: 11px 0
+	display: inline-block
+.front-news
+	min-height: 403px
+
+
+// footer
+footer
+	background: #2F4259
+	min-height: 400px
+	padding: 28px 0 15px
+	color: #bac7d3
+	position: relative
+	a	
+		color: #80a0b7
+		&:hover
+			color: #80a0b7
+	h3
+		color: #80a0b7
+.list_tripple > li
+	width: 33%
+	float: left
+.footer__contacts
+	font-size: 18px
+	a
+		margin-left: 30px
+		color: #bac7d3
+		&:nth-of-type(1)
+			margin-left: 5px
+.footer-phone-svg
+	width: 20px
+	height: 20px
+	fill: #C4C4C4
+	vertical-align: middle
+	&__text
+		font-size: 10px
+		font-family: $f-head
+		margin: -3px 0 0 -12px
+		display: inline-block
+		vertical-align: middle
+		max-width: 60px
+		text-align: center
+.link-nohover
+	color: #bac7d3
+	&:hover
+		text-decoration: none
+		svg
+			fill: #80a0b7
+	&:active,
+	&:focus
+		text-decoration: none
+		outline: none
+.diller-offer
+	text-align: center
+	h4
+		font-size: 22px
+		line-height: 1.4
+		margin-top: 0
+	p
+		font-family: $f-add-2
+		font-weight: lighter
+		line-height: 1.4
+.footer-button
+	display: block
+	color: #80A0B7
+	padding: 10px 0
+	font-size: 18px
+	font-weight: lighter
+	margin-top: 15px
+	border: 1px solid #80A0B7
+	svg
+		fill: #3f5677
+		// width: 13px
+		width: 0
+		overflow: hidden
+		height: 11px
+		vertical-align: middle
+		margin-left: 3px
+	&:focus, 
+	&:active
+		text-decoration: none
+		color: #80A0B7
+.diller-login
+	color: #fff
+	&:hover,
+	&:focus
+		text-decoration: none
+		color: #80a0b7
+		svg
+			fill: #80a0b7
+	svg
+		fill: #fff
+		width: 33px
+		height: 48px
+		vertical-align: middle
+		transition: 0.3s
+	p
+		display: inline-block
+		max-width: 100px
+		font-weight: lighter
+		font-size: 22px
+		text-decoration: underline
+		vertical-align: middle
+		line-height: 1.2
+		margin-bottom: 0
+.footer__info
+	font-weight: lighter
+	margin-top: 130px
+.copyright
+	font-size: 14px
+	margin-bottom: 0
+	margin-top: 3px
+	text-align: center
+.svg_hover
+	display: none
+.social-links
+	text-align: right
+	a
+		display: inline-block
+		margin-left: 10px
+	svg
+		width: 27px
+		height: 27px
+	a:hover
+		text-decoration: none
+		.svg_staic
+			display: none
+		svg.svg_hover
+			display: inline
+#to-top
+	position: absolute
+	display: inline-block
+	z-index: 5
+	right: 50%
+	margin-right: -825px
+	top: 185px
+	svg
+		width: 94px
+		height: 100px
+
+
+.scroll-menu__footer
+	padding: 10px 27px
+	a
+		color: #705F5A
+		&:hover
+			color: #6D4F48
+			svg
+				fill: #6D4F48
+	svg
+		fill: #705F5A
+.white-popup
+	position: relative
+	background: #FFF
+	padding: 40px 20px 20px
+	width: auto
+	max-width: 500px
+	margin: 20px auto
+	color: #404041
+	font: lighter 15px $f-default
+.white-popup--message
+	max-width: 250px
+.white-popup--form
+	max-width: 300px
+	padding: 20px
+.close-button--logo
+	width: 86px
+	height: 38px
+	margin-top: 15px
+.topline-scroll__contact
+	margin-top: 2px
+.submit-recall
+	margin-bottom: 10px
+	margin-top: 10px
+#call-back--name
+	margin-bottom: 0
+
+// style for google maps
+.gm-bundled-control > .gmnoprint > div
+	background: #2B2B2B !important
+	& > div:nth-of-type(2)
+		background: #2B2B2B !important
+.gm-svpc
+	background: #2B2B2B !important
+a[href^="https://maps.google.com/maps?ll="]
+	display: none !important
+.gm-style-cc > div > div
+	background-color: transparent !important
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "media"

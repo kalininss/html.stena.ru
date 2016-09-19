@@ -1,0 +1,404 @@
+@import "bourbon"
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1689px)
+	#to-top
+		margin-right: -655px
+		top: 98px
+
+@media only screen and (max-width : 1359px)
+	.parallax-container
+		padding-left: 15px
+		padding-right: 15px
+	.hover-lines
+		max-width: 100%
+		width: 100%
+		height: auto
+		display: block
+	.hover-lines_content
+		font-size: 18px
+		color: #000
+	.hover-lines img
+		max-width: 100%
+		height: auto
+		position: static
+	.hover-lines_content
+		font-size: 20px
+		font-family: $f-add-2
+		padding: 20px 5px
+	#to-top
+		margin-right: 0
+		right: 15px
+		top: 98px
+	.panel_front-news, .img-button_search
+		display: none
+	#map
+		height: 490px
+	.accent-header_small
+		font-size: 54px
+	.footer-button
+		text-align: center
+		margin: 0
+		max-width: 208px
+	.copyright
+		margin-top: 45px
+	.social-links
+		margin-top: 15px
+	.hover-lines_content
+		position: static
+		transform: 	scale(1)
+	.s-parallax
+		padding: 0
+	.panel_left, .panel_right
+		margin: 100px 0
+		background: none
+		z-index: 10
+		position: relative
+	.s-parallax_right
+		background-image: url(../img/uslugi_900.jpg)
+		background-size: cover
+		background-position: center center
+	.s-parallax_left 
+		background-image: url(../img/sotrudn_900.jpg)
+		background-size: cover
+		background-position: center center
+	.topline__logo
+		width: auto
+		display: inline-block
+		vertical-align: middle
+		float: right
+		margin: 2.5px 0
+		a
+			float: right
+			margin-right: 60px
+	.logo__text
+		font-size: 17px
+		margin-right: 90px
+		margin-top: 7px
+		float: right
+		display: inline-block
+	.logo-menu
+		display: inline-block
+		float: none
+		vertical-align: middle
+		margin-top: 14px
+	.extra
+		margin: 9px 0
+	.panel-diller
+		margin-top: 0
+	.parallax-img
+		position: absolute
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,0.4)
+		left: 0
+		top: 0
+		z-index: 0
+	.js-parallax
+		transform: translate3d(0, 0, 0) !important
+	.front-h1
+		font-size: 48px
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.parallax-service
+		min-height: 100%
+		width: auto
+		min-width: 100%
+		max-width: 100%
+	.panel__head
+		font-size: 42px
+	.panel__descr
+		font-size: 28px
+	.footer__info
+		display: none
+	#to-top
+		top: 220px
+	.social-links a
+		margin-left: 7px
+		&:first-of-type
+			margin: 0
+	.topline__logo a
+		margin-right: 0
+	.logo__text
+		margin-right: 40px
+	.accent-header
+		font-size: 50px
+	#map
+		height: 464px
+	.panel_left, .panel_right
+		margin: 50px 0
+	.owl-nav>div
+		top: 45%
+	.front-h1
+		font-size: 38px
+	.front-p
+		font-size: 20px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px)
+	.panel_right,
+	.panel_left
+		width: 100%
+		float: none
+		padding-left: 0
+		padding-right: 0
+		font-size: 28px
+	.row_bottom,
+	.social-links
+		text-align: center
+	.footer-button
+		display: inline-block
+		padding-left: 15px
+		padding-right: 15px
+	.s-front-contact h2
+		display: none
+	#to-top
+		margin-right: 0
+		right: 15px
+	.copyright
+		margin: 10px 0
+	.social-links
+		margin: 40px 0 20px
+	.xs-text-center
+		text-align: center
+		margin: 20px 0
+	.footer__contacts
+		max-width: 280px
+	.s-parallax_right
+		background-image: url(../img/uslugi_480.jpg)
+		background-size: cover
+		background-position: center center
+	.s-parallax_left
+		background-image: url(../img/sotrudn_480.jpg)
+		background-size: cover
+		background-position: center center
+	.panel_left, .panel_right
+		margin: 20px 0
+	.topline
+		position: static
+		background: #2F4259
+	.panel-diller
+		margin-top: 18px
+	.front-p
+		font-size: 20px
+	#map
+		margin-top: 25px
+	.accent-header_small
+		font-size: 42px
+
+@media only screen and (max-width : 639px)
+	.col-xs-full
+		padding: 0
+		width: 100%
+	.accent-header_small
+		font-size: 62px
+	.col-xxs-12
+		width: 100%
+		padding-left: 10px
+		padding-right: 10px
+	.s-front-contact h2
+		display: block
+	#map
+		margin-top: 0
+
+
+
+@media only screen and (max-width : 610px)
+	.logo__text
+		display: none
+	.topline__logo
+		float: none
+		margin-left: 10px
+	.logo-menu
+		margin-top: 4px
+	.col-extra
+		width: 50%
+	.col-topline-logo
+		width: 50%
+
+
+@media only screen and (max-width : 550px)
+	.list_tripple,
+	.topline-scroll__contact .link-nohover,
+	.topline__logo
+		display: none
+	footer
+		padding-top: 0
+	.logo-menu
+		margin-top: 14px
+	.footer__contacts
+		max-width: 280px
+		margin: 0 auto
+		text-align: center
+	.diller-login
+		margin-left: -85px
+	#to-top
+		right: 50px
+		right: 50%
+		margin-right: -120px
+		top: 322px
+	#to-top svg
+		width: 60px
+		height: 65px
+	.xs-text-center
+		margin: 40px 0
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.image-list__item
+		width: 50%
+	.panel__descr
+		font-size: 18px
+	.panel_left, .panel_right
+		margin: 30px 0
+	.panel__head
+		font-size: 28px
+	.panel_left, .panel_right
+		padding-top: 5px
+		padding-bottom: 5px
+	.accent-header
+		font-size: 50px
+	.scroll-menu
+		max-width: 80%
+		min-width: 120px
+	.s-front-contact
+		padding-bottom: 0
+	.panel_left, .panel_right
+		margin: 0
+	.owl-nav>div
+		top: 40%
+	.owl-dots
+		bottom: 10px
+	.owl-prev
+		left: 10px
+	.owl-next
+		right: 10px
+	.hover-lines_content
+		padding: 10px 3px
+	.image-list__item
+		margin-bottom: 15px
+	.front-h1
+		font-size: 34px
+		text-align: left
+	.front-p
+		font-size: 18px
+		text-align: left
+	#map
+		height: 300px
+
+
+@media only screen and (max-width : 450px)
+	.topline-scroll__contact a
+		display: none
+
+@media only screen and (max-width : 380px)
+	.s-front-contact h2
+		max-width: 220px
+		margin-left: auto
+		margin-right: auto
+		margin-top: 10px
+
+
+/*==========  Mobile First  ==========*/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 1360px)
+	/**/
+	.link_white:hover
+		color: #fff
+	.hover-lines
+		img
+			position: absolute
+			clear: both
+			z-index: 0
+			transition: 0.6s ease
+		&:after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			display: block
+			background: #000
+			opacity: 0
+			transition: 0.3s ease-out
+			z-index: 0
+		&:hover 
+			color: #fff
+			img
+				transform: scale(1.1)
+			.hover-lines_content
+				transform: scale(1)
+			&:after
+				opacity: 0.7
+			.hover-lines__line
+				&:nth-of-type(1),
+				&:nth-of-type(2)
+					height: 80%
+				&:nth-of-type(3),
+				&:nth-of-type(4)
+					width: 80%
+	.s-parallax
+		overflow: hidden
+		position: relative
+	.parallax-img
+		position: absolute
+		width: 100%
+		height: 492px
+		min-height: 100%
+		z-index: -1
+		background-size: cover
+		position: absolute
+		left: 0
+		background-position: center center
+	.parallax-img__uslugi 
+		top: -540px
+		background-image: url(../img/uslugi_1360.jpg)
+	.parallax-img__sotrudn
+		background-image: url(../img/sotrudn_1360.jpg)
+		top: -875px
+	.panel_right, .panel_left
+		position: relative
+		top: -300px	
+	.panel_left
+		top: -450px	 
+	.footer-button
+		&:hover
+			background: #80A0B7
+			color: #2F4259
+			text-decoration: none
+			svg
+				fill: #3f5677
+				width: 13px
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1450px)
+	/**/
+	.parallax-img
+		height: 1151px
+	.parallax-img__uslugi
+		background-image: url(../img/uslugi_1920.jpg)
+		// top: -925px
+		top: -1465px
+	.parallax-img__sotrudn
+		background-image: url(../img/sotrudn_1920.jpg)
+		// top: -1600px
+		top: -1900px
+	header
+		overflow: hidden
+	.panel_right, .panel_left
+		position: relative
+		top: -330px	
+	.panel_left
+		top: -480px	 
+
+@media only screen and (min-width : 1600px)
+	.menu-link
+		margin: 0 14px
