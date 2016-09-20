@@ -22,8 +22,7 @@
 	<style>@@include('header.min.css')</style>
 	
 
-	<!-- Доп. шрифт open-sans: 600, подключается здесь и на 7 странице --> <!-- todo: одинаковые шрифты на всех страницах -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,600,700|Roboto+Condensed:300|Roboto:300,500,700|Lobster&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,700|Roboto+Condensed:300|Roboto:300,500,700|Lobster&subset=cyrillic" rel="stylesheet">
 
 	<!-- Load sprite.svg -->
 	<script>!function(a,b){"use strict";var c="img/sprite.symbol.svg",d=1;if(!b.createElementNS||!b.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var f,g,e="localStorage"in a&&null!==a.localStorage,h=function(){b.body.insertAdjacentHTML("afterbegin",g)},i=function(){b.body?h():b.addEventListener("DOMContentLoaded",h)};if(e&&localStorage.getItem("inlineSVGrev")==d&&(g=localStorage.getItem("inlineSVGdata")))return i(),!0;try{f=new XMLHttpRequest,f.open("GET",c,!0),f.onload=function(){f.status>=200&&f.status<400&&(g=f.responseText,i(),e&&(localStorage.setItem("inlineSVGdata",g),localStorage.setItem("inlineSVGrev",d)))},f.send()}catch(j){}}(window,document);</script>
@@ -31,71 +30,15 @@
 
 </head>
 
+
 <!-- 
-Класс front-page определяет вид topline меню, 
-сейчас оно будет прозрачным и серым
+Класс common-page определяет вид topline меню, 
+сейчас оно будет синим и непрозрачным
 -->
-<!-- todo: TOP LINE ON SCROLL & BURGER MENU  вынести из хедера во всех страницах, уже вынесено на странице 07 -->
-<body class="front-page">
+<body class="common-page">
 
 
-
-	<!-- TOP LINE ON SCROLL -->
-	<div class="topline-scroll">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-2">
-					<a href="/" class="logo"><svg class="topline-scroll__logo"><use xlink:href="#02_Logo"></use></svg></a>
-				</div><!-- col -->
-
-				<div class="col-xs-8">
-					<div class="topline-scroll__contact">
-						<a href="tel:+74999777007">+7 (499) 977-70-07</a>
-						<a href="#popup--call-back" class="js-open-popup link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
-							<p class="footer-phone-svg__text">Обратный звонок</p>
-						</a>
-					</div>
-				</div><!-- col -->
-
-				<div class="col-xs-2">
-					<svg class="topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
-				</div><!-- col -->
-
-			</div>
-		</div><!-- container-fluid -->
-	</div><!-- topline-scroll -->
-
-	<!-- BURGER MENU -->
-	<div class="scroll-menu">
-		<div class="scroll-menu__header">
-			<svg class="logo__svg"><use xlink:href="#03_Logo"></use></svg>
-			<svg class="scroll-menu--close js-open-scroll-menu"><use xlink:href="#48_Close"></use></svg>
-		</div>
-		<nav class="nav scroll-menu__nav">
-			<ul class="list">
-				<li><a href="#">Главная</a></li>
-				<li><a href="#">О компании</a></li>
-				<li><a href="#">Подбор покрытия</a></li>
-				<li><a href="#">Каталог</a></li>
-				<li><a href="#">Галерея интерьеров</a></li>
-				<li><a href="#">Услуги</a></li>
-				<li><a href="#">Где купить</a></li>
-				<li><a href="#" class="js-open-scroll-search">Поиск <i class="icon-plus"></i></a></li>
-				<form class="scroll-search">
-					<input id="to-focus2" class="scroll-search__input brown_placeholder" type="text" name="stop" autocomplete="off" required placeholder="Ваш запрос">
-					<button class="scroll-search__sumbit"><svg class="svg_10"><use xlink:href="#10_search"></use></svg></button>
-				</form>
-			</ul>
-		</nav>
-		<div class="scroll-menu__footer">
-			<a href="#popup--call-back" class="link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
-				<p class="footer-phone-svg__text">Обратный звонок</p>
-			</a>
-		</div>
-	</div>
-	<div class="bg-dark"></div><!-- фон при выдвижении меню -->
-
-	<header class="header js-parallax">
+	<header class="header">
 
 		<!-- TOP LINE -->
 		<div class="header__topline topline">
@@ -149,37 +92,61 @@
 			</div><!-- container-fluid -->
 		</div><!-- topline -->
 
-		<!-- SLIDER -->
-		<div class="header__slider owl-header-front owl-carousel" style="display: block;">
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
-		</div><!-- owl-carousel -->
+		<!-- TOP LINE ON SCROLL -->
+		<div class="topline-scroll">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-2">
+						<a href="/" class="logo"><svg class="topline-scroll__logo"><use xlink:href="#02_Logo"></use></svg></a>
+					</div><!-- col -->
+
+					<div class="col-xs-8">
+						<div class="topline-scroll__contact">
+							<a href="tel:+74999777007">+7 (499) 977-70-07</a>
+							<a href="#popup--call-back" class="js-open-popup link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
+								<p class="footer-phone-svg__text">Обратный звонок</p>
+							</a>
+						</div>
+					</div><!-- col -->
+
+					<div class="col-xs-2">
+						<svg class="topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
+					</div><!-- col -->
+
+				</div>
+			</div><!-- container-fluid -->
+		</div><!-- topline-scroll -->
+
+		<!-- BURGER MENU -->
+		<div class="scroll-menu">
+			<div class="scroll-menu__header">
+				<svg class="logo__svg"><use xlink:href="#03_Logo"></use></svg>
+				<svg class="scroll-menu--close js-open-scroll-menu"><use xlink:href="#48_Close"></use></svg>
+			</div>
+			<nav class="nav scroll-menu__nav">
+				<ul class="list">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Подбор покрытия</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Галерея интерьеров</a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Где купить</a></li>
+					<li><a href="#" class="js-open-scroll-search">Поиск <i class="icon-plus"></i></a></li>
+					<form class="scroll-search">
+						<input id="to-focus2" class="scroll-search__input brown_placeholder" type="text" name="stop" autocomplete="off" required placeholder="Ваш запрос">
+						<button class="scroll-search__sumbit"><svg class="svg_10"><use xlink:href="#10_search"></use></svg></button>
+					</form>
+				</ul>
+			</nav>
+			<div class="scroll-menu__footer">
+				<a href="#popup--call-back" class="link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
+					<p class="footer-phone-svg__text">Обратный звонок</p>
+				</a>
+			</div>
+		</div>
+		<div class="bg-dark"></div><!-- фон при выдвижении меню -->
+
 
 	</header>
 
@@ -190,172 +157,95 @@
 	<!--  -->
 	<main class="main">
 
-		<section class="s-image-list">
-			<div class="container">
-				<h2 class="accent-header">Декоративные эффекты, которые тра-ля-ля</h2>
-				<div class="row image-list">
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
+		<nav class="breadcrump container-fluid container-lg-static">
+			<ul>
+				<li><a href="#">Фактурная штукатурка</a></li>
+				<li>Структурная штукатурка</li>
+			</ul>
+		</nav>
+
+		<article class="article-page container-fluid container-lg-static">
+
+			<h1 class="article__h1">Структурная штукатурка</h1>
+			<p>Отделка гостиных, спален, прихожих посредством керамической плитки сего дня стала обычным явлением. Безусловно, модные тенденции не предусматривают глянцевую плитку, которую чаще всего можно увидеть в ванных комнатах или санузлах. В жилом пространстве будет отлично смотреться плитка с имитацией дерева или натурального камня. Но, наверное, самым популярным направлением было и осталось обрамление пола паркетной доской. Единственное «но» - паркет очень дорого стоит и требует бережного, деликатного ухода за ним. Поэтому многие владельцы квартир и загородных домов идут на уловки и используют вместо паркетной доски керамическую плитку, имитирующую паркет. К тому же сегодня можно найти столько разнообразных по цвету и фактуре и рисунку вариантов, что действительно позволит создать невероятно стильный и красивый интерьер.</p>
+			
+			<div class="row style-list">
+
+				<!-- start style-list__item -->
+				<a href="#" class="wow zoomIn col-xs-6 col-xxs-12 style-list__item">
+					<h2>Под старину</h2>
+					<p>(от <span>340</span> до <span>1,270</span> руб./кв.м.)</p>
+					<div class="img-effect-zoomin">
+						<img src="img/img-article-style.png" alt="">
 					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
+				</a>
+				<!-- end style-list__item -->
+
+				<!-- start style-list__item -->
+				<a href="#" class="wow zoomIn col-xs-6 col-xxs-12 style-list__item">
+					<h2>Стиль лофт</h2>
+					<p>(от <span>340</span> до <span>1,270</span> руб./кв.м.)</p>
+					<div class="img-effect-zoomin">
+						<img src="img/img-article-style.png" alt="">
 					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
+				</a>
+				<!-- end style-list__item -->
+
+				<!-- start style-list__item -->
+				<a href="#" class="wow zoomIn col-xs-6 col-xxs-12 style-list__item">
+					<h2>Под дерево</h2>
+					<p>(от <span>340</span> до <span>1,270</span> руб./кв.м.)</p>
+					<div class="img-effect-zoomin">
+						<img src="img/img-article-style.png" alt="">
 					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
+				</a>
+				<!-- end style-list__item -->
+
+				<!-- start style-list__item -->
+				<a href="#" class="wow zoomIn col-xs-6 col-xxs-12 style-list__item">
+					<h2>Имитация камня</h2>
+					<p>(от <span>340</span> до <span>1,270</span> руб./кв.м.)</p>
+					<div class="img-effect-zoomin">
+						<img src="img/img-article-style.png" alt="">
 					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
+				</a>
+				<!-- end style-list__item -->
+
+				<!-- start style-list__item -->
+				<a href="#" class="wow zoomIn col-xs-6 col-xxs-12 style-list__item">
+					<h2>Имитация травертина</h2>
+					<p>(от <span>340</span> до <span>1,270</span> руб./кв.м.)</p>
+					<div class="img-effect-zoomin">
+						<img src="img/img-article-style.png" alt="">
 					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
+				</a>
+				<!-- end style-list__item -->
+
+				<!-- start style-list__item -->
+				<a href="#" class="wow zoomIn col-xs-6 col-xxs-12 style-list__item">
+					<h2>Имитация бетона</h2>
+					<p>(от <span>340</span> до <span>1,270</span> руб./кв.м.)</p>
+					<div class="img-effect-zoomin">
+						<img src="img/img-article-style.png" alt="">
 					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
+				</a>
+				<!-- end style-list__item -->
+
+			</div>
+
+			<div class="row text-justify">
+				<div class="col-xs-6 col-xxs-12">
+					<p>Отделка гостиных, спален, прихожих посредством керамической плитки сего дня стала обычным явлением. Безусловно, модные тенденции не предусматривают глянцевую плитку, которую чаще всего можно увидеть в ванных комнатах или санузлах. В жилом пространстве будет отлично смотреться плитка с имитацией дерева или натурального камня. Но, наверное, самым популярным направлением было и осталось обрамление пола паркетной доской. Единственное «но» - паркет очень дорого стоит и требует бережного, деликатного ухода за ним. Поэтому многие владельцы квартир и загородных домов идут на уловки и используют вместо паркетной доски керамическую плитку, имитирующую паркет. К тому же сегодня можно найти столько разнообразных по цвету и фактуре и рисунку вариантов, что действительно позволит создать невероятно стильный и красивый интерьер.</p>
+					<p>Отделка гостиных, спален, прихожих посредством керамической плитки сего дня стала обычным явлением. Безусловно, модные тенденции не предусматривают глянцевую плитку, которую чаще всего можно увидеть в ванных комнатах или санузлах. В жилом пространстве будет отлично смотреться плитка с имитацией дерева или натурального камня. Но, наверное, самым популярным направлением было и осталось обрамление пола паркетной доской. Единственное «но» - паркет очень дорого стоит и требует бережного, деликатного ухода за ним. Поэтому многие владельцы квартир и загородных домов идут на уловки и используют вместо паркетной доски керамическую плитку, имитирующую паркет. К тому же сегодня можно найти столько разнообразных по цвету и фактуре и рисунку вариантов, что действительно позволит создать невероятно стильный и красивый интерьер.</p>
+				</div>
+				<div class="col-xs-6 col-xxs-12">
+					<p>Единственное «но» - паркет очень дорого стоит и требует бережного, деликатного ухода за ним. Поэтому многие владельцы квартир и загородных домов идут на уловки и используют вместо паркетной доски керамическую плитку, имитирующую паркет. К тому же сегодня можно найти столько разнообразных по цвету и фактуре и рисунку вариантов, что действительно позволит создать невероятно стильный и красивый интерьер.</p>
+					<p>Отделка гостиных, спален, прихожих посредством керамической плитки сего дня стала обычным явлением. Безусловно, модные тенденции не предусматривают глянцевую плитку, которую чаще всего можно увидеть в ванных комнатах или санузлах. В жилом пространстве будет отлично смотреться плитка с имитацией дерева или натурального камня. Но, наверное, самым популярным направлением было и осталось обрамление пола паркетной доской. Единственное «но» - паркет очень дорого стоит и требует бережного, деликатного ухода за ним. Поэтому многие владельцы квартир и загородных домов идут на уловки и используют вместо паркетной доски керамическую плитку, имитирующую паркет. К тому же сегодня можно найти столько разнообразных по цвету и фактуре и рисунку вариантов, что действительно позволит создать невероятно стильный и красивый интерьер.</p>
+					<p>Отделка гостиных, спален, прихожих посредством керамической плитки сего дня стала обычным явлением. Безусловно, модные тенденции не предусматривают глянцевую плитку, которую чаще всего можно увидеть в ванных комнатах или санузлах. </p>
 				</div>
 			</div>
-		</section>
 
-		<section class="s-front-text">
-			<div class="container">
-				<h1 class="front-h1">Декоративная штукатурка и материалы для отделки стен</h1>
-				<p class="front-p">Специализация нашей компании - продажа и декоративная отделка фасадов и интерьеров современными французскими декоративными покрытиями Clavel. <br>Работая на рынке с 1995 года, мы накопили достаточно опыта, чтобы предлагать нашим заказчикам декоративную отделку в лучших мировых традициях , но с применением современных технологий.</p>
-				<p class="front-p">Компания «Стена-Клавель» занимается проектированием, производством и строительством деревянных домов из клееного бруса.  «Стена-Клавель» строит частные дома и коттеджные поселки, по индивидуальным и типовым проектам. Вы можете заказать как отдельные виды услуг, так и деревянный дом под ключ: фундамент, стены, окна, кровля, электрика, инженерные системы.</p>
-			</div>
-		</section>
-
-		<section class="s-parallax s-parallax_right">
-			<div class="parallax-img parallax-img__uslugi js-parallax"></div>
-			<div class="container parallax-container">
-				<div class="panel panel_right js-parallax">
-					<h2 class="panel__head"><a href="#" class="link_white link_reverse">Услуги</a></h2>
-					<p class="panel__descr">делаем  ремонт комфортным,<br>а результат впечатляющим</p>
-				</div>
-			</div>
-		</section>
-
-
-		<section class="s-image-list">
-			<div class="container">
-				<h2 class="accent-header">Идеи для ваших интерьеров</h2>
-				<div class="row image-list">
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="s-parallax s-parallax_left">
-			<div class="parallax-img parallax-img__sotrudn js-parallax"></div>
-			<div class="parallax-slider">
-				<div class="container parallax-container">
-					<div class="panel panel_left js-parallax">
-						<h2 class="panel__head"><a href="#" class="link_white link_reverse">Сотрудничество</a></h2>
-						<p class="panel__descr">Станьте дилером декоративных <br>покрытий Clavel  в вашем городе.</p>
-					</div>
-				</div>
-			</div>
-		</section>
+		</article>
 
 		<section class="s-front-contact">
 			<div class="container-fluid container-lg-static">

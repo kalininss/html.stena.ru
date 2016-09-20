@@ -63,7 +63,8 @@ gulp.task('libs', function() {
 		'app/libs/smooth-mouse/jQuery.scrollSpeed.js',
 		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
 		'app/libs/masked-input/masked-input.js',
-		'app/libs/wow/dist/wow.min.js'
+		'app/libs/wow/dist/wow.min.js',
+		'app/libs/picturefill/dist/picturefill.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())
@@ -106,9 +107,9 @@ gulp.task('build', ['removedist', 'buildhtml', 'imagemin', 'sass', 'libs'], func
 		'app/css/main.min.css'
 		]).pipe(gulp.dest('dist/css'));
 
-	// var buildFiles = gulp.src([
-	// 	'app/.htaccess'
-	// ]).pipe(gulp.dest('dist'));
+	var buildFiles = gulp.src([
+		'app/.htaccess'
+	]).pipe(gulp.dest('dist'));
 
 	var buildFonts = gulp.src('app/fonts/**/*').pipe(gulp.dest('dist/fonts'));
 
@@ -120,9 +121,10 @@ gulp.task('deploy', function() {
 
 	var conn = ftp.create({
 		host:      'ftp.sib-dvig.sibnethost.ru',
-		user:      'admin_stena@stena.infape.ru',
-		password:  '$Rvm!Q{=(cxz',
+		user:      'admin@stena.infape.ru',
+		password:  'pg2c#bnTRbwE',
 		parallel:  10,
+		idleTimeout: 5000,
 		log: gutil.log
 	});
 

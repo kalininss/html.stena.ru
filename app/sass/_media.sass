@@ -98,9 +98,15 @@
 		top: 0
 		z-index: 0
 	.js-parallax
-		transform: translate3d(0, 0, 0) !important
+		transform: none !important
 	.front-h1
 		font-size: 48px
+	.addToCart-button
+		display: block
+		margin-left: 0
+		margin-top: 25px
+	.product-price
+		margin-left: 9px
 
 
 
@@ -139,6 +145,16 @@
 		font-size: 38px
 	.front-p
 		font-size: 20px
+	h2
+		font-size: 26px
+	.addToCart-button
+		display: inline-block
+		margin-left: 25px
+		margin-top: 0
+	.product-table
+		display: none
+	.product-tabs .tab
+		font-size: 12px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -191,6 +207,35 @@
 		margin-top: 25px
 	.accent-header_small
 		font-size: 42px
+	h1
+		font-size: 38px
+	.h1_small
+		font-size: 28px
+		margin-top: 25px
+	.animated
+		transition-property: none !important
+		transform: none !important
+		animation: none !important
+	h2
+		font-size: 24px
+	.tab_item
+		display: block !important
+	.tabs
+		display: none
+	.tab-replace
+		display: block
+	.addToCart-button
+		float: right
+	.outer-addToCart
+		@include clearfix
+	.product-price
+		float: right
+	.outer__label-product-type
+		margin-top: 17px
+	.col-product-image
+		text-align: center
+
+
 
 @media only screen and (max-width : 639px)
 	.col-xs-full
@@ -291,11 +336,26 @@
 		text-align: left
 	#map
 		height: 300px
+	.breadcrump
+		display: none
+	.article__h1
+		margin-top: 25px
+	.addToCart-button
+		width: 135px
+		line-height: 1.2
+		font-weight: 400
+		padding: 5px 0
+	.product-count
+		margin-top: 8px
 
 
 @media only screen and (max-width : 450px)
 	.topline-scroll__contact a
 		display: none
+	.label-product-type
+		margin-right: 0
+	.product-price
+		margin-left: 8px
 
 @media only screen and (max-width : 380px)
 	.s-front-contact h2
@@ -359,16 +419,16 @@
 		left: 0
 		background-position: center center
 	.parallax-img__uslugi 
-		top: -540px
+		top: -580px
 		background-image: url(../img/uslugi_1360.jpg)
 	.parallax-img__sotrudn
 		background-image: url(../img/sotrudn_1360.jpg)
-		top: -875px
+		top: -935px
 	.panel_right, .panel_left
 		position: relative
-		top: -300px	
+		top: -340px	
 	.panel_left
-		top: -450px	 
+		top: -510px	 
 	.footer-button
 		&:hover
 			background: #80A0B7

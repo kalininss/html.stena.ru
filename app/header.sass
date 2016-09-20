@@ -12,7 +12,7 @@ body > svg
 
 
 // верхняя линия и лого
-.topline
+.front-page .topline
 	background: rgba(0, 0, 0, 0.43)
 	color: $c-white 
 	position: absolute
@@ -20,6 +20,9 @@ body > svg
 	right: 0
 	top: 0
 	z-index: 3
+.common-page .topline
+	background: $bg-accent
+	color: $c-white 
 .logo__svg 
 	width: 170px
 	height: 43px
@@ -166,191 +169,204 @@ body > svg
 .owl-loaded
 	img
 		display: block
-		
+
+@media only screen and (max-width : 480px)
+	.page-parallax
+		display: none
 
 
 
+// внутренние страницы
 
-.topline-scroll__logo
-	width: 58px
-	height: 26px
-	margin-top: 3px
-.topline-scroll
-	position: fixed
-	z-index: 15
-	background: #2F4259
-	width: 100%
-	left: 0
-	right: 0	
-	padding: 3px 0 0
-	top: -100px
-	transition: 0.5s
-	max-height: 0
-	overflow: hidden
-	box-shadow: 0px 3px 6px rgba(0,0,0,0.4)
-	&.opened
-		top: 0
-		max-height: 200px
-.topline-scroll__contact
+// хлебные крошки
+.breadcrump
+	padding-top: 17px
+	padding-bottom: 17px
+	display: block
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			font-size: 14px
+			font-family: $f-head
+			&:after
+				content: '>'
+				padding-left: 4px
+			&:last-child:after
+				content: ''
+			a
+				color: $c-default
+				text-decoration: underline
+				&:hover
+					text-decoration: none
+
+// страница
+.article__h1
+	font-weight: 300
 	text-align: center
-	a
-		font-size: 17px
-		font-weight: 500
-		margin: 0 14px
-		color: #E6E7E8
-		display: inline-block
-		vertical-align: middle
-		svg
-			fill: #E6E7E8
-		&:hover
-			text-decoration: none
-			svg
-				fill: #E6E7E8
-.topline-scroll__menu-btn
-	width: 25px
-	height: 21px
-	fill: #E6E7E8
-	cursor: pointer
-	float: right
-	margin-top: 5px
-	display: inline-block
-.logo-menu
-	display: none
-// меню в видвижной линии
-.scroll-menu
-	background: #E6E7E8
-	position: fixed
-	top: 0
-	min-width: 340px
-	right: -500px
-	transition: right 0.5s
-	z-index: 500
-	max-height: 100vh
-	overflow: auto
-	&.opened
-		right: 0px
-		& + .bg-dark
-			display: block
-.scroll-menu__nav
-	a
-		color: #705f5a
-		padding: 8px 27px
-		display: block
-		font-family: $f-head
-		&:hover,
-		&:active,
-		&:focus
-			background: #D7D3D2
-			text-decoration: none
-			color: #705f5a
-.bg-dark
-	position: fixed
-	width: 100%
-	height: 100%
-	left: 0
-	top: 0
-	z-index: 22
-	background: rgba(0,0,0, 0.2)
-	display: none	
-.scroll-menu--close
-	fill: #404041
-	width: 20px
-	height: 19px
-	float: right
-	margin-top: 9px
-	margin-right: 5px
-	cursor: pointer
-.scroll-menu__header
-	padding: 0 27px 0 10px
-	.logo__svg
-		margin-top: 5px
-.scroll-search
-	overflow: hidden
-	max-height: 0
-	transition: 0.3s
-	padding: 0 27px 0 35px
-	&.opened
-		max-height: 100px
-.scroll-search__input
-	border: none
-	background: none
-	color: #705F5A
-	width: 81%
-	padding-left: 0
-	width: calc(100% - 65px)
-	font-size: 16px
+	margin-top: 0
+article p
 	font-family: $f-head
+
+
+// style-list from 09.psd
+.style-list
+	text-align: center
+	margin-top: 20px
+	margin-bottom: 50px
+	p
+		margin-bottom: 10px
+	span
+		color: $c-span
+		font-weight: 500
+	h2
+		font-size: 24px
+		font-weight: 300
+		margin-bottom: 0
+		margin-top: 25px
+.style-list__item
+	display: block
+	color: $c-default
+	&:hover
+		text-decoration: none
+		color: $c-default
+	&:nth-child(2n-1).wow
+		animation-delay: 0s
+	&:nth-child(2n).wow
+		animation-delay: 0.2s
+.img-effect-zoomin
+	overflow: hidden
+	> .img-effect__link img,
+	> img
+		transition: 0.5s
+		width: 100%
+		height: auto
+	&:hover .img-effect__link > img,
+	&:hover > img
+		transform: scale(1.1)
+
+
+
+
+// product page 07
+.page-parallax img
+	width: 100%
+	height: auto
+.h1_small
+	font-size: 34px
+	text-align: left
+.product-description
+	font-size: 18px
+.label-product-type
+	font-family: $f-head
+	color: #000
+	font-size: 14px
+	margin-right: 10px
+	vertical-align: middle
+.product-type
+	border-color: #000
+	color: #000
+	padding-right: 10px
+	padding-left: 3px
+	font-size: 22px
+	font-family: $f-add-2
+	vertical-align: middle
+select
+	border-radius: 0
+.product-price
+	display: inline-block
+	vertical-align: middle
+	margin-left: 30px
+	text-align: center
+	line-height: 1.2
+	&__price
+		display: inline-block
+		color: $c-accent
+		font-weight: 500
+		font-size: 40px
+	&__value
+		display: inline-block
+		font-weight: 500
+		color: #727272
+		font-size: 28px
+		vertical-align: top
+	&__articul
+		font-family: $f-head
+		font-size: 14px
+.product-count
+	display: inline-block
+	vertical-align: middle
+.product-count input[type="text"]
+	width: 32px
+	text-align: center
+	line-height: 0
+	border: 1px solid #000
+	text-align: center
+	padding: 0
+	line-height: 30px
 	vertical-align: middle
 	margin-bottom: 0
-	border-bottom: 1px solid
-.scroll-search__sumbit
-	border: none
-	margin-top: 5px
+	margin-left: -1px
+	color: #000
+.product-links
+	margin-top: 20px
+	font-size: 15px
 	vertical-align: middle
-	outline: none
-	background: none
-	fill: #705F5A
-	display: inline-block
-	margin-left: 10px
-.svg_10
-	width: 24px
-	height: 24px
-.header__slider
-	z-index: 1
-	position: relative
-main
-	position: relative
-	z-index: 10
-.s-front-text
+	a
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+.addToCart-button
+	border-radius: 3px
+	background: #E15E78
+	color: #fff
+	padding: 3px 0
+	font-size: 18px
+	font-weight: 600
+	font-family: $f-head
+	vertical-align: middle
 	text-align: center
-.front-h1
-	font-size: 72px
-	font-family: $f-default
-	font: lighter 72px $f-default
-	line-height: 1.2
-	color: #4C6591
-.front-p
-	color: #404041
-	font: lighter 22px $f-default
-	margin: 2em 0
-.input-button__submit
-	float: right
-	background: none
-	outline: none
-	border: none
-	display: inline-block
-	vertical-align: middle
-	svg
-		width: 35px
-		height: 35px
-.img-button_search
-	position: relative
-.collapsed-search
-	vertical-align: middle
-	position: absolute
-	right: -6px
-	top: -1px
-	transition: width 0.5s
-	overflow: hidden
-	&.opened
-		width: 165px
-	input
-		border: none
-		border-bottom: 1px solid #fff
-		background: none
-		display: inline-block
-		width: 100%
-		padding-left: 0
+	width: 255px
+	margin-left: 28px
+	&:hover
+		background: #DB4B6C
 		color: #fff
-		padding-right: 40px
-		padding-bottom: 3px
-		padding-top: 3px
-	button
-		border: none
-		background: none
+		text-decoration: none
+		img
+			width: 12px
+			margin-right: 6px
+	img
 		display: inline-block
-		position: absolute
-		top: 0
-		right: 0
-		&:focus
-			outline: none
+		width: 0
+		transition: 0.3s
+		vertical-align: middle
+		margin-top: -3px
+.outer-addToCart
+	margin-top: 25px
+.product-table
+	width: 100%
+	text-align: center
+	color: #fff
+	font-size: 18px
+	font-family: $f-head
+	border-spacing: 0 1px
+	border-collapse: separate
+	line-height: 1.2
+	margin-top: 65px
+	th
+		background: #808394
+		margin-bottom: 2px
+		font-weight: normal
+		padding: 3px 0
+		width: 33%
+	tr:nth-child(1)
+		margin-bottom: 5px
+	tr:nth-child(odd)
+		background: #5E5E5E
+	tr:nth-child(even)
+		background: #939393
+	td
+		padding: 5px 0
+		width: 33%

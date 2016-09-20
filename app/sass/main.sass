@@ -105,24 +105,201 @@ body
 	padding-bottom: 15px
 .image-list__item
 	margin-bottom: 30px
-	&:nth-child(1) .wow
-		animation-delay: 0s;
-	&:nth-child(2) .wow
-		animation-delay: 0.2s;
-	&:nth-child(3) .wow
-		animation-delay: 0.4s;
-	&:nth-child(4) .wow
-		animation-delay: 0.6s;
-	&:nth-child(5) .wow
-		animation-delay: 0.8s;
-	&:nth-child(6) .wow
-		animation-delay: 1s;
-	&:nth-child(7) .wow
-		animation-delay: 1.2s;
-	&:nth-child(8) .wow
-		animation-delay: 1.4s;
+	&:nth-child(4n-3) .wow
+		animation-delay: 0s
+	&:nth-child(4n-2) .wow
+		animation-delay: 0.2s
+	&:nth-child(4n-1) .wow
+		animation-delay: 0.4s
+	&:nth-child(4n) .wow
+		animation-delay: 0.6s
 
 
+
+// выдвижное меню
+.topline-scroll__logo
+	width: 58px
+	height: 26px
+	margin-top: 3px
+.topline-scroll
+	position: fixed
+	z-index: 15
+	background: #2F4259
+	width: 100%
+	left: 0
+	right: 0	
+	padding: 3px 0 0
+	top: -100px
+	transition: 0.5s
+	max-height: 0
+	overflow: hidden
+	box-shadow: 0px 3px 6px rgba(0,0,0,0.4)
+	&.opened
+		top: 0
+		max-height: 200px
+.topline-scroll__contact
+	text-align: center
+	a
+		font-size: 17px
+		font-weight: 500
+		margin: 0 14px
+		color: #E6E7E8
+		display: inline-block
+		vertical-align: middle
+		svg
+			fill: #E6E7E8
+		&:hover
+			text-decoration: none
+			svg
+				fill: #E6E7E8
+.topline-scroll__menu-btn
+	width: 25px
+	height: 21px
+	fill: #E6E7E8
+	cursor: pointer
+	float: right
+	margin-top: 5px
+	display: inline-block
+.logo-menu
+	display: none
+// меню в видвижной линии
+.scroll-menu
+	background: #E6E7E8
+	position: fixed
+	top: 0
+	min-width: 340px
+	right: -500px
+	transition: right 0.5s
+	z-index: 500
+	max-height: 100vh
+	overflow: auto
+	&.opened
+		right: 0px
+		& + .bg-dark
+			display: block
+.scroll-menu__nav
+	a
+		color: #705f5a
+		padding: 8px 27px
+		display: block
+		font-family: $f-head
+		&:hover,
+		&:active,
+		&:focus
+			background: #D7D3D2
+			text-decoration: none
+			color: #705f5a
+.bg-dark
+	position: fixed
+	width: 100%
+	height: 100%
+	left: 0
+	top: 0
+	z-index: 22
+	background: rgba(0,0,0, 0.2)
+	display: none	
+.scroll-menu--close
+	fill: #404041
+	width: 20px
+	height: 19px
+	float: right
+	margin-top: 9px
+	margin-right: 5px
+	cursor: pointer
+.scroll-menu__header
+	padding: 0 27px 0 10px
+	.logo__svg
+		margin-top: 5px
+.scroll-search
+	overflow: hidden
+	max-height: 0
+	transition: 0.3s
+	padding: 0 27px 0 35px
+	&.opened
+		max-height: 100px
+.scroll-search__input
+	border: none
+	background: none
+	color: #705F5A
+	width: 81%
+	padding-left: 0
+	width: calc(100% - 65px)
+	font-size: 16px
+	font-family: $f-head
+	vertical-align: middle
+	margin-bottom: 0
+	border-bottom: 1px solid
+.scroll-search__sumbit
+	border: none
+	margin-top: 5px
+	vertical-align: middle
+	outline: none
+	background: none
+	fill: #705F5A
+	display: inline-block
+	margin-left: 10px
+.svg_10
+	width: 24px
+	height: 24px
+.header__slider
+	z-index: 1
+	position: relative
+main
+	position: relative
+	z-index: 10
+.s-front-text
+	text-align: center
+.front-h1
+	font-size: 72px
+	font-family: $f-default
+	font: lighter 72px $f-default
+	line-height: 1.2
+	color: #4C6591
+.front-p
+	color: #404041
+	font: lighter 22px $f-default
+	margin: 2em 0
+.input-button__submit
+	float: right
+	background: none
+	outline: none
+	border: none
+	display: inline-block
+	vertical-align: middle
+	svg
+		width: 35px
+		height: 35px
+.img-button_search
+	position: relative
+.collapsed-search
+	vertical-align: middle
+	position: absolute
+	right: -6px
+	top: -1px
+	transition: width 0.5s
+	overflow: hidden
+	&.opened
+		width: 165px
+	input
+		border: none
+		border-bottom: 1px solid #fff
+		background: none
+		display: inline-block
+		width: 100%
+		padding-left: 0
+		color: #fff
+		padding-right: 40px
+		padding-bottom: 3px
+		padding-top: 3px
+	button
+		border: none
+		background: none
+		display: inline-block
+		position: absolute
+		top: 0
+		right: 0
+		&:focus
+			outline: none
 
 
 // Параллакс
@@ -421,13 +598,208 @@ a[href^="https://maps.google.com/maps?ll="]
 
 
 
+// effect
+.img-effect-zoomin_hover-panel
+	position: relative
+	&:hover
+		.hover-panel
+			bottom: 0
+.hover-panel
+	display: block
+	position: absolute
+	background: #87736B
+	text-align: center
+	overflow: hidden
+	bottom: -30px
+	left: 0
+	right: 0
+	color: #fff
+	font-size: 14px
+	padding: 4px
+	transition: 0.5s
+	&:hover
+		text-decoration: none
+		color: #fff
+		background: #846459
+.effect-list
+	margin-bottom: 10px
+.effect-list__item
+	display: inline-block
+	color: $c-head
+	margin-bottom: 20px
+	&:nth-child(4n-3).wow
+		animation-delay: 0s
+	&:nth-child(4n-2).wow
+		animation-delay: 0.2s
+	&:nth-child(4n-1).wow
+		animation-delay: 0.4s
+	&:nth-child(4n).wow
+		animation-delay: 0.8s
+.effect-list__info
+	display: block
+	color: $c-default
+	h3
+		font-size: 10px
+		font-family: $f-add-2
+		margin-top: 15px
+		span
+			font-size: 14px
+			font-weight: 300
+.icon-favourite
+	width: 12px
+	height: 20px
+	display: inline-block
+	fill: #f0f
+	vertical-align: top
+.effect-price__price
+	font-family: $f-add-2
+	font-weight: bold
+	color: $c-span 
+	font-size: 36px
+	display: inline-block
+.effect-price__value
+	display: inline-block
+	margin-left: 3px
+	line-height: 1.2
 
 
 
 
+// product-page
+.btn-count
+	background: $c-accent
+	display: inline-block
+	line-height: 0
+	padding: 16px 0
+	color: #fff
+	text-align: center
+	vertical-align: middle
+	width: 32px
+	cursor: pointer
+	&:hover
+		background: #446FBC
+	&:active
+		background: $c-accent
+.product-tabs
+	margin-top: 50px
+	.tabs
+		@include clearfix
+		margin-bottom: 25px
+	.tab
+		width: calc(25% - 10px)
+		display: inline-block
+		float: left
+		background: #D0D2D3
+		font-weight: 600
+		text-align: center
+		padding: 18px 0
+		margin: 0 5px
+		cursor: pointer
+		transition: 0.3s
+		position: relative
+		&:hover
+			background: #B4B4B5
+		&:after
+			display: inline-block
+			transition: 0.3s
+			position: absolute
+			content: ''
+			width: 0
+			height: 0
+			left: 50%
+			border-left: 10px solid transparent
+			border-right: 10px solid transparent
+			border-top: 15px solid #fff
+			margin-left: -10px
+			bottom: -15px
+		&:first-child
+			margin-left: 0
+			width: calc(25% - 5px)
+		&:last-child
+			margin-right: 0
+			width: calc(25% - 5px)
+		&.active
+			background: $c-accent
+			color: #fff
+			&:after
+				border-top: 15px solid $c-accent
+.table-specification
+	width: 100%
+	font-family: $f-head
+	line-height: 1.2
+	tr:nth-child(odd)
+		background: #D0D2D3
+	tr:nth-child(even)
+		background: #F1F1F2
+	td
+		padding: 2px 23px
+	td:nth-child(even)
+		text-align: right
+.tab-replace
+	display: none
+
+// slider-effect
+.owl-effects
+	width: calc(100% - 60px)
+	margin: 0 auto
+	.owl-prev
+		left: -40px
+	.owl-next
+		right: -40px
+.shadow-effect
+	position: relative
+.shadow-effect:after
+	content: ''
+	display: block
+	position: absolute
+	width: 100%
+	height: 40px
+	bottom: -40px
+	max-width: 244px
+	left: 0
+	right: 0
+	margin: 0 auto
+	background-image: url(../img/background-effect.png)
+	background-repeat: no-repeat
+	background-size: contain
+.owl-effects__slide
+	display: block
+	color: $c-default
+	&:hover
+		color: $c-default
+.slide-head
+	font-family: $f-head
+	font-size: 18px
+	text-align: center
+	margin-top: 15px
+.owl-effects .owl-nav > div
+	width: 33px
+	height: auto
+	top: 27%
+	padding: 20px 10px
+	img
+		vertical-align: top
+.s-slider__head
+	color: $c-default
+	margin: 50px 0 30px
+
+// еще слайдер
+.owl-upsale
+.slide-head--ii
+	font-family: $f-default
+	font-weight: 700
+	text-align: center
+	font-size: 18px
+.slide-text
+	text-align: center
+	font-family: $f-head
+	font-size: 14px
 
 
-
+.outer__label-product-type
+	display: inline-block
+.no-transform
+	transform: none !important
 
 
 

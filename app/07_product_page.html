@@ -22,8 +22,7 @@
 	<style>@@include('header.min.css')</style>
 	
 
-	<!-- Доп. шрифт open-sans: 600, подключается здесь и на 7 странице --> <!-- todo: одинаковые шрифты на всех страницах -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,600,700|Roboto+Condensed:300|Roboto:300,500,700|Lobster&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,600,700|Roboto+Condensed:300,700|Roboto:300,500,700|Lobster&subset=cyrillic" rel="stylesheet">
 
 	<!-- Load sprite.svg -->
 	<script>!function(a,b){"use strict";var c="img/sprite.symbol.svg",d=1;if(!b.createElementNS||!b.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var f,g,e="localStorage"in a&&null!==a.localStorage,h=function(){b.body.insertAdjacentHTML("afterbegin",g)},i=function(){b.body?h():b.addEventListener("DOMContentLoaded",h)};if(e&&localStorage.getItem("inlineSVGrev")==d&&(g=localStorage.getItem("inlineSVGdata")))return i(),!0;try{f=new XMLHttpRequest,f.open("GET",c,!0),f.onload=function(){f.status>=200&&f.status<400&&(g=f.responseText,i(),e&&(localStorage.setItem("inlineSVGdata",g),localStorage.setItem("inlineSVGrev",d)))},f.send()}catch(j){}}(window,document);</script>
@@ -31,70 +30,70 @@
 
 </head>
 
+
 <!-- 
-Класс front-page определяет вид topline меню, 
-сейчас оно будет прозрачным и серым
+Класс common-page определяет вид topline меню, 
+сейчас оно будет синим и непрозрачным
 -->
-<!-- todo: TOP LINE ON SCROLL & BURGER MENU  вынести из хедера во всех страницах, уже вынесено на странице 07 -->
-<body class="front-page">
+<body class="common-page">
 
 
 
-	<!-- TOP LINE ON SCROLL -->
-	<div class="topline-scroll">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-2">
-					<a href="/" class="logo"><svg class="topline-scroll__logo"><use xlink:href="#02_Logo"></use></svg></a>
-				</div><!-- col -->
+		<!-- TOP LINE ON SCROLL -->
+		<div class="topline-scroll">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-2">
+						<a href="/" class="logo"><svg class="topline-scroll__logo"><use xlink:href="#02_Logo"></use></svg></a>
+					</div><!-- col -->
 
-				<div class="col-xs-8">
-					<div class="topline-scroll__contact">
-						<a href="tel:+74999777007">+7 (499) 977-70-07</a>
-						<a href="#popup--call-back" class="js-open-popup link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
-							<p class="footer-phone-svg__text">Обратный звонок</p>
-						</a>
-					</div>
-				</div><!-- col -->
+					<div class="col-xs-8">
+						<div class="topline-scroll__contact">
+							<a href="tel:+74999777007">+7 (499) 977-70-07</a>
+							<a href="#popup--call-back" class="js-open-popup link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
+								<p class="footer-phone-svg__text">Обратный звонок</p>
+							</a>
+						</div>
+					</div><!-- col -->
 
-				<div class="col-xs-2">
-					<svg class="topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
-				</div><!-- col -->
+					<div class="col-xs-2">
+						<svg class="topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
+					</div><!-- col -->
 
+				</div>
+			</div><!-- container-fluid -->
+		</div><!-- topline-scroll -->
+
+		<!-- BURGER MENU -->
+		<div class="scroll-menu">
+			<div class="scroll-menu__header">
+				<svg class="logo__svg"><use xlink:href="#03_Logo"></use></svg>
+				<svg class="scroll-menu--close js-open-scroll-menu"><use xlink:href="#48_Close"></use></svg>
 			</div>
-		</div><!-- container-fluid -->
-	</div><!-- topline-scroll -->
-
-	<!-- BURGER MENU -->
-	<div class="scroll-menu">
-		<div class="scroll-menu__header">
-			<svg class="logo__svg"><use xlink:href="#03_Logo"></use></svg>
-			<svg class="scroll-menu--close js-open-scroll-menu"><use xlink:href="#48_Close"></use></svg>
+			<nav class="nav scroll-menu__nav">
+				<ul class="list">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Подбор покрытия</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Галерея интерьеров</a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Где купить</a></li>
+					<li><a href="#" class="js-open-scroll-search">Поиск <i class="icon-plus"></i></a></li>
+					<form class="scroll-search">
+						<input id="to-focus2" class="scroll-search__input brown_placeholder" type="text" name="stop" autocomplete="off" required placeholder="Ваш запрос">
+						<button class="scroll-search__sumbit"><svg class="svg_10"><use xlink:href="#10_search"></use></svg></button>
+					</form>
+				</ul>
+			</nav>
+			<div class="scroll-menu__footer">
+				<a href="#popup--call-back" class="link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
+					<p class="footer-phone-svg__text">Обратный звонок</p>
+				</a>
+			</div>
 		</div>
-		<nav class="nav scroll-menu__nav">
-			<ul class="list">
-				<li><a href="#">Главная</a></li>
-				<li><a href="#">О компании</a></li>
-				<li><a href="#">Подбор покрытия</a></li>
-				<li><a href="#">Каталог</a></li>
-				<li><a href="#">Галерея интерьеров</a></li>
-				<li><a href="#">Услуги</a></li>
-				<li><a href="#">Где купить</a></li>
-				<li><a href="#" class="js-open-scroll-search">Поиск <i class="icon-plus"></i></a></li>
-				<form class="scroll-search">
-					<input id="to-focus2" class="scroll-search__input brown_placeholder" type="text" name="stop" autocomplete="off" required placeholder="Ваш запрос">
-					<button class="scroll-search__sumbit"><svg class="svg_10"><use xlink:href="#10_search"></use></svg></button>
-				</form>
-			</ul>
-		</nav>
-		<div class="scroll-menu__footer">
-			<a href="#popup--call-back" class="link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
-				<p class="footer-phone-svg__text">Обратный звонок</p>
-			</a>
-		</div>
-	</div>
-	<div class="bg-dark"></div><!-- фон при выдвижении меню -->
-
+		<div class="bg-dark"></div><!-- фон при выдвижении меню -->
+		
 	<header class="header js-parallax">
 
 		<!-- TOP LINE -->
@@ -148,38 +147,17 @@
 				</div>
 			</div><!-- container-fluid -->
 		</div><!-- topline -->
-
-		<!-- SLIDER -->
-		<div class="header__slider owl-header-front owl-carousel" style="display: block;">
+		
+		<div class="page-parallax">
 			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
+				<!-- Несуществующая картинка для смартфонов -->
+				<source srcset="undefined.jpg" media="(max-width: 480px)" />
+				<source srcset="img/baner_900.jpg" media="(max-width: 900px)" />
+				<source srcset="img/baner_1360.jpg" media="(max-width: 1370px)" />
+				<source srcset="img/baner_1920.jpg" media="(min-width: 1371px)" />
+				<img src="img/baner_900.jpg" alt="">
 			</picture>
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
-		</div><!-- owl-carousel -->
+		</div>
 
 	</header>
 
@@ -190,172 +168,191 @@
 	<!--  -->
 	<main class="main">
 
-		<section class="s-image-list">
-			<div class="container">
-				<h2 class="accent-header">Декоративные эффекты, которые тра-ля-ля</h2>
-				<div class="row image-list">
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
+		<nav class="breadcrump container-fluid container-lg-static">
+			<ul>
+				<li><a href="#">Декоративные штукатурки</a></li>
+				<li><a href="#">Венецианские</a></li>
+				<li><a href="#">Эффект мрамора</a></li>
+				<li>Венецианская штукатурка имитация камня с террактовыми вкраплениями</li>
+			</ul>
+		</nav>
+
+		<article class="article-page container-fluid container-lg-static">
+
+			<div class="row">
+				<div class="col-sm-4 col-product-image">
+					<img src="img/thumbnail-small.jpg" alt="">
+				</div>
+				<div class="col-sm-8">
+					<h1 class="article__h1 h1_small">Sabbia Micro Platinum / Саббия микро платинум</h1>
+					<p class="product-description">Современная высокотехнологичная рельефная штукатурка, создающая многообразие эффектов от имитации кожи до потрескавшегося фарфора и камня. Трещины можно моделировать по Вашему желанию - их рисунок, а также глубина и частота будут всегда уникальны и естественны.</p>
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+
+							<div class="clearfix">
+
+								<div class="outer__label-product-type">
+									<label class="label-product-type" for="l1">Фасовка кг:</label>
+									<select class="product-type" name="" id="l1">
+										<option value="1">1</option>
+										<option value="3">3</option>
+										<option value="2">2</option>
+									</select>
+								</div>
+
+								<div class="product-price">
+									<div class="product-price__price">1940</div>
+									<div class="product-price__value">руб.</div>
+									<div class="product-price__articul">Артикул: 1-016-678</div>
+								</div>
+							</div>
+							<div class="outer-addToCart">
+								<div class="product-count">
+									<div class="btn-count" onselectstart="return false" onmousedown="return false" onclick="this.nextElementSibling.value = parseInt(this.nextElementSibling.value) - 1">-</div>
+									<input type="text" name="n1" id="n1" value="1">
+									<div class="btn-count" onselectstart="return false" onmousedown="return false" onclick="this.previousElementSibling.value = parseInt(this.previousElementSibling.value) + 1">+</div>
+								</div>
+								<a href="#" class="btn addToCart-button"><img src="img/svg/51_Arrow_white.svg">Добавить в корзину</a>
+							</div>
+
+							<p class="product-links">
+								<a href="#">Доставка</a><br>
+								<a href="#">Каталог оттенков</a><br>
+								<a href="#">Галерея интерьеров</a>
+							</p>
+
+						</div>
+						<div class="col-xs-6">
+							<table class="product-table">
+								<tr><th>Упаковка<br>(кг)</th><th>Площадь<br>(кв.м.)</th><th>Цена<br>(руб.)</th></tr>
+								<tr></tr><!-- для разделения -->
+								<tr><td>1</td><td>0,8</td><td>228</td></tr>
+								<tr><td>5</td><td>4,4</td><td>912</td></tr>
+								<tr><td>25</td><td>22</td><td>3667</td></tr>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
-		</section>
 
-		<section class="s-front-text">
-			<div class="container">
-				<h1 class="front-h1">Декоративная штукатурка и материалы для отделки стен</h1>
-				<p class="front-p">Специализация нашей компании - продажа и декоративная отделка фасадов и интерьеров современными французскими декоративными покрытиями Clavel. <br>Работая на рынке с 1995 года, мы накопили достаточно опыта, чтобы предлагать нашим заказчикам декоративную отделку в лучших мировых традициях , но с применением современных технологий.</p>
-				<p class="front-p">Компания «Стена-Клавель» занимается проектированием, производством и строительством деревянных домов из клееного бруса.  «Стена-Клавель» строит частные дома и коттеджные поселки, по индивидуальным и типовым проектам. Вы можете заказать как отдельные виды услуг, так и деревянный дом под ключ: фундамент, стены, окна, кровля, электрика, инженерные системы.</p>
-			</div>
-		</section>
-
-		<section class="s-parallax s-parallax_right">
-			<div class="parallax-img parallax-img__uslugi js-parallax"></div>
-			<div class="container parallax-container">
-				<div class="panel panel_right js-parallax">
-					<h2 class="panel__head"><a href="#" class="link_white link_reverse">Услуги</a></h2>
-					<p class="panel__descr">делаем  ремонт комфортным,<br>а результат впечатляющим</p>
+			<div class="wrapper product-tabs">
+				<div class="tabs">
+					<span class="tab">Способ нанесения</span>
+					<span class="tab">Область применения</span>
+					<span class="tab">Преимущества</span>        
+					<span class="tab">Технические характеристики</span>        
 				</div>
-			</div>
-		</section>
-
-
-		<section class="s-image-list">
-			<div class="container">
-				<h2 class="accent-header">Идеи для ваших интерьеров</h2>
-				<div class="row image-list">
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
+				<div class="tab_content">
+					<div class="tab_item row">
+						<div class="col-md-5">
+							<img src="img/use-case.png" alt="">
+						</div>
+						<div class="col-md-7">
+						<h3 class="tab-replace">Способ нанесения</h3>
+							<p>Перед нанесением Arabesco, необходимо тщательно подготовить поверхность.  <br>Тип поверхности №1, методика 1.  <br>Условия при нанесении:  <br>температура воздуха: от 5°C до 35°C <br>относительная влажность воздуха - не более 75% (рекомендуемая - 60%).</p>
+							<p>Наносится в 3 этапа <br>1. Нанесение фактурного слоя Mystique <br>2. Нанесение декоративного слоя (можно тспользовать патенирующий гель Pate Deco, лак Poliver Mat или спеспециально разработанный для декоратвного покрытия Mystique финиш Mystique Glaze). <br>3. Нанесение защитного слоя воска Durawax или лака Poliver Mat.</p>
+							<p>Подробные техники нанесения для каждого эффекта смотрите в разделе ниже</p>
+						</div>
 					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
+					<div class="tab_item row">
+						<div class="col-md-6">
+						<h3 class="tab-replace">Область применения</h3>
+							<p>Перед нанесением Arabesco, необходимо тщательно подготовить поверхность.  <br>Тип поверхности №1, методика 1.  <br>Условия при нанесении:  <br>температура воздуха: от 5°C до 35°C <br>относительная влажность воздуха - не более 75% (рекомендуемая - 60%).</p>
+							<p>Наносится в 3 этапа <br>1. Нанесение фактурного слоя Mystique <br>2. Нанесение декоративного слоя (можно тспользовать патенирующий гель Pate Deco, лак Poliver Mat или спеспециально разработанный для декоратвного покрытия Mystique финиш Mystique Glaze). <br>3. Нанесение защитного слоя воска Durawax или лака Poliver Mat.</p>
+							<p>Подробные техники нанесения для каждого эффекта смотрите в разделе ниже</p>
+						</div>
 					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
+					<div class="tab_item row">
+						<div class="col-md-6">
+						<h3 class="tab-replace">Преимущества</h3>        
+							<ul>
+								<li>Не требует тщательной подготовки стен.</li>
+								<li>Скрывает неровности поверхности.</li>
+								<li>Покрытие дышащее: воздухо и паропроницаемое.</li>
+								<li>Покрытие влагостойкое.</li>
+								<li>Не требует разбавления водой - продукт готов к применению.</li>
+								<li>Не горит, без запаха.</li>
+							</ul>
+						</div>
 					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
+					<div class="tab_item">
+					<h3 class="tab-replace">Технические характеристики</h3>        
+						<table class="table-specification">
+							<tr><td>Содержание летучих органических соединений (ЛОС) (DIN EN 11890-2), г/л</td><td>значение</td></tr>
+							<tr><td>Содержание летучих органических соединений (ЛОС) (DIN EN 11890-2), г/л</td><td>значение</td></tr>
+							<tr><td>Содержание летучих органических соединений (ЛОС) (DIN EN 11890-2), г/л</td><td>значение</td></tr>
+							<tr><td>Содержание летучих органических соединений (ЛОС) (DIN EN 11890-2), г/л</td><td>значение</td></tr>
+							<tr><td>Содержание летучих органических соединений (ЛОС) (DIN EN 11890-2), г/л</td><td>значение</td></tr>
+							<tr><td>Содержание летучих органических соединений (ЛОС) (DIN EN 11890-2), г/л</td><td>значение</td></tr>
+							<tr><td>Содержание летучих органических соединений (ЛОС) (DIN EN 11890-2), г/л</td><td>значение</td></tr>
+						</table>
 					</div>
 				</div>
 			</div>
-		</section>
 
-		<section class="s-parallax s-parallax_left">
-			<div class="parallax-img parallax-img__sotrudn js-parallax"></div>
-			<div class="parallax-slider">
-				<div class="container parallax-container">
-					<div class="panel panel_left js-parallax">
-						<h2 class="panel__head"><a href="#" class="link_white link_reverse">Сотрудничество</a></h2>
-						<p class="panel__descr">Станьте дилером декоративных <br>покрытий Clavel  в вашем городе.</p>
-					</div>
+			<section class="s-slider">
+				<h2 class="s-slider__head">Получаемые эффекты и пошаговые техники нанесения</h2>
+				<div class="js-owl-effects owl-effects owl-carousel">
+					<a href="#" class="owl-effects__slide link_reverse">
+						<div class="shadow-effect"><img src="img/slide-effect.jpg" alt=""></div>
+						<h3 class="slide-head">Mystique MQ1</h3>
+					</a>
+					<a href="#" class="owl-effects__slide link_reverse shadow-effect-bg">
+						<div class="shadow-effect"><img src="img/slide-effect.jpg" alt=""></div>
+						<h3 class="slide-head">Mystique MQ1</h3>
+					</a>
+					<a href="#" class="owl-effects__slide link_reverse shadow-effect-bg">
+						<div class="shadow-effect"><img src="img/slide-effect.jpg" alt=""></div>
+						<h3 class="slide-head">Mystique MQ1</h3>
+					</a>
+					<a href="#" class="owl-effects__slide link_reverse shadow-effect-bg">
+						<div class="shadow-effect"><img src="img/slide-effect.jpg" alt=""></div>
+						<h3 class="slide-head">Mystique MQ1</h3>
+					</a>
+					<a href="#" class="owl-effects__slide link_reverse shadow-effect-bg">
+						<div class="shadow-effect"><img src="img/slide-effect.jpg" alt=""></div>
+						<h3 class="slide-head">Mystique MQ1</h3>
+					</a>
 				</div>
-			</div>
-		</section>
+			</section>
+
+			<section class="s-slider">
+				<h2 class="s-slider__head">Вам также могут потребоваться</h2>
+				<div class="js-owl-upsale owl-effects owl-carousel">
+					<a href="#" class="owl-effects__slide">
+						<img src="img/thumbnail-small.jpg" alt="">
+						<h3 class="slide-head--ii">Travertino</h3>
+						<p class="slide-text">Декоративное покрытие с эффектом песаных барханов</p>
+					</a>
+					<a href="#" class="owl-effects__slide">
+						<img src="img/thumbnail-small.jpg" alt="">
+						<h3 class="slide-head--ii">Travertino</h3>
+						<p class="slide-text">Декоративное покрытие с эффектом песаных барханов</p>
+					</a>
+					<a href="#" class="owl-effects__slide">
+						<img src="img/thumbnail-small.jpg" alt="">
+						<h3 class="slide-head--ii">Travertino</h3>
+						<p class="slide-text">Декоративное покрытие с эффектом песаных барханов</p>
+					</a>
+					<a href="#" class="owl-effects__slide">
+						<img src="img/thumbnail-small.jpg" alt="">
+						<h3 class="slide-head--ii">Travertino</h3>
+						<p class="slide-text">Декоративное покрытие с эффектом песаных барханов</p>
+					</a>
+					<a href="#" class="owl-effects__slide">
+						<img src="img/thumbnail-small.jpg" alt="">
+						<h3 class="slide-head--ii">Travertino</h3>
+						<p class="slide-text">Декоративное покрытие с эффектом песаных барханов</p>
+					</a>
+					<a href="#" class="owl-effects__slide">
+						<img src="img/thumbnail-small.jpg" alt="">
+						<h3 class="slide-head--ii">Travertino</h3>
+						<p class="slide-text">Декоративное покрытие с эффектом песаных барханов</p>
+					</a>
+				</div>
+			</section>
+
+		</article>
 
 		<section class="s-front-contact">
 			<div class="container-fluid container-lg-static">
