@@ -42,15 +42,9 @@ $(function() {
 		navText: ['<img src="img/svg-pages/slider-arrow.svg">',
 		'<img src="img/svg-pages/slider-arrow.svg">'],
 		responsive: {
-			480 : {
-				items: 2
-			},
-			768 : {
-				items: 3
-			},
-			1024 : {
-				items: 4
-			}
+			480 : {items: 2},
+			768 : {items: 3},
+			1024 : {items: 4}
 		}
 	});
 	// slider effects from product page 07
@@ -63,20 +57,47 @@ $(function() {
 		navText: ['<img src="img/svg-pages/slider-arrow.svg">',
 		'<img src="img/svg-pages/slider-arrow.svg">'],
 		responsive: {
-			480 : {
-				items: 2
-			},
-			768 : {
-				items: 4
-			},
-			1024 : {
-				items: 5
-			}
+			480 : {items: 2},
+			768 : {items: 4},
+			1024 : {items: 5}
+		}
+	});
+	$(".js-owl-double").owlCarousel({
+		items: 4,
+		nav: true,
+		margin: 10,
+		loop: true,
+		dots: false,
+		navText: ['<img src="img/svg-pages/slider-arrow.svg">',
+		'<img src="img/svg-pages/slider-arrow.svg">'],
+	});
+	$(".js-owl-double-small").owlCarousel({
+		items: 2,
+		nav: true,
+		margin: 10,
+		loop: true,
+		dots: false,
+		navText: ['<img src="img/svg-pages/slider-arrow.svg">',
+		'<img src="img/svg-pages/slider-arrow.svg">'],
+	});
+	$('.js-owl-half').owlCarousel({
+		items: 5,
+		nav: true,
+		margin: 30,
+		stagePadding: 25,
+		loop: true,
+		dots: false,
+		navText: ['<img src="img/svg-pages/slider-arrow.svg">',
+		'<img src="img/svg-pages/slider-arrow.svg">'],
+		responsive: {
+			320 : {items: 2},
+			480 : {items: 3},
+			768 : {items: 5}
 		}
 	});
 
 	// smooth scroll to #top
-	$("a[href^='#top']").click(function () {
+	$("a[href^='#top']").click(function(){
 		$("html:not(:animated),body:not(:animated)").animate({scrollTop: 0}, 500);
 		return false;
 	});

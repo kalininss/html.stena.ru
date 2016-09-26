@@ -107,6 +107,59 @@
 		margin-top: 25px
 	.product-price
 		margin-left: 9px
+	.effect-list__item
+		&:nth-child(4n-3).wow
+			clear: none
+		&:nth-child(4n).wow
+			clear: left
+	.animated
+		transition-property: none !important
+		transform: none !important
+		animation: none !important
+	.icon-favourite_mobile
+		display: inline-block
+		margin-right: -3px
+	.effect-list__head
+		width: calc(100% - 145px)
+	.hover-panel
+		display: none
+	.effect-price__price
+		vertical-align: middle
+		margin-top: -16px
+	.effect-price__value
+		line-height: 1.1
+	.effect-list__head
+		margin-top: 4px
+	.smeta-icon__mobile
+		display: inline-block
+	.smeta-panel,
+	.double-slider
+		display: none
+	.mobile-message
+		display: block
+		color: #6280BF
+		font-size: 10px
+	.smeta-icons
+		border-bottom: 1px solid $c-default
+		padding-bottom: 20px
+	.smeta-icon:nth-child(1)
+		display: block
+		width: 100%
+		margin-bottom: 15px
+	.page-effect-06 .tabs
+		display: none
+	.page-effect-06 .tab-stars,
+	.page-effect-06 .area-3d 
+		display: none !important
+	.page-effect-06
+		border-top: 1px solid $c-default
+	.my-col-4-5
+		float: right
+		left: 0
+		width: 460px
+	.my-col-7-5
+		width: calc(100% - 460px)
+		right: 0
 
 
 
@@ -155,6 +208,39 @@
 		display: none
 	.product-tabs .tab
 		font-size: 12px
+	.tab-slider.owl-carousel .owl-item img
+		width: auto
+		margin: 0 auto
+	.smeta-icons i
+		display: block
+		margin-bottom: 5px
+	.smeta-icon:nth-child(1)
+		display: inline-block
+		width: auto
+		margin-bottom: 0
+		i
+			height: 38px
+			background-position: bottom left
+	.smeta-icon
+		vertical-align: bottom
+	.smeta__prices
+		float: left
+		width: 50%
+		padding-left: 15px
+		&:nth-child(3n)
+			padding-right: 15px
+			padding-left: 0
+	.smeta-price__descr
+		display: inline-block
+		width: 152px
+		line-height: 1.2
+	.smeta-icons
+		border: none
+	.my-col-4-5
+		float: none
+		width: 100%
+	.my-col-7-5
+		width: 100%
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -212,10 +298,6 @@
 	.h1_small
 		font-size: 28px
 		margin-top: 25px
-	.animated
-		transition-property: none !important
-		transform: none !important
-		animation: none !important
 	h2
 		font-size: 24px
 	.tab_item
@@ -234,6 +316,11 @@
 		margin-top: 17px
 	.col-product-image
 		text-align: center
+	.effect-list__item
+		&:nth-child(4n).wow
+			clear: none
+		&:nth-child(2n-1).wow
+			clear: left
 
 
 
@@ -251,8 +338,48 @@
 		display: block
 	#map
 		margin-top: 0
-
-
+	.effect-price__value
+		display: inline-block
+		padding-bottom: 18px
+		font-size: 13px
+		vertical-align: middle
+	.effect-price__price
+		font-size: 30px
+	.effect-list__head
+		width: calc(100% - 125px)
+	.effect-list__description
+		display: none
+	.effect-list__item
+		margin-bottom: 0
+	.effect-list__head
+		margin-bottom: 7px
+	.effect-item__tags
+		left: 10px
+	.comment
+		padding: 30px 20px
+		background-image: none
+	.breadcrump,
+	.mobile-message,
+	.smeta-icons,
+	.img-top-panel,
+	.smeta__prices
+		display: none
+	.smeta__head
+		display: inline-block
+		margin-bottom: 0
+		vertical-align: middle
+		width: calc(100% - 150px)
+	.smeta-price_mobile
+		float: right
+		display: inline-block
+	.smeta
+		line-height: 50px
+		margin: 20px 0
+	.article_smeta
+		margin-bottom: 0
+	.mobile-smeta-icons
+		& > *
+			display: inline-block
 
 @media only screen and (max-width : 610px)
 	.logo__text
@@ -336,8 +463,6 @@
 		text-align: left
 	#map
 		height: 300px
-	.breadcrump
-		display: none
 	.article__h1
 		margin-top: 25px
 	.addToCart-button
@@ -347,6 +472,33 @@
 		padding: 5px 0
 	.product-count
 		margin-top: 8px
+	.smeta__head
+		display: block
+		width: 100%
+		margin: 30px 0 0
+	.smeta-price_mobile
+		float: none
+		display: inline-block
+		margin: 20px 0 0
+	.smeta
+		margin-bottom: 0
+	.mobile-smeta-icons
+		& > *
+			width: 55px
+			height: 58px
+			background-size: 300px
+			max-width: 100%
+	.one_mobile_smeta_icon--calculator
+		background-position: 0px 0px
+	.one_mobile_smeta_icon--visualisator
+		background-position: -82px 0px
+	.one_mobile_smeta_icon--camera
+		background-position: -163px 0px
+	.one_mobile_smeta_icon--favourite
+		background-position: -245px 0px
+	.col-tab-slider
+		display: none
+
 
 
 @media only screen and (max-width : 450px)
@@ -366,6 +518,15 @@
 
 
 /*==========  Mobile First  ==========*/
+
+@media only screen and (min-width : 992px)
+	.col-tab-slider
+		padding-right: 75px
+	.col-tab-slider_right
+		padding-right: 15px
+		padding-left: 75px
+
+
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 1360px)
@@ -437,6 +598,36 @@
 			svg
 				fill: #3f5677
 				width: 13px
+	.img-effect-zoomin_hover-panel
+		&:hover
+			.hover-panel
+				bottom: 0
+	.img-effect-zoomin
+		overflow: hidden
+		> .img-effect__link img,
+		> img
+			transition: 0.5s
+			width: 100%
+			height: auto
+		&:hover .img-effect__link > img,
+		&:hover > img
+			transform: scale(1.1)
+	.my-col-7-5
+		width: 65.5%
+		right: 34.5%
+	.my-col-4-5
+		width: 34.5%
+		left: 65.5%
+	.addToCart-button
+		&:hover
+			background: #DB4B6C
+			color: #fff
+			text-decoration: none
+			img
+				width: 12px
+				margin-right: 6px
+
+
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1450px)

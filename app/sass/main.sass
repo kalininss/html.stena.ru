@@ -601,9 +601,6 @@ a[href^="https://maps.google.com/maps?ll="]
 // effect
 .img-effect-zoomin_hover-panel
 	position: relative
-	&:hover
-		.hover-panel
-			bottom: 0
 .hover-panel
 	display: block
 	position: absolute
@@ -627,8 +624,10 @@ a[href^="https://maps.google.com/maps?ll="]
 	display: inline-block
 	color: $c-head
 	margin-bottom: 20px
+	position: relative
 	&:nth-child(4n-3).wow
 		animation-delay: 0s
+		clear: left
 	&:nth-child(4n-2).wow
 		animation-delay: 0.2s
 	&:nth-child(4n-1).wow
@@ -638,13 +637,41 @@ a[href^="https://maps.google.com/maps?ll="]
 .effect-list__info
 	display: block
 	color: $c-default
-	h3
+	width: 100%
+.effect-list__head
+	font-size: 10px
+	font-family: $f-add-2
+	margin-top: 13px
+	color: $c-default
+	max-width: calc(100% - 120px)
+	width: 100%
+	&:hover
+		text-decoration: underline
+		color: $c-default
+	span:nth-child(1)
+		font-size: 14px
+		font-weight: 300
+.effect-list__description
+	font-size: 10px
+	font-family: $f-add-2
+	margin: 0
+.bg-red
+	background: #EC1C24
+.bg-blue
+	background: #4C6591
+.effect-item__tags
+	position: absolute
+	left: 14px
+	top: -9px
+	z-index: 2
+	font-weight: 500
+	color: #fff
+	> *
+		display: inline-block
+		margin-right: 3px
+		padding: 0 5px
+		border-radius: 2px
 		font-size: 10px
-		font-family: $f-add-2
-		margin-top: 15px
-		span
-			font-size: 14px
-			font-weight: 300
 .icon-favourite
 	width: 12px
 	height: 20px
@@ -659,8 +686,19 @@ a[href^="https://maps.google.com/maps?ll="]
 	display: inline-block
 .effect-price__value
 	display: inline-block
-	margin-left: 3px
 	line-height: 1.2
+	text-align: center
+	font-family: $f-add-2
+.icon-favourite_mobile
+	mask: url(../img/svg-pages/favourite.svg) no-repeat 50% 50%
+	background-color: #7B6B66
+	display: none
+	width: 30px
+	height: 30px
+	margin-bottom: -2px
+.img-effect__link img
+	width: 100%
+
 
 
 
@@ -755,7 +793,7 @@ a[href^="https://maps.google.com/maps?ll="]
 	width: 100%
 	height: 40px
 	bottom: -40px
-	max-width: 244px
+	max-width: 95%
 	left: 0
 	right: 0
 	margin: 0 auto
@@ -772,6 +810,8 @@ a[href^="https://maps.google.com/maps?ll="]
 	font-size: 18px
 	text-align: center
 	margin-top: 15px
+	position: relative
+	z-index: 2
 .owl-effects .owl-nav > div
 	width: 33px
 	height: auto
@@ -803,5 +843,377 @@ a[href^="https://maps.google.com/maps?ll="]
 
 
 
+// 06_effect_page
+.full-width
+	width: 100%
+.smeta__head
+	font-weight: 300
+	font-size: 24px
+	margin: 0 0 10px
+	line-height: 1
+.smeta__prices
+	font-weight: 300
+	font-size: 16px
+	margin: 3px 0
+	@include clearfix
+	line-height: 38px
+.smeta__price
+	color: $c-accent
+	font-size: 32px
+	font-weight: 500
+	float: right
+.smeta__value
+	font-weight: 24
+	font-weight: 500
+	color: $c-default
+.smeta-panel
+	border: 3px solid #A6A8AB
+	border-radius: 3px
+	padding: 14px
+.label_area
+	display: inline-block
+	font-weight: 300
+	font-size: 20px
+	margin-right: 15px
+	vertical-align: middle
+.smeta-panel__label-after
+	font-size: 20px
+	display: inline-block
+	font-weight: 300
+	margin-left: 10px
+	vertical-align: middle
+input[type="checkbox"]
+	display: inline-block
+	width: auto
+.smeta-checkbox
+	background: none
+	outline: none
+	border: none
+.input_area
+	display: inline-block
+	width: 85px
+	vertical-align: middle
+	padding: 0
+	text-align: center
+	line-height: 32px
+	border-color: #A6A8AB
+	font-size: 30px
+	margin-bottom: 0
+	font-weight: 300
+.btn_smeta
+	width: 100% !important
+	padding: 3px 0 !important
+	font-size: 24px !important
+	font-weight: 600
+	font-family: $f-head
+	vertical-align: middle
+	text-align: center
+	text-transform: none !important
+	margin-bottom: 0
+	margin-top: 10px
+	&:hover
+		background: #DB4B6C
+		color: #fff
+		text-decoration: none
+.smeta-panel__summary
+	font-size: 22px
+	font-weight: 300
+.summary__span
+	font-weight: 300
+	font-size: 30px
+.smeta-icon__camera
+	background-image: url(../img/svg-pages/camera.svg)
+	width: 40px
+	height: 25px
+.smeta-icon__visualisator
+	background-image: url(../img/svg-pages/visualisator.svg)
+	width: 29px
+	height: 39px
+.smeta-icon__favourite-2
+	background-image: url(../img/svg-pages/favourite-2.svg)
+	width: 19px
+	height: 39px
+.smeta-icon__calculator
+	background-image: url(../img/svg-pages/calculator.svg)
+	width: 26px
+	height: 38px
+.smeta-icon__text
+	font-weight: 300
+	display: inline-block
+	color: #9A8479
+	text-decoration: underline
+	font-size: 18px
+	vertical-align: middle
+	margin: 0
+.smeta-icons
+	margin: 16px 0 18px
+	@include clearfix
+	i
+		display: inline-block
+		background-size: contain
+		background-repeat: no-repeat
+		vertical-align: middle
+		margin-right: 3px
+.smeta-icon
+	float: left
+	margin-right: 27px
+.smeta-icon:last-child
+	margin-right: 0
+.smeta-icon:hover 
+	text-decoration: none
+	.smeta-icon__text
+		text-decoration: none
+.double-slider
+	margin-top: 10px
+.double-slider-text
+	text-align: center
+	font-size: 14px
+	font-weight: 300
+.owl-carousel.owl-double-slider.owl-loaded
+	display: inline-block
+	vertical-align: middle
+.owl-double-slider
+	width: 315px
+	.owl-item a
+		color: $c-default
+	.owl-nav > *
+		width: 13px
+		height: 27px
+		top: 26%
+	.owl-prev
+		left: -25px
+	.owl-next
+		right: -25px
+.double-slider__head
+	font-size: 19px
+	font-weight: 300
+	display: inline-block
+	color: #6D6E70
+	vertical-align: middle
+	line-height: 22px
+	margin-right: 40px
+	margin-bottom: 20px
+.js-owl-double-small
+	width: 152px
+.double-slider__item
+	display: inline-block
+.effect-page__text
+	font-size: 20px
+	font-family: $f-head
+	font-weight: 300
+	margin-bottom: -20px
+	margin-top: 20px
+.double-slider__item.pull-right
+	margin-right: 25px
+.position-relative
+	position: relative
+.img-top-panel
+	left: 0
+	right: 0
+	width: 100%
+	position: absolute
+	text-align: center
+	top: 10px
+	span
+		display: inline-block
+		font-size: 14px
+		font-family: $f-head
+		font-weight: 500
+		color: #fff
+		display: inline-block
+		background: #6E7177
+		border-radius: 2px
+		padding: 2px 10px
+.smeta-icon__mobile
+	display: none
+.mobile-message
+	display: none
+	clear: both
+.one_mobile_smeta_icon--calculator
+	background: url(../img/mobile-smeta-icon.png) 0px 0px 
+.one_mobile_smeta_icon--visualisator
+	background: url(../img/mobile-smeta-icon.png) -163px 0px 
+.one_mobile_smeta_icon--camera
+	background: url(../img/mobile-smeta-icon.png) -326px 0px 
+.one_mobile_smeta_icon--favourite
+	background: url(../img/mobile-smeta-icon.png) -489px 0px 
+.mobile-smeta-icons
+	display: flex
+	justify-content: space-between
+	margin-top: 25px
+.mobile-smeta-icons
+	& > *
+		display: none
+		width: 110px
+		height: 116px
+		max-width: 100%
+
+// поворот вокруг оси
+.rotate-item
+	transition: transform 0.5s
+	transform-style: preserve-3d
+	position: relative
+	.shadow-effect:after
+		background-size: 98% 7px
+		background-position: center top
+		z-index: 1
+	// z-index: 4
+.rotate__outer:hover .rotate-item
+	transform: rotateY(180deg) translateY(-10px)
+	z-index: 5
+	.rotate-back
+		z-index: 20
+.rotate-front
+	position: relative
+	z-index: 2
+.rotate-side
+	backface-visibility: hidden
+.rotate-back
+	transform: rotateY(180deg)
+	left: 50%
+	right: 0
+	top: 0
+	padding: 10px 12px 12px
+	position: absolute
+	z-index: 10
+	background: #EFEFEF
+	border: 1px solid #8C8C8C
+	width: 200px
+	margin-left: -100px
+.area-3d
+	perspective: 0px
+.rotate-text__main
+	font-family: $f-head
+	font-size: 14px
+	text-decoration: underline
+	color: $c-head
+	display: block
+.rotate-text__number,
+.rotate-text__descr
+	font-size: 12px
+	color: $c-default
+	margin: 0
+	line-height: 1
+.rotate-text
+	margin-bottom: 5px
+	line-height: 1
+.rotate-text__number
+	display: inline-block
+	margin-right: 5px
+.btn_rotate
+	background: #87736B
+	border-radius: 2px
+	font-size: 11px
+	color: #fff
+	padding: 2px 7px
+	margin: 5px 3px 5px 0
+	&:hover
+		color: #fff
+		text-decoration: none
+		background: #60524D
+.rotate-footer__text
+	color: $c-head
+	text-decoration: underline
+	font-size: 18px
+.rotate__outer
+	.text-light
+		color: $c-head
+		font-weight: 300
+		position: relative
+		z-index: 1
+
+
+
+
+// tabs
+.tab-head
+	font-size: 32px
+	font-weight: 300
+.tab-article
+	font-size: 12px
+	font-weight: 300
+.tab-slider__head
+	color: #888
+	font-size: 26px
+.ol-li
+	display: inline-block
+	border-radius: 50px
+	background: #9A8479
+	width: 20px
+	height: 20px
+	text-align: center
+	font-size: 13px
+	vertical-align: middle
+	line-height: 1.5
+	margin-right: 10px
+	margin-top: -3px
+.ol-li__inner
+	background: #FACBCC
+	color: #fff
+	display: inline-block 
+	line-height: 1
+.instruction
+	list-style-type: none
+	margin: 0
+	padding: 0
+	p
+		font-size: 20px
+		font-weight: 300
+		font-family: $f-default
+		margin-bottom: 10px
+	li
+		margin-bottom: 10px
+.p_big
+	font-size: 20px
+	font-weight: 300
+	font-family: $f-default
+.comment
+	margin-top: 10px
+	padding: 25px 35px 25px 90px
+	background: #9E9872 url(../img/svg-pages/testimonial.svg) no-repeat 20px 25px
+	background-size: 42px 
+	font-style: italic
+	font-family: $f-default
+	font-size: 20px
+	color: #fff
+.tab-slider__text
+	font-size: 12px
+.tab-slider
+	text-align: center
+	a
+		color: $c-default
+	.owl-nav 
+		& > *
+			width: 15px
+			top: 30px
+			height: 30px
+		.owl-prev
+			left: 0
+		.owl-next
+			right: 0
+
+
+
+// звёзды
+.stars
+	> div
+		display: inline-block
+		width: 40px
+		height: 40px
+		background-size: contain
+		background-repeat: no-repeat
+.full-star
+	background: url(../img/svg-pages/star-full.svg)
+.empty-star
+	background: url(../img/svg-pages/star.svg)
+.tab-stars
+	margin-top: 50px
+
+
+
+
+
+.smeta-price_mobile
+	display: none
 
 @import "media"

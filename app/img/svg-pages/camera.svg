@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.58 25.73">
+  <defs>
+    <style>
+      .a {
+        fill: #998379;
+      }
+    </style>
+  </defs>
+  <title>camera</title>
+  <path class="a" d="M8920.84,513.09v-3.65h-14.62v4.21h0v21.53h40.57V513.09h-26Zm-3.08,5.31h-9.31V512h9.31v6.37Zm15.48,14.38a8.08,8.08,0,1,1,8.08-8.08A8.08,8.08,0,0,1,8933.25,532.78Z" transform="translate(-8906.22 -509.43)"/>
+</svg>
