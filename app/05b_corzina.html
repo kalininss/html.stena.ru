@@ -22,8 +22,7 @@
 	<style>@@include('header.min.css')</style>
 	
 
-	<!-- Доп. шрифт open-sans: 600, подключается здесь и на 7 странице --> <!-- todo: одинаковые шрифты на всех страницах -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300,400,600,600,700|Roboto+Condensed:300,400|Roboto:300,300i,500,700|Lobster&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300,400,600,700|Roboto+Condensed:300,400|Roboto:300,300i,500,700|Lobster&subset=cyrillic" rel="stylesheet">
 
 	<!-- Load sprite.svg -->
 	<script>!function(a,b){"use strict";var c="img/sprite.symbol.svg",d=1;if(!b.createElementNS||!b.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var f,g,e="localStorage"in a&&null!==a.localStorage,h=function(){b.body.insertAdjacentHTML("afterbegin",g)},i=function(){b.body?h():b.addEventListener("DOMContentLoaded",h)};if(e&&localStorage.getItem("inlineSVGrev")==d&&(g=localStorage.getItem("inlineSVGdata")))return i(),!0;try{f=new XMLHttpRequest,f.open("GET",c,!0),f.onload=function(){f.status>=200&&f.status<400&&(g=f.responseText,i(),e&&(localStorage.setItem("inlineSVGdata",g),localStorage.setItem("inlineSVGrev",d)))},f.send()}catch(j){}}(window,document);</script>
@@ -31,75 +30,19 @@
 
 </head>
 
+
 <!-- 
-Класс front-page определяет вид topline меню, 
-сейчас оно будет прозрачным и серым
+Класс common-page определяет вид topline меню, 
+сейчас оно будет синим и непрозрачным
 -->
-<!-- todo: TOP LINE ON SCROLL & BURGER MENU  вынести из хедера во всех страницах, уже вынесено на странице 07 -->
-<body class="front-page">
+<body class="common-page">
 
 
-
-	<!-- TOP LINE ON SCROLL -->
-	<div class="topline-scroll">
-		<div class="container-fluid container-lg-static">
-			<div class="row">
-				<div class="col-xs-2">
-					<a href="/" class="logo"><svg class="topline-scroll__logo"><use xlink:href="#02_Logo"></use></svg></a>
-				</div><!-- col -->
-
-				<div class="col-xs-8">
-					<div class="topline-scroll__contact">
-						<a href="tel:+74999777007">+7 (499) 977-70-07</a>
-						<a href="#popup--call-back" class="js-open-popup link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
-							<p class="footer-phone-svg__text">Обратный звонок</p>
-						</a>
-					</div>
-				</div><!-- col -->
-
-				<div class="col-xs-2">
-					<svg class="topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
-				</div><!-- col -->
-
-			</div>
-		</div><!-- container-fluid -->
-	</div><!-- topline-scroll -->
-
-	<!-- BURGER MENU -->
-	<div class="scroll-menu">
-		<div class="scroll-menu__header">
-			<svg class="logo__svg"><use xlink:href="#03_Logo"></use></svg>
-			<svg class="scroll-menu--close js-open-scroll-menu"><use xlink:href="#48_Close"></use></svg>
-		</div>
-		<nav class="nav scroll-menu__nav">
-			<ul class="list">
-				<li><a href="#">Главная</a></li>
-				<li><a href="#">О компании</a></li>
-				<li><a href="#">Подбор покрытия</a></li>
-				<li><a href="#">Каталог</a></li>
-				<li><a href="#">Галерея интерьеров</a></li>
-				<li><a href="#">Услуги</a></li>
-				<li><a href="#">Где купить</a></li>
-				<li><a href="#" class="js-open-scroll-search">Поиск <i class="icon-plus"></i></a></li>
-				<form class="scroll-search">
-					<input id="to-focus2" class="scroll-search__input brown_placeholder" type="text" name="stop" autocomplete="off" required placeholder="Ваш запрос">
-					<button class="scroll-search__sumbit"><svg class="svg_10"><use xlink:href="#10_search"></use></svg></button>
-				</form>
-			</ul>
-		</nav>
-		<div class="scroll-menu__footer">
-			<a href="#popup--call-back" class="link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
-				<p class="footer-phone-svg__text">Обратный звонок</p>
-			</a>
-		</div>
-	</div>
-	<div class="bg-dark"></div><!-- фон при выдвижении меню -->
-
-	<header class="header js-parallax">
+	<header class="header">
 
 		<!-- TOP LINE -->
 		<div class="header__topline topline">
-			<div class="container-fluid container-lg-static">	
+			<div class="container-fluid">	
 				<div class="row">
 					<div class="col-lg-2 col-sm-9 col-xs-9 col-topline-logo">
 						<svg class="logo-menu topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
@@ -135,7 +78,7 @@
 								<svg class="svg_06"><use xlink:href="#07_cabinet"></use></svg>
 								<span class="img-button_cabinet__text">06</span>
 							</a>
-							<a href="#" class="extra__item img-button img-button_favorites">
+							<a href="#popup--favourite" class="js-open-popup extra__item img-button img-button_favorites">
 								<svg class="svg_06"><use xlink:href="#08_favorites"></use></svg>
 								<span class="img-button_favorites__text">23</span>
 							</a>
@@ -149,37 +92,61 @@
 			</div><!-- container-fluid -->
 		</div><!-- topline -->
 
-		<!-- SLIDER -->
-		<div class="header__slider owl-header-front owl-carousel" style="display: block;">
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
-		</div><!-- owl-carousel -->
+		<!-- TOP LINE ON SCROLL -->
+		<div class="topline-scroll">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-2">
+						<a href="/" class="logo"><svg class="topline-scroll__logo"><use xlink:href="#02_Logo"></use></svg></a>
+					</div><!-- col -->
+
+					<div class="col-xs-8">
+						<div class="topline-scroll__contact">
+							<a href="tel:+74999777007">+7 (499) 977-70-07</a>
+							<a href="#popup--call-back" class="js-open-popup link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
+								<p class="footer-phone-svg__text">Обратный звонок</p>
+							</a>
+						</div>
+					</div><!-- col -->
+
+					<div class="col-xs-2">
+						<svg class="topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
+					</div><!-- col -->
+
+				</div>
+			</div><!-- container-fluid -->
+		</div><!-- topline-scroll -->
+
+		<!-- BURGER MENU -->
+		<div class="scroll-menu">
+			<div class="scroll-menu__header">
+				<svg class="logo__svg"><use xlink:href="#03_Logo"></use></svg>
+				<svg class="scroll-menu--close js-open-scroll-menu"><use xlink:href="#48_Close"></use></svg>
+			</div>
+			<nav class="nav scroll-menu__nav">
+				<ul class="list">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Подбор покрытия</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Галерея интерьеров</a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Где купить</a></li>
+					<li><a href="#" class="js-open-scroll-search">Поиск <i class="icon-plus"></i></a></li>
+					<form class="scroll-search">
+						<input id="to-focus2" class="scroll-search__input brown_placeholder" type="text" name="stop" autocomplete="off" required placeholder="Ваш запрос">
+						<button class="scroll-search__sumbit"><svg class="svg_10"><use xlink:href="#10_search"></use></svg></button>
+					</form>
+				</ul>
+			</nav>
+			<div class="scroll-menu__footer">
+				<a href="#popup--call-back" class="link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
+					<p class="footer-phone-svg__text">Обратный звонок</p>
+				</a>
+			</div>
+		</div>
+		<div class="bg-dark"></div><!-- фон при выдвижении меню -->
+
 
 	</header>
 
@@ -190,257 +157,129 @@
 	<!--  -->
 	<main class="main">
 
-		<section class="s-image-list">
+		<nav class="breadcrump container-fluid container-lg-static">
+			<ul>
+				<li><a href="#">Главная</a></li>
+				<li>Кабинет</li>
+			</ul>
+		</nav>
+
+		<section class="s-cart">
+			
 			<div class="container-fluid container-lg-static">
-				<h2 class="accent-header">Декоративные эффекты, которые тра-ля-ля</h2>
-				<div class="row image-list">
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
+				<div class="clearfix greeting">
+					<h6 class="text-light pull-left">Здравствуйте, Николай!</h6>
+					<h6 class="pull-right"><a class="link_reverse grey-link text-medium" href="#">Выйти</a></h6>
 				</div>
 			</div>
-		</section>
 
-		<section class="s-front-text">
 			<div class="container-fluid container-lg-static">
-				<h1 class="front-h1">Декоративная штукатурка и материалы для отделки стен</h1>
-				<p class="front-p">Специализация нашей компании - продажа и декоративная отделка фасадов и интерьеров современными французскими декоративными покрытиями Clavel. <br>Работая на рынке с 1995 года, мы накопили достаточно опыта, чтобы предлагать нашим заказчикам декоративную отделку в лучших мировых традициях , но с применением современных технологий.</p>
-				<p class="front-p">Компания «Стена-Клавель» занимается проектированием, производством и строительством деревянных домов из клееного бруса.  «Стена-Клавель» строит частные дома и коттеджные поселки, по индивидуальным и типовым проектам. Вы можете заказать как отдельные виды услуг, так и деревянный дом под ключ: фундамент, стены, окна, кровля, электрика, инженерные системы.</p>
-			</div>
-		</section>
 
-		<section class="s-parallax s-parallax_right">
-			<div class="parallax-img parallax-img__uslugi js-parallax"></div>
-			<div class="container-fluid container-lg-static parallax-container">
-				<div class="panel panel_right js-parallax">
-					<h2 class="panel__head"><a href="#" class="link_white link_reverse">Услуги</a></h2>
-					<p class="panel__descr">делаем  ремонт комфортным,<br>а результат впечатляющим</p>
-				</div>
-			</div>
-		</section>
+				<div class="cart">
+					<div class="cart--header">
+						<div class="cart--title">Артикул</div>
+						<div class="cart--title">Наименование товара</div>
+						<div class="cart--title">Фасовка</div>
+						<div class="cart--title">Цена</div>
+						<div class="cart--title">Количество</div>
+						<div class="cart--title">Сумма</div>
+						<div class="cart--title">Сравнить</div>
+					</div>
 
-
-		<section class="s-image-list">
-			<div class="container-fluid container-lg-static">
-				<h2 class="accent-header">Идеи для ваших интерьеров</h2>
-				<div class="row image-list">
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-					<div class="col-md-3 col-xs-4 image-list__item">
-						<a href="#" class="wow zoomIn hover-lines clearfix">
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<div class="hover-lines__line"></div>
-							<img src="img/img-effect.jpg" alt="">
-							<h3 class="hover-lines_content">Декоративные краски</h3>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="s-parallax s-parallax_left">
-			<div class="parallax-img parallax-img__sotrudn js-parallax"></div>
-			<div class="parallax-slider">
-				<div class="container-fluid container-lg-static parallax-container">
-					<div class="panel panel_left js-parallax">
-						<h2 class="panel__head"><a href="#" class="link_white link_reverse">Сотрудничество</a></h2>
-						<p class="panel__descr">Станьте дилером декоративных <br>покрытий Clavel  в вашем городе.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="s-front-contact">
-			<div class="container-fluid container-lg-static">
-				<div class="row">
-					<div class="col-sm-12">
-						<h2 class="accent-header hidden-lg t-center">Салоны Stena-Clavel в Москве</h2>
-					</div>
-					<div class="col-lg-5 col-md-8 col-xs-7 col-xxs-12">
-						<h2 class="accent-header visible-lg-block">Салоны Stena-Clavel в Москве</h2>
-						<div id="map"></div>
-						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_UZtFriSt4MRiJnc6SuGzpMeiKY94igo&callback=initMap" async defer></script>
-						<script>
-							function initMap() {
-								var styleArray = [{"fearureType":"all","elementType":"labels.text","stylers":[{"visibility":"on"},{"color":"#868080"},{"weight":0.1}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":56}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}];
-								var map = new google.maps.Map(document.getElementById('map'), {
-									center: {lat: -34.397, lng: 150.644},
-									scrollwheel: false,
-									styles: styleArray,
-									zoom: 8,
-									zoomControl: true,
-									mapTypeControl: false,
-									scaleControl: false,
-									streetViewControl: true,
-									rotateControl: false
-								});
-								var image = 'img/39_geomarker.png';
-								var marker = new google.maps.Marker({
-									position: {lat: -34.397, lng: 150.644},
-									label: "1",
-									icon: image,
-									map: map
-								});
-							}
-						</script>
-					</div>
-					<div class="col-lg-3 col-md-4 col-xs-5 col-xs-full">
-						<div class="panel_white panel-diller">
-							<h3 class="accent-header">Найти дилера</h3>
-							<form>
-								<div class="input-button clearfix">
-									<input name="s" class="input-button__input" type="text" placeholder="Введите город" required>
-									<button class="input-button__submit">
-										<svg>
-											<use xlink:href="#10_search"></use>
-										</svg>
-									</button>
-								</div>
-							</form>
-						</div>
-						<div class="panel_white t-center">
-							<h3 class="accent-header accent-header_small">Отправить сообщение</h3>
-							<form>
-								<input name="n" class="" type="text" placeholder="Имя" required>
-								<input name="e" class="" type="text" placeholder="Email" required>
-								<textarea name="m" placeholder="Сообщение"></textarea>
-								<input type="submit" value="Отправить">
-							</form>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="panel_white panel_front-news">
-							<h3 class="accent-header t-center">Новости</h3>
-							<div class="front-news">
-								<div class="front_news__item">
-									<p class="pink">2016-03-08</p>
-									<a href="#">Видео нанесения декоративной краски Totem</a>
-								</div>
-								<div class="front_news__item">
-									<p class="pink">2016-03-08</p>
-									<a href="#">Мозаичная краска и флоки сертифицированы по классу пожарной безопасности на категорию КМ-1</a>
-								</div>
-								<div class="front_news__item">
-									<p class="pink">2016-03-08</p>
-									<a href="#">Новое фасадное покрытие -"камешковая штукатурка Koncepto - уже в продаже.</a>
-								</div>
-								<div class="front_news__item">
-									<p class="pink">2016-03-08</p>
-									<a href="#">Новое фасадное покрытие -"камешковая штукатурка Koncepto - уже в продаже.</a>
-								</div>
+					<!-- start row -->
+					<div class="cart--row">
+						<div class="cart--articul">0-186-003</div>
+						<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
+						<div class="cart--other">
+							<a href="#" class="cart--name">Intuel</a>
+							<div class="cart--weight">5 кг</div>
+							<div class="cart--price">3 496 руб.</div>
+							<div class="cart--count">
+								<input class="cart--input" type="number" name="n1" id="n1" value="1">
+								<label for="n1">шт.</label>
 							</div>
+							<div class="cart--summ">3 496 руб.</div>
+							<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch1" id="ch1"><label for="ch1"></label></div>
+							<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
+							<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы</div>
 						</div>
 					</div>
+					<!-- end row -->
+
+					<!-- start row -->
+					<div class="cart--row">
+						<div class="cart--articul">0-186-003</div>
+						<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
+						<div class="cart--other">
+							<a href="#" class="cart--name">Intuel</a>
+							<div class="cart--weight">5 958 кг</div>
+							<div class="cart--price">96 руб.</div>
+							<div class="cart--count">
+								<input class="cart--input" type="number" name="n2" id="n2" value="1">
+								<label for="n2">шт.</label>
+							</div>
+							<div class="cart--summ">3 496 руб.</div>
+							<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch2" id="ch2" checked><label for="ch2"></label></div>
+							<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
+							<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы</div>
+						</div>
+					</div>
+					<!-- end row -->
+
+					<!-- start row -->
+					<div class="cart--row">
+						<div class="cart--articul">0-186-003</div>
+						<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
+						<div class="cart--other">
+							<a href="#" class="cart--name">Intuel</a>
+							<div class="cart--weight">5 кг</div>
+							<div class="cart--price">6 руб.</div>
+							<div class="cart--count">
+								<input class="cart--input" type="number" name="n3" id="n3" value="98">
+								<label for="n3">шт.</label>
+							</div>
+							<div class="cart--summ">9 323 496 руб.</div>
+							<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch3" id="ch3"><label for="ch3"></label></div>
+							<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
+							<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы Декоративное покрытие с эффектом стен ручной работы Декоративное покрытие с эффектом стен ручной работы Декоративное покрытие с эффектом стен ручной работы</div>
+						</div>
+					</div>
+					<!-- end row -->
+
+					<!-- start row -->
+					<div class="cart--row">
+						<div class="cart--articul">0-186-003</div>
+						<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
+						<div class="cart--other">
+							<a href="#" class="cart--name">Intuel</a>
+							<div class="cart--weight">5 кг</div>
+							<div class="cart--price">1 243 496 руб.</div>
+							<div class="cart--count">
+								<input class="cart--input" type="number" name="n4" id="n4" value="1">
+								<label for="n4">шт.</label>
+							</div>
+							<div class="cart--summ">3 496 руб.</div>
+							<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch4" id="ch4" checked><label for="ch4"></label></div>
+							<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
+							<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы</div>
+						</div>
+					</div>
+					<!-- end row -->
+
+					<div class="cart--footer">
+						<span class="cart--footer-summ">Итого: </span>
+						<span>453 346 руб.</span>
+						<div class="btn--send-outer">
+							<a href="#" class="btn btn--send btn--send_reverse">Заказать</a>
+						</div>
+					</div>
+
 				</div>
 			</div>
+
 		</section>
+
+
 
 	</main>
 	<!--  -->
@@ -552,6 +391,11 @@
 	<!-- Start popup -->
 	<!--  -->
 	<div id="popup--mesage-success" class="white-popup white-popup--message mfp-hide">
+		<p class="t-center">Ваше сообщение успешно отправлено. Мы свяжемся с  Вами в течение рабочего дня</p>
+		<svg class="close-button--logo"><use xlink:href="#02_Logo"></use></svg>
+	</div>
+
+	<div id="popup--favourite" class="white-popup white-popup--message mfp-hide">
 		<p class="t-center">Ваше сообщение успешно отправлено. Мы свяжемся с  Вами в течение рабочего дня</p>
 		<svg class="close-button--logo"><use xlink:href="#02_Logo"></use></svg>
 	</div>

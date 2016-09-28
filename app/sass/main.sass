@@ -360,7 +360,7 @@ div.gm-style div div div div div div div
 
 // 
 #map
-	height: 415px
+	height: 435px
 	background: #333
 .link_white
 	color: #fff
@@ -369,6 +369,8 @@ div.gm-style div div div div div div div
 	border: 1px solid #707070
 	padding: 0 10px
 	margin-top: 30px
+	input[type="submit"]
+		margin-bottom: 14px
 	.accent-header
 		margin: 5px 0
 .s-front-contact
@@ -409,7 +411,7 @@ input[type="submit"]
 	margin: 11px 0
 	display: inline-block
 .front-news
-	min-height: 403px
+	min-height: 423px
 
 
 // footer
@@ -540,7 +542,7 @@ footer
 	display: inline-block
 	z-index: 5
 	right: 50%
-	margin-right: -825px
+	margin-right: -425px
 	top: 185px
 	svg
 		width: 94px
@@ -1070,6 +1072,7 @@ input[type="checkbox"]
 	backface-visibility: hidden
 .rotate-back
 	transform: rotateY(180deg)
+	box-shadow: 5px 5px 12px rgba(0,0,0,.7)
 	left: 50%
 	right: 0
 	top: 0
@@ -1082,6 +1085,8 @@ input[type="checkbox"]
 	margin-left: -100px
 .area-3d
 	perspective: 0px
+	> div
+		width: 1070px
 .rotate-text__main
 	font-family: $f-head
 	font-size: 14px
@@ -1215,5 +1220,273 @@ input[type="checkbox"]
 
 .smeta-price_mobile
 	display: none
+
+.cabinet--button
+	max-width: 400px
+	display: block
+	width: 100%
+	font-size: 22px
+	font-weight: 300
+	text-align: center
+	padding: 3px 5px
+	background: #2F4B77
+	color: #fff
+	border-radius: 5px
+	margin-bottom: 15px
+	&:hover
+		background: #163B72
+		text-decoration: none
+		color: #fff
+	&:active
+		background: #2F4B77
+	&:focus
+		text-decoration: none
+		color: #fff
+.cabinet--button_red
+	background: #B22828
+	&:hover
+		background: #AD0C0C
+	&:active
+		background: #B22828
+.manager_img
+	margin-right: 10px
+	margin-left: 80px
+.manager-text
+	font-weight: 300
+	margin-top: 0
+	line-height: 1.35
+	a
+		color: $c-default
+.manager_subhead
+	font-style: italic
+.excel
+	color: $c-default
+	float: right
+	margin-top: -27px
+	&:hover
+		color: $c-default
+		text-decoration: none
+.excel-icon
+	width: 25px
+	height: 22px
+	display: inline-block
+	vertical-align: middle
+.excel_head
+	display: inline-block
+	font-size: 9px
+	font-weight: bold
+	font: bold 9px $f-head
+	vertical-align: middle
+	text-align: left
+
+
+.order_panel
+	margin-top: 20px
+.order_panel--header
+	background: #526989
+	font-size: 28px
+	font-weight: 500
+	color: #fff
+	padding: 10px 20px
+	margin-bottom: 50px
+.order_panel--footer
+	background: #526989
+	padding: 24px 64px 24px 20px
+	text-align: right
+.order_panel--row
+	margin-bottom: 15px
+.btn--send
+	color: #CEDAE7
+	background: #526988
+	border-radius: 3px
+	padding: 5px 40px
+	vertical-align: middle
+	margin-left: 100px
+	font-size: 18px
+	font-family: $f-head
+	&:hover
+		background: #2F5784
+		color: #CEDAE7
+		text-decoration: none
+	&:active
+		background: #526988
+	&:focus
+		color: #CEDAE7
+		text-decoration: none
+.btn--send_reverse
+	background: #CEDAE7
+	color: #526988
+	&:hover
+		background: #9BBFE0
+		color: #526988
+	&:active
+		background: #CEDAE7
+	&:focus
+		color: #526988
+.order-text
+	display: inline-block
+	vertical-align: middle
+	color: #595959
+	font-size: 20px
+	font-weight: 300
+	margin-right: 45px
+.b-plus
+	display: inline-block
+	border: 1px solid #444444
+	width: 31px
+	height: 31px
+	position: relative
+	vertical-align: middle
+	&:after,
+	&:before
+		display: inline-block
+		content: ''
+		position: absolute
+		background: #444
+		top: 50%
+		left: 50%
+		transition: 0.3s
+	&:after
+		width: 18px
+		height: 1px
+		margin-left: -9px
+	&:before
+		width: 1px
+		height: 18px
+		margin-top: -9px
+.b-plus_exit
+	border: none
+	&:after
+		transform: rotate(45deg)
+	&:before
+		transform: rotate(45deg)
+.order-text_price
+	margin-right: 210px
+
+
+
+// cart
+.s-cart
+	margin-bottom: 100px
+.cart--header,
+.cart--footer
+	background: #8396B5
+	color: #fff
+	padding: 10px 20px
+	font-size: 22px
+	font-weight: 500
+	margin-bottom: 30px
+.cart--footer
+	text-align: right
+	padding-right: 17.5%
+.cart--footer-summ
+	margin-right: 40px
+.cart--title
+	display: inline-block
+	&:nth-child(1)
+		width: 8%
+	&:nth-child(5)
+		width: 13%
+	&:nth-child(6)
+		width: 10%
+	&:nth-child(7)
+		width: 10%
+	&:nth-child(3)
+		width: 10%
+	&:nth-child(2)
+		width: 33%
+	&:nth-child(4)
+		width: 9%
+.cart--row
+	font-weight: 500
+	font-size: 18px
+	padding: 0 20px
+	margin-bottom: 50px
+	> *
+		display: inline-block
+		vertical-align: middle
+.cart--articul
+	width: 8%
+	margin-bottom: 15px
+.cart--img
+	width: 8%
+.cart--other
+	width: 83%
+	> *
+		display: inline-block
+		vertical-align: middle
+		text-align: center
+.cart--name
+	width: 30%
+	font-size: 24px
+	color: $c-default
+	text-decoration: underline
+	text-align: left
+	&:hover
+		color: $c-default
+		text-decoration: none
+.cart--weight
+	width: 9.5%
+.cart--price
+	width: 12%
+.cart--count
+	width: 10%
+	margin-left: 3.5%
+.cart--summ
+	width: 14%
+.cart--compare
+	width: 5%
+	margin-left: 4.5%
+	line-height: 0
+.cart--remove
+	float: right
+	margin-top: 4px
+.cart--decsr
+	font-size: 14px
+	font-weight: 300
+	text-decoration: underline
+	display: block
+	text-align: left
+	margin-top: 6px
+.cart--input
+	display: inline-block
+	width: auto
+	padding: 6px 0
+	width: 50px
+	text-align: center
+	line-height: 16px
+	font-weight: 300
+	border: 1px solid $c-head
+	margin-bottom: 0
+	& + label
+		font-weight: 300
+		font-size: 18px
+.cart--compare
+	input[type="checkbox"]
+		display: none            
+	input[type="checkbox"] + label
+		cursor: pointer
+		line-height: 0
+	input[type="checkbox"] + label::before
+		content: ""
+		display: inline-block
+		height: 25px
+		width: 25px
+		background: url(../img/svg-pages/check.svg) center -20px no-repeat
+		background-size: 14px
+		transition: 0.1s
+		border: 1px solid $c-head
+		padding: 4px
+	input[type="checkbox"]:checked + label::before
+		background-position: center center
+.greeting
+	margin-bottom: 20px
+.cart--footer
+	.btn--send_reverse
+		margin: 10px 0 5px
+		font-weight: 600
+.mobile-smeta-icons
+	display: none
+
 
 @import "media"

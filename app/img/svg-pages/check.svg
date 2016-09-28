@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.38 15.55">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #444;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>check</title>
+  <polyline class="a" points="0.91 4.97 4.85 13.41 12.52 0.51"/>
+</svg>
