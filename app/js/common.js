@@ -1,5 +1,33 @@
 $(function() {
 
+	// page #12 plus button
+	$('.mega_plus').click(function(){
+		var temp = $(this);
+		if (!temp.hasClass('started')) {
+			$(this).toggleClass('clicked').addClass('started').closest('.section_service').find('.hidden_info').slideToggle(500, function(){
+				temp.removeClass('started');
+			});
+		}
+	});
+
+	// page #6, rotate panels
+	$('.js-rotate').click(function(){
+		$(this).closest('.rotate').toggleClass('rotated');
+	});
+	$('.rotate-item').on( {
+		'mouseenter':function() { $(this).find('.rotate').fadeIn(300); }
+	});
+	$('.rotate').on( {
+		'mouseleave':function() { $(this).fadeOut(300).removeClass('rotated');}
+	});
+
+	// фильтр по цене
+	try {
+		startRange();
+	} catch (err) {
+		// функция находится в файле 08_vybor_pokrytia.html
+	}
+
 	// tabs on page 7
 	$(".tab_item").not(":first").hide();
 	$(".wrapper .tab").click(function() {
@@ -114,6 +142,16 @@ $(function() {
 		}
 	});
 
+	// ui_order page #8
+	$(".ui_order").click(function(){
+		$(this).toggleClass('reverse');
+	});
+
+	// open next
+	$(".js-open-next").click(function(){
+		$(this).next().toggleClass('opened');
+	});
+
 	// Open scroll-topline menu
 	$(".js-open-scroll-menu").click(function(){
 		$(".scroll-menu").toggleClass("opened");
@@ -124,7 +162,7 @@ $(function() {
 	$(window).scroll(function() {
 		if ( $("body").scrollTop() > 540 ) {
 			$(".topline-scroll").addClass("opened");
-			$("header").addClass("no-transform");
+			// $("header").addClass("no-transform");
 		}
 		else {
 			$(".topline-scroll").removeClass("opened");

@@ -353,3 +353,44 @@ select
 	td
 		padding: 5px 0
 		width: 33%
+
+
+// page service
+.page-parallax_relative
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,0.56)
+		display: block
+		z-index: 2
+		top: 0
+.page-parallax--container
+	position: absolute
+	left: 0
+	right: 0
+	z-index: 10
+	top: 50%
+	margin-top: -120px
+.page-parallax--head
+	text-align: center
+	font-size: 100px
+	font-weight: 300
+	text-transform: uppercase
+	color: #fff
+.page-parallax--text
+	font-size: 24px
+	font-weight: 300
+	color: #fff
+	text-align: center
+	max-width: 1170px
+	margin: 50px auto 0
+.page-parallax--breadcrump
+	position: absolute
+	z-index: 4
+	top: 80px
+	color: #fff
+	ul li a
+		color: #fff

@@ -64,7 +64,8 @@ gulp.task('libs', function() {
 		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
 		'app/libs/masked-input/masked-input.js',
 		'app/libs/wow/dist/wow.min.js',
-		'app/libs/picturefill/dist/picturefill.min.js'
+		'app/libs/picturefill/dist/picturefill.min.js',
+		'app/libs/nouislider/nouislider.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())

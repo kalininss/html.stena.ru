@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Titled</title>
+	<title>08 Выбор покрытия</title>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -22,7 +22,7 @@
 	<style>@@include('header.min.css')</style>
 	
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300,400,600,700|Roboto+Condensed:300,400|Roboto:300,300i,500,700|Lobster&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,700|Roboto+Condensed:300,700|Roboto:300,500,700|Lobster&subset=cyrillic" rel="stylesheet">
 
 	<!-- Load sprite.svg -->
 	<script>!function(a,b){"use strict";var c="img/sprite.symbol.svg",d=1;if(!b.createElementNS||!b.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var f,g,e="localStorage"in a&&null!==a.localStorage,h=function(){b.body.insertAdjacentHTML("afterbegin",g)},i=function(){b.body?h():b.addEventListener("DOMContentLoaded",h)};if(e&&localStorage.getItem("inlineSVGrev")==d&&(g=localStorage.getItem("inlineSVGdata")))return i(),!0;try{f=new XMLHttpRequest,f.open("GET",c,!0),f.onload=function(){f.status>=200&&f.status<400&&(g=f.responseText,i(),e&&(localStorage.setItem("inlineSVGdata",g),localStorage.setItem("inlineSVGrev",d)))},f.send()}catch(j){}}(window,document);</script>
@@ -78,7 +78,7 @@
 								<svg class="svg_06"><use xlink:href="#07_cabinet"></use></svg>
 								<span class="img-button_cabinet__text">06</span>
 							</a>
-							<a href="#popup--favourite" class="js-open-popup extra__item img-button img-button_favorites">
+							<a href="#" class="extra__item img-button img-button_favorites">
 								<svg class="svg_06"><use xlink:href="#08_favorites"></use></svg>
 								<span class="img-button_favorites__text">23</span>
 							</a>
@@ -160,126 +160,387 @@
 		<nav class="breadcrump container-fluid container-lg-static">
 			<ul>
 				<li><a href="#">Главная</a></li>
-				<li>Кабинет</li>
+				<li>Выбор покрытия</li>
 			</ul>
 		</nav>
 
-		<section class="s-cart">
+		<article class="article-page container-fluid container-lg-static">
+
+			<h1 class="article__h1">Выбор покрытия</h1>
 			
-			<div class="container-fluid container-lg-static">
-				<div class="clearfix greeting">
-					<h6 class="text-light pull-left">Здравствуйте, Николай!</h6>
-					<h6 class="pull-right"><a class="link_reverse grey-link text-medium" href="#">Выйти</a></h6>
+			<div class="filter">
+				<div class="filter--tabs wrapper clearfix">
+					<div class="filter--label">ФИЛЬТР:</div>
+					<div class="tabs">
+						<span class="tab">Цена</span>
+						<span class="tab">Эффект</span>
+						<span class="tab">Стиль</span>
+						<span class="tab">Стиль покрытия</span>
+					</div>
+					<div class="filter--select unreal_select">
+						<div class="unreal_select--label js-open-next">Сортировать</div>
+						<div class="unreal_select--options">
+							<div class="unreal_select--item selected"><a href="#">Алфавиту</a> <div class="ui_order"><i></i></div></div>
+							<div class="unreal_select--item"><a href="#">Цене</a></div>
+							<div class="unreal_select--item"><a href="#">Новинкам</a></div>
+							<div class="unreal_select--item"><a href="#">Визуализации</a></div>
+							<div class="unreal_select--item"><a href="#">Паропроницаемости</a></div>
+							<div class="unreal_select--item"><a href="#">Влагостойкости</a></div>
+							<div class="unreal_select--item"><a href="#">Прочности</a></div>
+							<div class="unreal_select--item"><a href="#">Элестичности</a></div>
+							<div class="unreal_select--item"><a href="#">Сложности</a></div>
+						</div>
+					</div>
+					<div class="tab_content">
+						<div class="tab_item">
+							<div class="input_price">
+								<label class="input_price--label" for="n1">от</label>
+								<input class="input_price--input" type="number" value="10000" name="n1" id="n1">
+							</div>
+							<div class="input_price">
+								<label class="input_price--label" for="n2">до</label>
+								<input class="input_price--input" type="number" value="10000" name="n2" id="n2">
+								<div class="input_price--value">руб./кв.м.</div>
+							</div>
+							<div class="multiply_range--outer">
+								<div class="multiply_range" id="range"></div>
+							</div>
+							<script>
+								function startRange() {
+									var range = document.getElementById('range');
+
+									noUiSlider.create(range, {
+										start: [ 20, 5000 ], // Handle start position
+										step: 1, // Slider moves in increments of '10'
+										margin: 20, // Handles must be more than '20' apart
+										connect: true, // Display a colored bar between the handles
+										behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+										range: { // Slider can select '0' to '100'
+										'min': 0,
+										'max': 10000
+									}
+								});
+
+									var valueInput1 = document.getElementById('n1'),
+									valueInput2 = document.getElementById('n2');
+
+									// When the slider value changes, update the input and span
+									range.noUiSlider.on('update', function( values, handle ) {
+										if ( handle ) {
+											valueInput2.value = ~~values[handle];
+										} else {
+											valueInput1.value = ~~values[handle];
+										}
+									});
+
+									// When the input changes, set the slider value
+									valueInput1.addEventListener('change', function(){
+										range.noUiSlider.set([this.value, null]);
+									});
+									valueInput2.addEventListener('change', function(){
+										range.noUiSlider.set([null, this.value]);
+									});
+								}
+							</script>
+						</div>
+						<div class="tab_item">
+
+							<div class="filter--checkbox-list">
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch1" id="ch1"><label for="ch1">Под старину</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch2" id="ch2"><label for="ch2">Кожа</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch3" id="ch3"><label for="ch3">Креативные</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch4" id="ch4"><label for="ch4">Металл</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch5" id="ch5"><label for="ch5">Перламутр</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch6" id="ch6"><label for="ch6">Трещины</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch7" id="ch7"><label for="ch7">Мрамор</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch8" id="ch8"><label for="ch8">Камни</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch9" id="ch9"><label for="ch9">Шелк</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch10" id="ch10"><label for="ch10">Бетон</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch11" id="ch11"><label for="ch11">Травертин</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch12" id="ch12"><label for="ch12">Песок</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch13" id="ch13"><label for="ch13">Ткань</label></div>
+							</div>
+
+						</div>
+						<div class="tab_item">
+
+							<div class="filter--checkbox-list filter--checkbox-list_small">
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch21" id="ch21"><label for="ch21">Классический</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch22" id="ch22"><label for="ch22">Современный</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch23" id="ch23"><label for="ch23">Этнический</label></div>
+							</div>
+
+						</div>
+						<div class="tab_item">
+
+							<div class="filter--checkbox-list filter--checkbox-list_full">
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch41" id="ch41"><label for="ch41">Венецианские штукатурки</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch42" id="ch42"><label for="ch42">Рельефные штукатурки</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch43" id="ch43"><label for="ch43">Гладкие покрытия</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch44" id="ch44"><label for="ch44">Флоковые покрытия</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch45" id="ch45"><label for="ch45">Мозаичные краски</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch46" id="ch46"><label for="ch46">Фасадные штукатурки</label></div>
+								<div class="filter--checkbox"><input class="styled-checkbox" type="checkbox" name="ch47" id="ch47"><label for="ch47">Объемные трафареты</label></div>
+							</div>
+
+						</div>
+					</div>
 				</div>
 			</div>
 
-			<div class="container-fluid container-lg-static">
+			<div class="row effect-list">
 
-				<div class="cart">
-					<div class="cart--header">
-						<div class="cart--title">Артикул</div>
-						<div class="cart--title">Наименование товара</div>
-						<div class="cart--title">Фасовка</div>
-						<div class="cart--title">Цена</div>
-						<div class="cart--title">Количество</div>
-						<div class="cart--title">Сумма</div>
-						<div class="cart--title">Сравнить</div>
+				<!-- start style-list__item -->
+				<div class="wow zoomIn col-lg-3 col-md-4 col-xs-6 col-xxs-12 effect-list__item">
+					<div class="img-effect-zoomin img-effect-zoomin_hover-panel">
+						<a href="#href-1" class="img-effect__link"><img src="img/img-article-effect.png" alt=""></a>
+						<a href="#href-2" class="hover-panel"> 
+							<img class="icon-favourite" src="img/svg-pages/favourite.svg" alt="">
+							<span>Отложить в избранное</span>
+						</a>
 					</div>
-
-					<!-- start row -->
-					<div class="cart--row">
-						<div class="cart--articul">0-186-003</div>
-						<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
-						<div class="cart--other">
-							<a href="#" class="cart--name">Intuel</a>
-							<div class="cart--weight">5 кг</div>
-							<div class="cart--price">3 496 руб.</div>
-							<div class="cart--count">
-								<input class="cart--input" type="number" name="n1" id="n1" value="1">
-								<label for="n1">шт.</label>
-							</div>
-							<div class="cart--summ">3 496 руб.</div>
-							<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch1" id="ch1"><label for="ch1"></label></div>
-							<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
-							<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы</div>
+					<div class="effect-list__info clearfix">
+						<a href="#href-1" class="effect-list__head pull-left"><span>Sab bia Mic ro Gold  AC14334 Sab bia Mic ro Gold  AC14334 Sab bia Mic ro Gold  AC14334 Sab bia Micro Gold  AC143 Sab bia Micro Gold  AC143 Sab bia Micro Gold  AC143 Sabbia Micro Gold  AC143</span><br><h2 class="effect-list__description">Декоративная штукатурка прованс</h2></a>
+						<div class="pull-right effect-price">
+							<a href="#to-favourite" class="icon-favourite_mobile"></a>
+							<span class="effect-price__price">1,340</span>
+							<span class="effect-price__value">руб.<br>м<sup>2</sup></span>
 						</div>
 					</div>
-					<!-- end row -->
-
-					<!-- start row -->
-					<div class="cart--row">
-						<div class="cart--articul">0-186-003</div>
-						<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
-						<div class="cart--other">
-							<a href="#" class="cart--name">Intuel</a>
-							<div class="cart--weight">5 958 кг</div>
-							<div class="cart--price">96 руб.</div>
-							<div class="cart--count">
-								<input class="cart--input" type="number" name="n2" id="n2" value="1">
-								<label for="n2">шт.</label>
-							</div>
-							<div class="cart--summ">3 496 руб.</div>
-							<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch2" id="ch2" checked><label for="ch2"></label></div>
-							<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
-							<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы</div>
-						</div>
-					</div>
-					<!-- end row -->
-
-					<!-- start row -->
-					<div class="cart--row">
-						<div class="cart--articul">0-186-003</div>
-						<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
-						<div class="cart--other">
-							<a href="#" class="cart--name">Intuel</a>
-							<div class="cart--weight">5 кг</div>
-							<div class="cart--price">6 руб.</div>
-							<div class="cart--count">
-								<input class="cart--input" type="number" name="n3" id="n3" value="98">
-								<label for="n3">шт.</label>
-							</div>
-							<div class="cart--summ">9 323 496 руб.</div>
-							<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch3" id="ch3"><label for="ch3"></label></div>
-							<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
-							<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы Декоративное покрытие с эффектом стен ручной работы Декоративное покрытие с эффектом стен ручной работы Декоративное покрытие с эффектом стен ручной работы</div>
-						</div>
-					</div>
-					<!-- end row -->
-
-					<!-- start row -->
-					<div class="cart--row">
-						<div class="cart--articul">0-186-003</div>
-						<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
-						<div class="cart--other">
-							<a href="#" class="cart--name">Intuel</a>
-							<div class="cart--weight">5 кг</div>
-							<div class="cart--price">1 243 496 руб.</div>
-							<div class="cart--count">
-								<input class="cart--input" type="number" name="n4" id="n4" value="1">
-								<label for="n4">шт.</label>
-							</div>
-							<div class="cart--summ">3 496 руб.</div>
-							<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch4" id="ch4" checked><label for="ch4"></label></div>
-							<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
-							<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы</div>
-						</div>
-					</div>
-					<!-- end row -->
-
-					<div class="cart--footer">
-						<span class="cart--footer-summ">Итого: </span>
-						<span>453 346 руб.</span>
-						<div class="btn--send-outer">
-							<a href="#" class="btn btn--send btn--send_reverse">Заказать</a>
-						</div>
-					</div>
-
 				</div>
+				<!-- end style-list__item -->
+
+				<!-- start style-list__item -->
+				<div class="wow zoomIn col-lg-3 col-md-4 col-xs-6 col-xxs-12 effect-list__item">
+					<div class="effect-item__tags">
+						<div class="bg-red">New</div>
+						<div class="bg-blue">3D</div>
+					</div>
+					<div class="img-effect-zoomin img-effect-zoomin_hover-panel">
+						<a href="#href-1" class="img-effect__link"><img src="img/img-article-effect.png" alt=""></a>
+						<a href="#href-2" class="hover-panel"> 
+							<img class="icon-favourite" src="img/svg-pages/favourite.svg" alt="">
+							<span>Отложить в избранное</span>
+						</a>
+					</div>
+					<div class="effect-list__info clearfix">
+						<a href="#href-1" class="effect-list__head pull-left"><span>Sabbia Micro Gold  AC143</span><br><h2 class="effect-list__description">“Декоративная штукатурка прованс антик с эффектом натурально состаренных стен в средиземноморско-марокканском стиле</h2></a>
+						<div class="pull-right effect-price">
+							<a href="#to-favourite" class="icon-favourite_mobile"></a>
+							<span class="effect-price__price">1,340</span>
+							<span class="effect-price__value">руб.<br>м<sup>2</sup></span>
+						</div>
+					</div>
+				</div>
+				<!-- end style-list__item -->
+
+				<!-- start style-list__item -->
+				<div class="wow zoomIn col-lg-3 col-md-4 col-xs-6 col-xxs-12 effect-list__item">
+					<div class="img-effect-zoomin img-effect-zoomin_hover-panel">
+						<a href="#href-1" class="img-effect__link"><img src="img/img-article-effect.png" alt=""></a>
+						<a href="#href-2" class="hover-panel"> 
+							<img class="icon-favourite" src="img/svg-pages/favourite.svg" alt="">
+							<span>Отложить в избранное</span>
+						</a>
+					</div>
+					<div class="effect-list__info clearfix">
+						<a href="#href-1" class="effect-list__head pull-left"><span>Sabbia Micro Gold  AC143</span><br><h2 class="effect-list__description">Декоративная штукатурка прованс</h2></a>
+						<div class="pull-right effect-price">
+							<a href="#to-favourite" class="icon-favourite_mobile"></a>
+							<span class="effect-price__price">1,340</span>
+							<span class="effect-price__value">руб.<br>м<sup>2</sup></span>
+						</div>
+					</div>
+				</div>
+				<!-- end style-list__item -->
+
+				<!-- start style-list__item -->
+				<div class="wow zoomIn col-lg-3 col-md-4 col-xs-6 col-xxs-12 effect-list__item">
+					<div class="img-effect-zoomin img-effect-zoomin_hover-panel">
+						<a href="#href-1" class="img-effect__link"><img src="img/img-article-effect.png" alt=""></a>
+						<a href="#href-2" class="hover-panel"> 
+							<img class="icon-favourite" src="img/svg-pages/favourite.svg" alt="">
+							<span>Отложить в избранное</span>
+						</a>
+					</div>
+					<div class="effect-list__info clearfix">
+						<a href="#href-1" class="effect-list__head pull-left"><span>Sabbia Micro Gold  AC143</span><br><h2 class="effect-list__description">Декоративная штукатурка прованс</h2></a>
+						<div class="pull-right effect-price">
+							<a href="#to-favourite" class="icon-favourite_mobile"></a>
+							<span class="effect-price__price">1,340</span>
+							<span class="effect-price__value">руб.<br>м<sup>2</sup></span>
+						</div>
+					</div>
+				</div>
+				<!-- end style-list__item -->
+
+				<!-- start style-list__item -->
+				<div class="wow zoomIn col-lg-3 col-md-4 col-xs-6 col-xxs-12 effect-list__item">
+					<div class="img-effect-zoomin img-effect-zoomin_hover-panel">
+						<a href="#href-1" class="img-effect__link"><img src="img/img-article-effect.png" alt=""></a>
+						<a href="#href-2" class="hover-panel"> 
+							<img class="icon-favourite" src="img/svg-pages/favourite.svg" alt="">
+							<span>Отложить в избранное</span>
+						</a>
+					</div>
+					<div class="effect-list__info clearfix">
+						<a href="#href-1" class="effect-list__head pull-left"><span>Sabbia Micro Gold  AC143</span><br><h2 class="effect-list__description">Декоративная штукатурка прованс</h2></a>
+						<div class="pull-right effect-price">
+							<a href="#to-favourite" class="icon-favourite_mobile"></a>
+							<span class="effect-price__price">1,340</span>
+							<span class="effect-price__value">руб.<br>м<sup>2</sup></span>
+						</div>
+					</div>
+				</div>
+				<!-- end style-list__item -->
+
+				<!-- start style-list__item -->
+				<div class="wow zoomIn col-lg-3 col-md-4 col-xs-6 col-xxs-12 effect-list__item">
+					<div class="img-effect-zoomin img-effect-zoomin_hover-panel">
+						<a href="#href-1" class="img-effect__link"><img src="img/img-article-effect.png" alt=""></a>
+						<a href="#href-2" class="hover-panel"> 
+							<img class="icon-favourite" src="img/svg-pages/favourite.svg" alt="">
+							<span>Отложить в избранное</span>
+						</a>
+					</div>
+					<div class="effect-list__info clearfix">
+						<a href="#href-1" class="effect-list__head pull-left"><span>Sabbia Micro Gold  AC143</span><br><h2 class="effect-list__description">Декоративная штукатурка прованс</h2></a>
+						<div class="pull-right effect-price">
+							<a href="#to-favourite" class="icon-favourite_mobile"></a>
+							<span class="effect-price__price">1,340</span>
+							<span class="effect-price__value">руб.<br>м<sup>2</sup></span>
+						</div>
+					</div>
+				</div>
+				<!-- end style-list__item -->
+
+				<!-- start style-list__item -->
+				<div class="wow zoomIn col-lg-3 col-md-4 col-xs-6 col-xxs-12 effect-list__item">
+					<div class="img-effect-zoomin img-effect-zoomin_hover-panel">
+						<a href="#href-1" class="img-effect__link"><img src="img/img-article-effect.png" alt=""></a>
+						<a href="#href-2" class="hover-panel"> 
+							<img class="icon-favourite" src="img/svg-pages/favourite.svg" alt="">
+							<span>Отложить в избранное</span>
+						</a>
+					</div>
+					<div class="effect-list__info clearfix">
+						<a href="#href-1" class="effect-list__head pull-left"><span>Sabbia Micro Gold  AC143</span><br><h2 class="effect-list__description">Декоративная штукатурка прованс</h2></a>
+						<div class="pull-right effect-price">
+							<a href="#to-favourite" class="icon-favourite_mobile"></a>
+							<span class="effect-price__price">1,340</span>
+							<span class="effect-price__value">руб.<br>м<sup>2</sup></span>
+						</div>
+					</div>
+				</div>
+				<!-- end style-list__item -->
+
 			</div>
 
+			<div class="pagination">
+				<ul class="pagination--list">
+					<li class="pagination--service"><a href="#"><<</a></li>
+					<li class="pagination--service"><a href="#"><</a></li>
+					<li class="pagination--service"><a href="#">...</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li class="pagination--active">6</li>
+					<li><a href="#">7</a></li>
+					<li><a href="#">8</a></li>
+					<li><a href="#">9</a></li>
+					<li><a href="#">10</a></li>
+					<li class="pagination--service"><a href="#">...</a></li>
+					<li class="pagination--service"><a href="#">></a></li>
+					<li class="pagination--service"><a href="#">>></a></li>
+				</ul>
+			</div>
+
+		</article>
+
+		<section class="s-front-contact">
+			<div class="container-fluid container-lg-static">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 class="accent-header hidden-lg t-center">Салоны Stena-Clavel в Москве</h2>
+					</div>
+					<div class="col-lg-5 col-md-8 col-xs-7 col-xxs-12">
+						<h2 class="accent-header visible-lg-block">Салоны Stena-Clavel в Москве</h2>
+						<div id="map"></div>
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_UZtFriSt4MRiJnc6SuGzpMeiKY94igo&callback=initMap" async defer></script>
+						<script>
+							function initMap() {
+								var styleArray = [{"fearureType":"all","elementType":"labels.text","stylers":[{"visibility":"on"},{"color":"#868080"},{"weight":0.1}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":56}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}];
+								var map = new google.maps.Map(document.getElementById('map'), {
+									center: {lat: -34.397, lng: 150.644},
+									scrollwheel: false,
+									styles: styleArray,
+									zoom: 8,
+									zoomControl: true,
+									mapTypeControl: false,
+									scaleControl: false,
+									streetViewControl: true,
+									rotateControl: false
+								});
+								var image = 'img/39_geomarker.png';
+								var marker = new google.maps.Marker({
+									position: {lat: -34.397, lng: 150.644},
+									label: "1",
+									icon: image,
+									map: map
+								});
+							}
+						</script>
+					</div>
+					<div class="col-lg-3 col-md-4 col-xs-5 col-xs-full">
+						<div class="panel_white panel-diller">
+							<h3 class="accent-header">Найти дилера</h3>
+							<form>
+								<div class="input-button clearfix">
+									<input name="s" class="input-button__input" type="text" placeholder="Введите город" required>
+									<button class="input-button__submit">
+										<svg>
+											<use xlink:href="#10_search"></use>
+										</svg>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="panel_white t-center">
+							<h3 class="accent-header accent-header_small">Отправить сообщение</h3>
+							<form>
+								<input name="n" class="" type="text" placeholder="Имя" required>
+								<input name="e" class="" type="text" placeholder="Email" required>
+								<textarea name="m" placeholder="Сообщение"></textarea>
+								<input type="submit" value="Отправить">
+							</form>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel_white panel_front-news">
+							<h3 class="accent-header t-center">Новости</h3>
+							<div class="front-news">
+								<div class="front_news__item">
+									<p class="pink">2016-03-08</p>
+									<a href="#">Видео нанесения декоративной краски Totem</a>
+								</div>
+								<div class="front_news__item">
+									<p class="pink">2016-03-08</p>
+									<a href="#">Мозаичная краска и флоки сертифицированы по классу пожарной безопасности на категорию КМ-1</a>
+								</div>
+								<div class="front_news__item">
+									<p class="pink">2016-03-08</p>
+									<a href="#">Новое фасадное покрытие -"камешковая штукатурка Koncepto - уже в продаже.</a>
+								</div>
+								<div class="front_news__item">
+									<p class="pink">2016-03-08</p>
+									<a href="#">Новое фасадное покрытие -"камешковая штукатурка Koncepto - уже в продаже.</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
-
-
 
 	</main>
 	<!--  -->
@@ -391,11 +652,6 @@
 	<!-- Start popup -->
 	<!--  -->
 	<div id="popup--mesage-success" class="white-popup white-popup--message mfp-hide">
-		<p class="t-center">Ваше сообщение успешно отправлено. Мы свяжемся с  Вами в течение рабочего дня</p>
-		<svg class="close-button--logo"><use xlink:href="#02_Logo"></use></svg>
-	</div>
-
-	<div id="popup--favourite" class="white-popup white-popup--message mfp-hide">
 		<p class="t-center">Ваше сообщение успешно отправлено. Мы свяжемся с  Вами в течение рабочего дня</p>
 		<svg class="close-button--logo"><use xlink:href="#02_Logo"></use></svg>
 	</div>
