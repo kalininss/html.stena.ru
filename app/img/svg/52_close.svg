@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.93 11.93">
+  <defs>
+    <style>
+      .a {
+        opacity: 0.2;
+      }
+
+      .b {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>52_close</title>
+  <g class="a">
+    <polygon class="b" points="10.37 0 5.96 4.41 1.56 0 0 1.56 4.41 5.96 0 10.37 1.56 11.93 5.96 7.52 10.37 11.93 11.93 10.37 7.52 5.96 11.93 1.56 10.37 0"/>
+  </g>
+</svg>

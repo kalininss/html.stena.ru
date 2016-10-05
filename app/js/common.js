@@ -1,5 +1,10 @@
 $(function() {
 
+	// page #16 catalogue
+	$('.filter_by_name').click(function(){
+		$(this).find('.ui_order').toggleClass('reverse');
+	});
+
 	// page #12 plus button
 	$('.mega_plus').click(function(){
 		var temp = $(this);

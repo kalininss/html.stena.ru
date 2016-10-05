@@ -12,14 +12,17 @@ body > svg
 
 
 // верхняя линия и лого
-.front-page .topline
-	background: rgba(0, 0, 0, 0.43)
-	color: $c-white 
-	position: absolute
-	left: 0
-	right: 0
-	top: 0
-	z-index: 3
+.front-page 
+	.topline
+		background: rgba(0, 0, 0, 0.43)
+		color: $c-white 
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		z-index: 3
+	.topline_interior
+		background: none
 .common-page .topline
 	background: $bg-accent
 	color: $c-white 
@@ -91,6 +94,12 @@ body > svg
 	margin-top: 3px
 	width: 30px
 	height: 21px
+.img-button_close-interior 
+	padding: 5px
+	background: rgba(0,0,0,0.2)
+	svg
+		width: 12px
+		height: 12px
 .extra__item
 	display: inline-block
 	margin-left: 5px
@@ -100,6 +109,8 @@ body > svg
 .extra
 	margin: 24px 0
 	text-align: right
+.extra-small
+	margin: 13px 0
 .img-button_favorites__text,
 .img-button_cabinet__text
 	position: absolute
@@ -171,9 +182,12 @@ body > svg
 		display: block
 
 @media only screen and (max-width : 480px)
-	.page-parallax
+	.page-parallax:not(.page-parallax_interior)
 		display: none
 
+
+.topline_interior--logo
+	margin: 10px 0
 
 
 // внутренние страницы
@@ -394,3 +408,19 @@ select
 	color: #fff
 	ul li a
 		color: #fff
+.svg--camera-white
+	width: 32px
+	height: 20px
+	margin-left: 25px
+
+.page-parallax.wow
+	overflow: hidden
+	img
+		transition: 4s
+		transform: scale(1.2)
+	.page-parallax--container
+		transition: 4s
+.dark-logo
+	background-image: url(../img/svg-pages/logo-dark.svg)
+	width: 150px
+	height: 38px

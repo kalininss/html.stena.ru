@@ -163,6 +163,10 @@ body
 	display: inline-block
 .logo-menu
 	display: none
+.logo-menu--visible-always
+	display: inline-block
+	float: none
+	margin-top: 10px
 // меню в видвижной линии
 .scroll-menu
 	background: #E6E7E8
@@ -2025,6 +2029,310 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	&.clicked
 		background-position: -1008px 0
 
+
+
+
+// page 16
+.catalog
+	margin-bottom: 50px
+	margin-top: 30px
+.catalog--item
+	overflow: hidden
+	position: relative
+	margin-bottom: 20px
+.catalog--visible:hover + .catalog--hidden
+	top: 0
+.catalog--img
+	margin: 0 auto
+	display: block
+.catalog--footer
+	font-size: 20px
+	font-weight: 500
+	text-align: center
+	margin-bottom: 0
+	position: relative
+.catalog--name
+	display: inline-block
+.catalog--tag
+	position: absolute
+	font-size: 10px
+	font-weight: 500
+	background: #EC1C24
+	display: inline-block
+	color: #fff
+	padding: 2px 4px
+	border-radius: 2px
+	margin: 5px 0 0 10px
+.catalog--hidden
+	background: #8F8858
+	position: absolute
+	height: 100%
+	width: calc(100% - 30px)
+	top: 100%
+	transition: 0.3s
+	left: 15px
+	padding: 0 40px
+	display: flex
+	&:hover
+		top: 0
+.catalog--link
+	color: #fff
+	text-decoration: underline
+	font-size: 20px
+	font-family: $f-head
+	margin: auto
+	line-height: 1.4
+	&:focus,
+	&:hover,
+	&:active
+		color: #fff
+		text-decoration: underline
+
+.catalog_filter
+	text-transform: uppercase
+	max-width: 790px
+	margin: 0 auto
+	position: relative
+	.tab
+		color: #87736B
+		font-weight: bold
+		font-family: $f-add-2
+		display: inline-block
+		margin: 10px 12px
+		border-bottom: 2px solid
+		line-height: 1.2
+		padding: 3px 0
+		font-size: 16px
+		position: relative
+		&.active
+			color: #fff
+			background: #87736B
+			padding: 3px 7px
+			margin: 10px 5px
+			border-bottom: none
+			&:after
+				content: ''
+				position: absolute
+				width: 0
+				height: 0
+				border-top: 4px solid #87736B
+				border-left: 6px solid transparent
+				border-right: 6px solid transparent
+				bottom: -4px
+				left: 50%
+				margin-left: -6px
+
+
+.filter_by_name
+	position: absolute
+	display: inline-block
+	padding: 5px 14px
+	background: #536FA0
+	border: none
+	color: #fff
+	top: 10px
+	right: -200px
+	font-family: $f-add-2
+	font-weight: 300
+	font-size: 17px
+	&:focus
+		outline: none
+
+
+
+// 13 gallery
+.super_head
+	background: #E5E5E5
+	padding: 20px 0
+.super_head--subhead
+	position: relative
+	color: #87736B
+	font-family: $f-head
+	font-style: italic
+	text-align: center
+	span
+		background: #FACBCC
+		position: relative
+		z-index: 3
+		font-size: 21px
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		z-index: 2
+		top: 50%
+		background: #87736B
+		height: 1px
+		width: calc(50% - 220px)
+		display: block
+	&:after
+		right: 0
+	&:before
+		left: 0
+.super_head--main
+	margin-bottom: 0
+.filter--tabs
+	.tab_compact
+		margin: 15px 8px
+		&.active
+			margin: 15px 1px
+.filter-with_margin
+	margin: 5px 0
+.unreal_select-simple
+	margin: 15px 8px
+
+
+
+.row-margin_5
+	margin-left: -5px
+	margin-right: -5px
+.gallery--item
+	padding-left: 5px
+	padding-right: 5px
+	margin-bottom: 10px
+	.hover-lines
+		width: 100%
+		height: 100%
+		left: 0
+		top: 100%
+		position: absolute
+	.hover-lines__line
+		&:nth-of-type(1)
+			top: 44px
+		&:nth-of-type(2)
+			bottom: 44px
+		&:nth-of-type(3)
+			right: 33px
+		&:nth-of-type(4)
+			left: 33px
+	.hover-lines
+		&:hover 
+			&:after
+			.hover-lines__line
+				&:nth-of-type(1),
+				&:nth-of-type(2)
+					height: calc(100% - 88px)
+				&:nth-of-type(3),
+				&:nth-of-type(4)
+					width: calc(100% - 66px)
+
+.hover-lines:hover
+	.hover-lines__text-top
+		top: 34px
+		opacity: 1
+	.hover-lines__text-bottom
+		bottom: 34px
+		opacity: 1
+.gallery--group
+	margin-bottom: 0
+.gallery--inner
+	position: relative
+	overflow: hidden
+	img
+		transition: 0.5s
+		width: 100%
+	&:hover
+		.hover-lines
+			top: 0
+		img
+			transform: scale(1.1)
+
+.hover-lines__text
+	position: absolute
+	margin: 0
+	left: 34px
+	font-family: $f-default
+	color: #fff
+	z-index: 6
+	opacity: 0
+	transition: 0.3s ease-out
+	padding-right: 34px
+.hover-lines__text-top
+	top: 34px
+	top: 0
+	font-weight: 900
+	font-size: 21px
+.hover-lines__text-bottom
+	bottom: 34px
+	bottom: 0
+	font-size: 18px
+	font-weight: 300
+	font-style: italic
+	text-decoration: underline
+.page-parallax_interior
+	width: 100%
+	height: 100%
+	left: 0
+	right: 0
+	.page-parallax--container
+		display: flex
+		.inner
+			margin: auto
+	&:after
+		display: none
+
+
+
+
+// pae interior
+.page-parallax--text-small
+	margin-top: 20px
+	font-family: $f-head
+	font-size: 28px
+	max-width: 800px
+	line-height: 1.6
+.page-parallax--head-small
+	font-size: 80px
+	font-weight: 500
+	margin-top: 0.7em
+
+.page-parallax_interior.wow.animated
+	img
+		transform: scale(1.2)
+	.page-parallax--container
+		opacity: 0
+.page-parallax_interior
+	img
+		transform: scale(1)
+	.page-parallax--container
+		opacity: 1
+.btn_brown
+	font-size: 18px
+	font-family: $f-head
+	color: #fff
+	background: #71605A
+	border-radius: 3px
+	display: block
+	text-align: center
+	padding: 7px 0
+	&:hover,
+	&:focus
+		color: #fff
+		text-decoration: none
+		background: #514846
+	&:active
+		background: #71605A
+.interior_name
+	color: #404041
+	font-size: 22px
+	text-decoration: underline
+	font-weight: 300
+	font-family: $f-default
+	margin-top: 10px
+	margin-bottom: 20px
+.interior--description
+	font-size: 21px
+	font-family: $f-head
+	color: #404041
+	font-weight: 400
+
+.interior
+	padding-top: 20px
+	padding-bottom: 50px
+.interior--main
+	width: 279px
+.interior--description
+	width: calc(100% - 279px)
 
 
 

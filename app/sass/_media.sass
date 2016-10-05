@@ -94,7 +94,7 @@
 		left: 0
 		top: 0
 		z-index: 0
-	.js-parallax
+	.js-parallax:not(.header-always-parallax)
 		transform: none !important
 	.front-h1
 		font-size: 48px
@@ -286,7 +286,28 @@
 			background-position: -715px 0
 	.double--text
 		margin-top: 0
-	
+	.filter_by_name
+		position: static
+		margin: 10px 10px 0
+	.unreal_select-simple
+		margin: 10px 0
+	.filter--tabs-simple
+		display: block
+		.tabs
+			display: block
+			width: 100%
+	.filter--tabs .tab_compact
+		margin-top: 10px
+		margin-bottom: 10px
+	.page-parallax--head-small
+		font-size: 60px
+	.page-parallax--text-small
+		font-size: 22px
+		max-width: 600px
+	.logo-menu--visible-always
+		vertical-align: top
+	.svg--camera-white
+		margin-top: 14px
 @media only screen and (max-width : 1010px)
 	.smeta-price__descr
 		max-width: 150px
@@ -322,8 +343,14 @@
 		margin: auto auto
 	.mega_plus
 		margin-bottom: 0
-
-
+	.filter--tabs-simple
+		.tabs
+			max-width: 550px
+			margin: 0 auto
+	.top-camera
+		display: inline-block
+		vertical-align: top
+		// margin-top: 13px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 900px)
@@ -456,7 +483,7 @@
 			clear: none
 		&:nth-child(2n-1).wow
 			clear: left
-	.filter--tabs
+	.filter--tabs:not(.filter--tabs-simple)
 		display: block
 		position: relative
 		.tabs
@@ -474,7 +501,7 @@
 		margin: 20px 0
 	.filter--label
 		float: left
-	.unreal_select
+	.unreal_select:not(.unreal_select-simple)
 		float: right
 		margin-right: 50px
 	.tab_content
@@ -504,8 +531,17 @@
 		display: inline-block
 		padding: 10px 30px
 		margin: 10px 0 20px
-
-
+	.super_head--main
+		margin: 0
+	.interior
+		padding-bottom: 30px
+	.interior--description
+		font-size: 18px
+	.page-parallax--head-small
+		font-size: 58px
+	.page-parallax--text-small
+		font-size: 22px
+		max-width: 600px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -641,7 +677,7 @@
 		margin: 10px 0
 	.smeta-icon
 		margin-right: 25px
-	.filter--tabs
+	.filter--tabs:not(.filter--tabs-simple)
 		.tabs
 			margin-right: -115px
 			width: 350px
@@ -654,8 +690,21 @@
 	.multiply_range--outer
 		margin-left: 0
 		width: 290px
-
-
+	.catalog_filter
+		.tabs
+			display: block
+	.catalog--hidden
+		padding: 0 20px
+	.super_head--subhead 
+		&:before,
+		&:after
+			width: calc(50% - 180px)
+		span
+			font-size: 18px
+	.page-parallax--head-small
+		font-size: 50px
+	.page-parallax--text-small
+		font-size: 18px	
 @media only screen and (max-width : 639px)
 	.col-xs-full
 		padding: 0
@@ -716,14 +765,47 @@
 		display: none !important
 	.smeta__head_sm
 		display: none !important
-	.filter--select
+	.filter--select:not(.unreal_select-simple)
 		display: none
-	.filter--tabs
+	.filter--tabs:not(.filter--tabs-simple)
 		.tabs
 			margin-right: 0
 			right: 0
 			width: 100%
 			padding-left: 70px
+	.catalog--tag
+		position: static
+		margin-left: 5px
+		margin-top: 2px
+		vertical-align: middle
+	.catalog--name
+		font-size: 16px
+	.catalog--item
+		vertical-align: top
+	.catalog--item:nth-child(2n-1)
+		clear: left
+	.interior
+		padding-bottom: 20px
+	.interior--main,
+	.interior--description
+		width: 100%
+	.interior--img
+		width: 45%
+		float: left
+		margin-right: 4%
+	.btn_brown
+		display: inline-block
+		width: calc(50% - 15px)
+		position: absolute
+		bottom: 0
+	.interior_name
+		margin: 0
+	.interior--description
+		margin-top: 20px
+	.page-parallax_interior img
+		display: block
+	.interior--main
+		position: relative
 
 @media only screen and (max-width : 610px)
 	.logo__text
@@ -741,7 +823,9 @@
 		font-size: 18px
 	.style-list h2
 		font-size: 20px
-
+	.topline_interior
+		.logo-menu
+			margin-top: 12px
 @media only screen and (max-width : 550px)
 	.list_tripple,
 	.topline-scroll__contact .link-nohover,
@@ -774,6 +858,19 @@
 		padding-bottom: 60px
 	.order_panel--header
 		margin-bottom: 20px
+	.filter--tabs-simple
+		.tabs
+			margin: 0 -10px
+			width: 100%
+		// .tab_compact
+		// 	margin: 0 6px
+		// 	// font-size: 14px
+		// 	&.active
+		// 		padding-left: 5px
+		// 		padding-right: 5px
+		// 		margin: 0 2px
+
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -878,7 +975,7 @@
 		font-size: 36px
 	.filter--label
 		display: none
-	.filter--tabs
+	.filter--tabs:not(.filter--tabs-simple)
 		.tabs
 			margin-right: 0
 			right: 0
@@ -975,19 +1072,19 @@
 			margin-top: -15px
 		.btn_smeta
 			background: #9A8479
-	.page-parallax_relative
+	.page-parallax_relative:not(.page-parallax_interior)
 		display: block
 		&:after, img
 			display: none
-	.page-parallax--container
-		position: static
-		margin-top: 0
-	.page-parallax--text
-		display: none
+		.page-parallax--container
+			position: static
+			margin-top: 0
+		.page-parallax--text
+			display: none
 	.service-page .topline
 		position: static
 		background: #2F4259
-	.page-parallax--head
+	.page-parallax--head:not(.page-parallax--head-small)
 		color: #404041
 		margin: 20px 0
 	.double--item
@@ -1004,7 +1101,58 @@
 		margin-bottom: 30px
 	.style-list h2
 		font-size: 24px
-
+	.catalog_filter 
+		.tabs
+			@include clearfix
+		.tab
+			margin-left: 0
+			&.active
+				margin-left: 0
+	.catalog_filter--item
+		float: left
+		clear: both
+	.filter_by_name
+		margin-left: 0
+	.catalog
+		margin-top: 20px
+		margin-bottom: 20px
+	.catalog--name
+		font-size: 20px
+	.catalog--tag
+		margin-top: 0
+	.catalog--hidden
+		width: calc(100% - 20px)
+		left: 10px
+	.super_head--main
+		margin-top: 0
+		font-size: 31px
+	.super_head--subhead 
+		&:before,
+		&:after
+			width: calc(50% - 135px)
+		span
+			font-size: 14px
+	.filter-with_margin
+		margin: 10px 0
+	.filter--tabs-simple
+		.tabs
+			max-width: 350px
+	.page-parallax--head-small
+		font-size: 30px
+		margin-top: 30px
+	.page-parallax--text-small
+		font-size: 18px	
+	.top-camera
+		display: none
+	.topline_interior
+		background: none !important
+		position: absolute !important
+	.interior_name
+		margin: 0
+		font-size: 18px
+	.dark-logo
+		width: 120px
+		background-repeat: no-repeat
 
 @media only screen and (max-width : 450px)
 	.topline-scroll__contact a
@@ -1020,6 +1168,25 @@
 		margin-left: auto
 		margin-right: auto
 		margin-top: 10px
+	.catalog_filter .tab
+		font-size: 15px
+		margin: 5px 0 !important
+	h1
+		font-size: 32px
+	.filter--tabs-simple
+		.tabs
+			max-width: 290px
+		.tab_compact
+			margin: 0 6px
+			font-size: 14px
+			&.active
+				padding-left: 5px
+				padding-right: 5px
+				margin: 0 2px
+	.unreal_select-simple
+		font-size: 14px
+		.unreal_select--label
+			padding-top: 2px
 
 
 /*==========  Mobile First  ==========*/
