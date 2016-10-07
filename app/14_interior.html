@@ -24,6 +24,9 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,600,700|Roboto+Condensed:300,700|Roboto:300,500,700|Lobster&subset=cyrillic" rel="stylesheet">
 
+	<!-- удалить строку ниже в продакшне, код принудительно чистит localstorage, чтобы загрузить новую версию svg спрайта -->
+	<script>localStorage.clear();</script>
+
 	<!-- Load sprite.svg -->
 	<script>!function(a,b){"use strict";var c="img/sprite.symbol.svg",d=1;if(!b.createElementNS||!b.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var f,g,e="localStorage"in a&&null!==a.localStorage,h=function(){b.body.insertAdjacentHTML("afterbegin",g)},i=function(){b.body?h():b.addEventListener("DOMContentLoaded",h)};if(e&&localStorage.getItem("inlineSVGrev")==d&&(g=localStorage.getItem("inlineSVGdata")))return i(),!0;try{f=new XMLHttpRequest,f.open("GET",c,!0),f.onload=function(){f.status>=200&&f.status<400&&(g=f.responseText,i(),e&&(localStorage.setItem("inlineSVGdata",g),localStorage.setItem("inlineSVGrev",d)))},f.send()}catch(j){}}(window,document);</script>
 	<link rel="stylesheet" href="css/main.min.css">
@@ -97,10 +100,10 @@ service-page делает синим и непрозрачным на смарт
 			</div><!-- container-fluid -->
 		</div><!-- topline -->
 		
-		<div class="page-parallax page-parallax_relative page-parallax_interior wow">
+		<div class="page-parallax page-parallax_relative page-parallax_interior">
 			<picture>
-				<source srcset="img/demo/page-interior/header-480.png" media="(max-width: 480px)" />
-				<source srcset="img/demo/page-interior/header-900.png" media="(max-width: 900px)" />
+				<source srcset="img/demo/page-interior/header-480.jpg" media="(max-width: 480px)" />
+				<source srcset="img/demo/page-interior/header-900.jpg" media="(max-width: 900px)" />
 				<source srcset="img/demo/page-interior/header-1360.jpg" media="(max-width: 1360px)" />
 				<source srcset="img/demo/page-interior/header-1920.jpg" media="(min-width: 1361px)" />
 				<img src="img/demo/page-interior/header-480.jpg" alt="">
@@ -124,7 +127,7 @@ service-page делает синим и непрозрачным на смарт
 
 			<div class="row">
 				<div class="col-xs-3 interior--main">
-					<img class="interior--img" src="img/demo/page-interior/thumbnail.png" alt="">
+					<img class="interior--img" src="img/demo/page-interior/thumbnail.jpg" alt="">
 					<h3 class="interior_name">Sabbia Micro Platinum  AR124</h3>
 					<a href="#" class="btn btn_brown">Подробнее</a>
 				</div>

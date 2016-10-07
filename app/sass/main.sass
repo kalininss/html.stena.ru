@@ -2141,6 +2141,7 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 
 
 // 13 gallery
+
 .super_head
 	background: #E5E5E5
 	padding: 20px 0
@@ -2182,14 +2183,59 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	margin: 15px 8px
 
 
+.hover-lines
+	img
+		position: absolute
+		clear: both
+		z-index: 0
+		transition: 0.6s ease
+	&:after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		display: block
+		background: #000
+		opacity: 0
+		transition: 0.3s ease-out
+		z-index: 0
 
-.row-margin_5
+
+.gallery
+	position: relative
+	margin-bottom: 30px
 	margin-left: -5px
 	margin-right: -5px
 .gallery--item
-	padding-left: 5px
-	padding-right: 5px
-	margin-bottom: 10px
+	float: left
+	position: relative
+	overflow: hidden
+	height: 100%
+	img
+		transition: 0.5s
+		width: 100%
+		height: 100%
+	&:hover
+		.hover-lines
+			color: #fff
+			img
+				transform: scale(1.1)
+			.hover-lines_content
+				transform: scale(1)
+			&:after
+				opacity: 0.7
+			.hover-lines__line
+				&:nth-of-type(1),
+				&:nth-of-type(2)
+					height: 80%
+				&:nth-of-type(3),
+				&:nth-of-type(4)
+					width: 80%
+			top: 0
+		img
+			transform: scale(1.1)
 	.hover-lines
 		width: 100%
 		height: 100%
@@ -2223,19 +2269,6 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	.hover-lines__text-bottom
 		bottom: 34px
 		opacity: 1
-.gallery--group
-	margin-bottom: 0
-.gallery--inner
-	position: relative
-	overflow: hidden
-	img
-		transition: 0.5s
-		width: 100%
-	&:hover
-		.hover-lines
-			top: 0
-		img
-			transform: scale(1.1)
 
 .hover-lines__text
 	position: absolute
@@ -2286,16 +2319,19 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	font-weight: 500
 	margin-top: 0.7em
 
-.page-parallax_interior.wow.animated
+.page-parallax_interior
+	overflow: hidden
 	img
+		transition: 4s
 		transform: scale(1.2)
 	.page-parallax--container
-		opacity: 0
-.page-parallax_interior
+		transition: 4s
+		opacity: 1
+.page-parallax_interior.animated
 	img
 		transform: scale(1)
 	.page-parallax--container
-		opacity: 1
+		opacity: 0
 .btn_brown
 	font-size: 18px
 	font-family: $f-head
@@ -2334,6 +2370,34 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 .interior--description
 	width: calc(100% - 279px)
 
+
+
+
+// page 11 where buy
+#map_big
+	height: 570px
+	margin-bottom: 25px
+.img-bordered
+	border: 10px solid #605A43
+	margin-right: 55px
+	position: relative
+	margin-bottom: 30px
+	img
+		width: 100%
+.img-bordered--text
+	font-weight: 300
+	margin-bottom: 50px
+	margin-right: 55px
+.next-link
+	display: block
+	border-left: 32px solid #605A43
+	border-top: 19px solid transparent
+	border-bottom: 19px solid transparent
+	position: absolute
+	top: 50%
+	margin-top: -19px
+	right: 0
+	margin-right: -66px
 
 
 @import "media"

@@ -296,9 +296,13 @@
 		.tabs
 			display: block
 			width: 100%
-	.filter--tabs .tab_compact
-		margin-top: 10px
-		margin-bottom: 10px
+	.filter--tabs 
+		.tab_compact
+			margin-top: 10px
+			margin-bottom: 10px
+			&.active
+				margin-top: 10px
+				margin-bottom: 10px
 	.page-parallax--head-small
 		font-size: 60px
 	.page-parallax--text-small
@@ -308,6 +312,9 @@
 		vertical-align: top
 	.svg--camera-white
 		margin-top: 14px
+
+
+
 @media only screen and (max-width : 1010px)
 	.smeta-price__descr
 		max-width: 150px
@@ -343,10 +350,8 @@
 		margin: auto auto
 	.mega_plus
 		margin-bottom: 0
-	.filter--tabs-simple
-		.tabs
-			max-width: 550px
-			margin: 0 auto
+	.filter--tabs .tab_compact
+		font-size: 15px
 	.top-camera
 		display: inline-block
 		vertical-align: top
@@ -542,6 +547,12 @@
 	.page-parallax--text-small
 		font-size: 22px
 		max-width: 600px
+	.filter--tabs-simple
+		.tabs
+			max-width: 550px
+			margin: 0 auto
+
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -706,6 +717,9 @@
 	.page-parallax--text-small
 		font-size: 18px	
 @media only screen and (max-width : 639px)
+	.s-front-contact
+		.col-xxs-12
+			width: 100%
 	.col-xs-full
 		padding: 0
 		width: 100%
@@ -714,6 +728,7 @@
 	.s-front-contact h2
 		display: block
 	#map
+		height: 300px
 		margin-top: 0
 	.effect-price__value
 		display: inline-block
@@ -757,8 +772,6 @@
 		display: flex
 		& > *
 			display: inline-block
-	#map
-		height: 300px
 	.greeting
 		margin: 20px 0 10px
 	.smeta-icons__sm
@@ -806,6 +819,21 @@
 		display: block
 	.interior--main
 		position: relative
+	.hover-lines__text-top
+		font-size: 16px
+	.hover-lines__text-bottom
+		font-size: 14px
+	.hover-lines__text
+		left: 10px
+		padding-right: 10px
+	.hover-lines:hover 
+		.hover-lines__text-top
+			top: 10px
+		.hover-lines__text-bottom
+			bottom: 10px
+	.gallery .hover-lines__line
+		display: none
+
 
 @media only screen and (max-width : 610px)
 	.logo__text
@@ -861,7 +889,7 @@
 	.filter--tabs-simple
 		.tabs
 			margin: 0 -10px
-			width: 100%
+			width: auto
 		// .tab_compact
 		// 	margin: 0 6px
 		// 	// font-size: 14px
@@ -1134,9 +1162,9 @@
 			font-size: 14px
 	.filter-with_margin
 		margin: 10px 0
-	.filter--tabs-simple
-		.tabs
-			max-width: 350px
+	// .filter--tabs-simple
+	// 	.tabs
+	// 		max-width: 350px
 	.page-parallax--head-small
 		font-size: 30px
 		margin-top: 30px
@@ -1153,6 +1181,30 @@
 	.dark-logo
 		width: 120px
 		background-repeat: no-repeat
+	.filter--tabs-simple
+		margin: 0 -10px
+		text-align: center
+		.tab_compact
+			margin-top: 0
+			margin-bottom: 10px
+			&.active
+				margin-top: 0
+				margin-bottom: 10px
+		.tabs
+			display: inline-block
+			margin: 0
+			width: 310px
+			font-size: 15px
+	.unreal_select-simple
+		margin-left: 20px
+		margin-right: 20px
+		margin-top: 0
+		margin-bottom: 0
+	.hover-lines__text-top
+		font-size: 10px
+	.hover-lines__text-bottom
+		font-size: 8px
+
 
 @media only screen and (max-width : 450px)
 	.topline-scroll__contact a
@@ -1173,20 +1225,6 @@
 		margin: 5px 0 !important
 	h1
 		font-size: 32px
-	.filter--tabs-simple
-		.tabs
-			max-width: 290px
-		.tab_compact
-			margin: 0 6px
-			font-size: 14px
-			&.active
-				padding-left: 5px
-				padding-right: 5px
-				margin: 0 2px
-	.unreal_select-simple
-		font-size: 14px
-		.unreal_select--label
-			padding-top: 2px
 
 
 /*==========  Mobile First  ==========*/
@@ -1206,23 +1244,6 @@
 	.link_white:hover
 		color: #fff
 	.hover-lines
-		img
-			position: absolute
-			clear: both
-			z-index: 0
-			transition: 0.6s ease
-		&:after
-			content: ''
-			position: absolute
-			width: 100%
-			height: 100%
-			left: 0
-			top: 0
-			display: block
-			background: #000
-			opacity: 0
-			transition: 0.3s ease-out
-			z-index: 0
 		&:hover 
 			color: #fff
 			img

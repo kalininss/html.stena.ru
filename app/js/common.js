@@ -1,7 +1,32 @@
 $(function() {
 
-	// page #16 catalogue
-	$('.filter_by_name').click(function(){
+	$(".gallery").mason({
+		itemSelector: '.gallery--item',
+		ratio: 1.32,
+		sizes: [
+			[1, 1]
+		],
+		promoted: [
+			['gallery--item-high', 1, 2],
+			['gallery--item-quadro', 1, 1],
+			['gallery--item-long', 2, 1]
+		],
+		columns: [
+        [0,870,2],
+        [870,1300,3],
+        [1300,1680,4]
+		],
+		filler: {
+			itemSelector: '.gallery--item-quadro',
+        filler_class: 'custom_filler',
+        keepDataAndEvents: false
+		},
+		layout: 'fluid',
+		gutter: 5
+	});
+
+	// page #16 & #8 catalogue
+	$('.js-reverse').click(function(){
 		$(this).find('.ui_order').toggleClass('reverse');
 	});
 
@@ -51,6 +76,9 @@ $(function() {
 	}
 	);
 	wow.init();
+
+	// 14 page header
+	$('.page-parallax_interior').addClass('animated');
 
 	// magnific popup. href must start from #popup--{id}
 	$("a[href^='#popup--']").magnificPopup({
@@ -145,11 +173,6 @@ $(function() {
 			$(this).parent().removeClass("opened");
 			return false;
 		}
-	});
-
-	// ui_order page #8
-	$(".ui_order").click(function(){
-		$(this).toggleClass('reverse');
 	});
 
 	// open next
