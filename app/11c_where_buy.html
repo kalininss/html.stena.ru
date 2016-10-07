@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>14 Интерьер</title>
+	<title>11b Where buy</title>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -22,10 +22,7 @@
 	<style>@@include('header.min.css')</style>
 	
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,600,700|Roboto+Condensed:300,700|Roboto:300,500,700|Lobster&subset=cyrillic" rel="stylesheet">
-
-	<!-- удалить строку ниже в продакшне, код принудительно чистит localstorage, чтобы загрузить новую версию svg спрайта -->
-	<script>localStorage.clear();</script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,700|Roboto+Condensed:300,700|Roboto:300,500,700|Lobster&subset=cyrillic" rel="stylesheet">
 
 	<!-- Load sprite.svg -->
 	<script>!function(a,b){"use strict";var c="img/sprite.symbol.svg",d=1;if(!b.createElementNS||!b.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var f,g,e="localStorage"in a&&null!==a.localStorage,h=function(){b.body.insertAdjacentHTML("afterbegin",g)},i=function(){b.body?h():b.addEventListener("DOMContentLoaded",h)};if(e&&localStorage.getItem("inlineSVGrev")==d&&(g=localStorage.getItem("inlineSVGdata")))return i(),!0;try{f=new XMLHttpRequest,f.open("GET",c,!0),f.onload=function(){f.status>=200&&f.status<400&&(g=f.responseText,i(),e&&(localStorage.setItem("inlineSVGdata",g),localStorage.setItem("inlineSVGrev",d)))},f.send()}catch(j){}}(window,document);</script>
@@ -35,63 +32,58 @@
 
 
 <!-- 
-Класс front-page определяет вид topline меню, 
-сейчас оно будет СИНИМ и ПРОЗРАЧНЫМ
-service-page делает синим и непрозрачным на смартфонах
+Класс common-page определяет вид topline меню, 
+сейчас оно будет синим и непрозрачным
 -->
-<body class="front-page service-page">
+<body class="common-page">
 
-	<!-- BURGER MENU -->
-	<div class="scroll-menu">
-		<div class="scroll-menu__header">
-			<svg class="logo__svg"><use xlink:href="#03_Logo"></use></svg>
-			<svg class="scroll-menu--close js-open-scroll-menu"><use xlink:href="#48_Close"></use></svg>
-		</div>
-		<nav class="nav scroll-menu__nav">
-			<ul class="list">
-				<li><a href="#">Главная</a></li>
-				<li><a href="#">О компании</a></li>
-				<li><a href="#">Подбор покрытия</a></li>
-				<li><a href="#">Каталог</a></li>
-				<li><a href="#">Галерея интерьеров</a></li>
-				<li><a href="#">Услуги</a></li>
-				<li><a href="#">Где купить</a></li>
-				<li><a href="#" class="js-open-scroll-search">Поиск <i class="icon-plus"></i></a></li>
-				<form class="scroll-search">
-					<input id="to-focus2" class="scroll-search__input brown_placeholder" type="text" name="stop" autocomplete="off" required placeholder="Ваш запрос">
-					<button class="scroll-search__sumbit"><svg class="svg_10"><use xlink:href="#10_search"></use></svg></button>
-				</form>
-			</ul>
-		</nav>
-		<div class="scroll-menu__footer">
-			<a href="#popup--call-back" class="link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
-				<p class="footer-phone-svg__text">Обратный звонок</p>
-			</a>
-		</div>
-	</div>
-	<div class="bg-dark"></div><!-- фон при выдвижении меню -->
-	
-	<header class="header js-parallax header-always-parallax">
+
+	<header class="header">
 
 		<!-- TOP LINE -->
-		<div class="header__topline topline topline_interior">
+		<div class="header__topline topline">
 			<div class="container-fluid">	
 				<div class="row">
-					<div class="col-xs-3">
-						<svg class="logo-menu logo-menu--visible-always topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
-						<a class="top-camera" href="#"><svg class="svg--camera-white"><use xlink:href="#53_camera"></use></svg></a>
-					</div><!-- col -->
-
-					<div class="col-xs-6 text-center">
-						<div class="topline_interior--logo logo clearfix">
-							<a href="/"><svg class="dark-logo"><use xlink:href="img/svg-pages/rotate.svg"></use></svg></a>
+					<div class="col-lg-2 col-sm-9 col-xs-9 col-topline-logo">
+						<svg class="logo-menu topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
+						<div class="topline__logo logo clearfix">
+							<a href="/"><svg class="logo__svg"><use xlink:href="#03_Logo"></use></svg></a>
+							<p class="logo__text">+7 (499) 977-70-07</p>
 						</div>
 					</div><!-- col -->
 
-					<div class="col-xs-3">
-						<div class="topline__extra extra extra-small">
-							<a href="#" class="extra__item img-button img-button_close-interior">
-								<svg class="svg_06"><use xlink:href="#52_close"></use></svg>
+					<div class="col-lg-8 col-md-7 visible-lg-block">
+						<nav class="topline__nav nav">
+							<ul class="list flex flex_center">
+								<li class="list__item"><a class="menu-link" href="#">О компании</a></li>
+								<li class="list__item"><a class="menu-link" href="#">Подбор покрытия</a></li>
+								<li class="list__item"><a class="menu-link" href="#">Каталог</a></li>
+								<li class="list__item"><a class="menu-link" href="#">Галерея интерьеров</a></li>
+								<li class="list__item"><a class="menu-link" href="#">Услуги</a></li>
+								<li class="list__item"><a class="menu-link" href="#">Где купить</a></li>
+							</ul>
+						</nav>
+					</div><!-- col -->
+
+					<div class="col-lg-2 col-sm-3 col-xs-3 col-extra">
+						<div class="topline__extra extra">
+							<a href="#" class="extra__item img-button img-button_search">
+								<svg class="svg_06 open-collapse-search"><use xlink:href="#06_search"></use></svg>
+								<form class="collapsed-search">
+									<input id="to-focus" class="white_placeholder" type="text" name="stop" autocomplete="off" required placeholder="Ваш запрос">
+									<button class="collapsed-search__submit-btn"><svg class="svg_06"><use xlink:href="#06_search"></use></svg></button>
+								</form>
+							</a>
+							<a href="#" class="extra__item img-button img-button_cabinet">
+								<svg class="svg_06"><use xlink:href="#07_cabinet"></use></svg>
+								<span class="img-button_cabinet__text">06</span>
+							</a>
+							<a href="#" class="extra__item img-button img-button_favorites">
+								<svg class="svg_06"><use xlink:href="#08_favorites"></use></svg>
+								<span class="img-button_favorites__text">23</span>
+							</a>
+							<a href="#" class="extra__item img-button img-button_personal">
+								<svg class="svg_06"><use xlink:href="#42_Personal"></use></svg>
 							</a>
 						</div>
 					</div><!-- col -->
@@ -99,20 +91,62 @@ service-page делает синим и непрозрачным на смарт
 				</div>
 			</div><!-- container-fluid -->
 		</div><!-- topline -->
-		
-		<div class="page-parallax page-parallax_relative page-parallax_interior">
-			<picture>
-				<source srcset="img/demo/page-interior/header-480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/demo/page-interior/header-900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/demo/page-interior/header-1360.jpg" media="(max-width: 1360px)" />
-				<source srcset="img/demo/page-interior/header-1920.jpg" media="(min-width: 1361px)" />
-				<img src="img/demo/page-interior/header-480.jpg" alt="">
-			</picture>
-			<div class="container-fluid container-lg-static page-parallax--container"><div class="inner">
-				<h2 class="page-parallax--head page-parallax--head-small">SABBIA MICRO PLATINUM</h2>
-				<h1 class="page-parallax--text page-parallax--text-small">Венецианская штукатурка имитация камня с терракотовыми вкраплениями</h1>
-			</div></div>
+
+		<!-- TOP LINE ON SCROLL -->
+		<div class="topline-scroll">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-2">
+						<a href="/" class="logo"><svg class="topline-scroll__logo"><use xlink:href="#02_Logo"></use></svg></a>
+					</div><!-- col -->
+
+					<div class="col-xs-8">
+						<div class="topline-scroll__contact">
+							<a href="tel:+74999777007">+7 (499) 977-70-07</a>
+							<a href="#popup--call-back" class="js-open-popup link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
+								<p class="footer-phone-svg__text">Обратный звонок</p>
+							</a>
+						</div>
+					</div><!-- col -->
+
+					<div class="col-xs-2">
+						<svg class="topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
+					</div><!-- col -->
+
+				</div>
+			</div><!-- container-fluid -->
+		</div><!-- topline-scroll -->
+
+		<!-- BURGER MENU -->
+		<div class="scroll-menu">
+			<div class="scroll-menu__header">
+				<svg class="logo__svg"><use xlink:href="#03_Logo"></use></svg>
+				<svg class="scroll-menu--close js-open-scroll-menu"><use xlink:href="#48_Close"></use></svg>
+			</div>
+			<nav class="nav scroll-menu__nav">
+				<ul class="list">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Подбор покрытия</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Галерея интерьеров</a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Где купить</a></li>
+					<li><a href="#" class="js-open-scroll-search">Поиск <i class="icon-plus"></i></a></li>
+					<form class="scroll-search">
+						<input id="to-focus2" class="scroll-search__input brown_placeholder" type="text" name="stop" autocomplete="off" required placeholder="Ваш запрос">
+						<button class="scroll-search__sumbit"><svg class="svg_10"><use xlink:href="#10_search"></use></svg></button>
+					</form>
+				</ul>
+			</nav>
+			<div class="scroll-menu__footer">
+				<a href="#popup--call-back" class="link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
+					<p class="footer-phone-svg__text">Обратный звонок</p>
+				</a>
+			</div>
 		</div>
+		<div class="bg-dark"></div><!-- фон при выдвижении меню -->
+
 
 	</header>
 
@@ -123,22 +157,81 @@ service-page делает синим и непрозрачным на смарт
 	<!--  -->
 	<main class="main">
 
-		<article class="container-fluid container-lg-static interior">
+		<nav class="breadcrump container-fluid container-lg-static">
+			<ul>
+				<li><a href="#">Главная</a></li>
+				<li>Где купить</li>
+			</ul>
+		</nav>
+
+		<article class="container-fluid container-lg-static">
+			<div id="map_big"></div>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_UZtFriSt4MRiJnc6SuGzpMeiKY94igo&callback=initMap" async defer></script>
+			<script>
+				function initMap() {
+					var styleArray = [{"fearureType":"all","elementType":"labels.text","stylers":[{"visibility":"on"},{"color":"#868080"},{"weight":0.1}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":56}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}];
+					var map = new google.maps.Map(document.getElementById('map_big'), {
+						center: {lat: 55.7499093, lng: 37.61179},
+						scrollwheel: false,
+						styles: styleArray,
+						zoom: 8,
+						zoomControl: true,
+						mapTypeControl: false,
+						scaleControl: false,
+						streetViewControl: true,
+						rotateControl: false
+					});
+					var image = 'img/39_geomarker.png';
+					var marker = new google.maps.Marker({
+						position: {lat: 55.7499093, lng: 37.61179},
+						label: "1",
+						icon: image,
+						map: map
+					});
+				}
+			</script>
+
 
 			<div class="row">
-				<div class="col-xs-3 interior--main">
-					<img class="interior--img" src="img/demo/page-interior/thumbnail.jpg" alt="">
-					<h3 class="interior_name">Sabbia Micro Platinum  AR124</h3>
-					<a href="#" class="btn btn_brown">Подробнее</a>
+				<div class="col-lg-7">
+					<div class="place_panel">
+						<div class="place_panel--info">
+							<div class="place_panel--number">01</div>
+							<h1 class="place_panel--head">Центр Декоративных материалов "Стена-Клавэль"</h1>
+							<h2 class="place_panel--address">127550, г. Москва, ул. Прянишникова, 31 А</h2>
+							<div class="place_panel--phones">
+								<a href="tel:+74999778766">+7 (499) 977-8766</a>
+								<a href="tel:+74999778766">+7 (499) 977-8766</a>
+								<a href="tel:+74999778766">+7 (499) 977-8766</a>
+								<a href="tel:+74999778766">+7 (499) 977-8766</a>
+							</div>
+							<p class="place_panel--time">Пн-пт     9-00 - 17-30 <br>Сб         10-00 -16-00</p>
+						</div>
+						<div class="place_panel--buttons">
+							<a href="#" class="btn btn--send">Отправить сообщение</a>
+							<a href="#" class="btn btn--send">Обратный звонок</a>
+						</div>
+					</div>
+					<div class="place--text">
+						<p>Генеральный дилер производителя. С 1997 года оказываем услуги на рынке декоративных покрытий для интерьеров и фасадов. </p>
+						<p>Самый широкий ассортимент  готовых эффектов. От натуральных венецианских штукатурок до флоковых покрытий и шелковых красок.</p>
+						<p>Подбор по визуализатору про, демонстрационным выкрасам, каталогам с реальными образцами  - цвета, фактуры, функциональных характеристик в соответствие с назначением помещения..</p>
+						<p>Более 15 лет опыта в ненесении венецианских штукатурок, всех типов фактурных штукатурок в том числе с применением объемных трафаретов,, флоков , мозаичных красок, </p>
+						<p>Кроме того, в продаже имеются фасадные краски и штукатурки, позволяющие получать различные декоративные эффекты при проведении наружных отделочных работ. С Центром «Стена» любые стены станут как новые!    www.stena.ru</p>
+					</div>
 				</div>
-				<div class="col-xs-9 interior--description">
-					<p>В интерьере спальни использовано декоративное покрытие Arabesco с эффектом мокрого шелка (эффект Arabesco  AR124). <br>Декоративная штукатурка, нанесенная с эффектом «Морская губка», будто повторяет природные мотивы. В зависимости от метода нанесения такая штукатурка может иметь вид морской пены, имитировать поверхность морской губки или быть похожей на местами пористый натуральный камень.</p>
-					<p>При удачно направленном освещении, стена кажется приятно прохладной. Эффект «Морская губка» используют в интерьерах самых разных стилей: он отлично подходит для классических интерьеров, при выборе насыщенных «пряных» цветов может стать украшением комнаты в восточном стиле, в определенной заданной стилистике «Морская губка» находит свое место даже в помещениях хай-тек.</p>
+				<div class="col-lg-5 place-col">
+					<div class="img-bordered">
+						<img src="img/demo/page-where-buy/thumbnail.jpg" alt="">
+						<a href="#" class="next-link"></a>
+					</div>
+					<div class="img-bordered--text">
+						<p><b>Проезд от м. Войковская</b><br>1 вагон из центра выход в сторону кинотеатра Варшава автобусы: 114,179,282,191 204, маршрутное такси: 132,114,282 до остановки Лихоборские бугры справа от остановки рядом со светофором указатель со стрелкой Академический проезд, с правой стороны здание НИИ Агрохимии сельского хозяйства на первом этаже магазин салон "СТЕНА"</p>
+						<p><b>Проезд от м. Войковская</b><br>1 вагон из центра выход в сторону кинотеатра Варшава автобусы: 114,179,282,191 204, маршрутное такси: 132,114,282 до остановки Лихоборские бугры справа от остановки рядом со светофором указатель со стрелкой Академический проезд, с правой стороны здание НИИ Агрохимии сельского хозяйства на первом этаже магазин салон "СТЕНА"</p>
+					</div>
 				</div>
 			</div>
-
 		</article>
-
 
 	</main>
 	<!--  -->

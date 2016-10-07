@@ -1,25 +1,33 @@
 $(function() {
 
+
+
+	// page 11 where to buy
+	$('.not-found--close').click(function(){
+		$(this).parent().slideUp(300);
+	});
+
+	// page gallery for equale height
 	$(".gallery").mason({
 		itemSelector: '.gallery--item',
 		ratio: 1.32,
 		sizes: [
-			[1, 1]
+		[1, 1]
 		],
 		promoted: [
-			['gallery--item-high', 1, 2],
-			['gallery--item-quadro', 1, 1],
-			['gallery--item-long', 2, 1]
+		['gallery--item-high', 1, 2],
+		['gallery--item-quadro', 1, 1],
+		['gallery--item-long', 2, 1]
 		],
 		columns: [
-        [0,870,2],
-        [870,1300,3],
-        [1300,1680,4]
+		[0,870,2],
+		[870,1300,3],
+		[1300,1680,4]
 		],
 		filler: {
 			itemSelector: '.gallery--item-quadro',
-        filler_class: 'custom_filler',
-        keepDataAndEvents: false
+			filler_class: 'custom_filler',
+			keepDataAndEvents: false
 		},
 		layout: 'fluid',
 		gutter: 5
@@ -53,6 +61,7 @@ $(function() {
 
 	// фильтр по цене
 	try {
+		loadJS();
 		startRange();
 	} catch (err) {
 		// функция находится в файле 08_vybor_pokrytia.html

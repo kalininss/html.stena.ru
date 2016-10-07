@@ -66,7 +66,7 @@ gulp.task('libs', function() {
 		'app/libs/wow/dist/wow.min.js',
 		'app/libs/picturefill/dist/picturefill.min.js',
 		'app/libs/nouislider/nouislider.min.js',
-		// 'app/libs/google-maps/google.min.js',
+		'app/libs/enquire/dist/enquire.min.js',
 		'app/libs/MasonJS/dist/mason.min.js'
 		])
 		.pipe(concat('libs.min.js'))
@@ -103,7 +103,7 @@ gulp.task('buildhtml', function() {
 
 gulp.task('removedist', function() { return del.sync('dist'); });
 
-gulp.task('build', ['removedist', 'buildhtml', 'imagemin', 'sass', 'libs'], function() {
+gulp.task('build', ['removedist', 'buildhtml'/**/ , 'imagemin','sass', 'libs'], function() {
 
 	var buildCss = gulp.src([
 		'app/css/fonts.min.css',
