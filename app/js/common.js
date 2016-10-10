@@ -1,5 +1,7 @@
 $(function() {
 
+	// 14 page header
+	$('.page-parallax_interior').addClass('animated');
 
 
 	// page 11 where to buy
@@ -7,31 +9,51 @@ $(function() {
 		$(this).parent().slideUp(300);
 	});
 
+	// $('.gallery').nested({
+	// 	selector: '.gallery--item',
+	// 	minWidth: 300,
+	// 	minColumn: 4,
+	// 	gutter: 10,
+	//   resizeToFit: true,
+	//   resizeToFitOptions: { 
+	//     resizeAny: true
+	//   }
+	// });
 	// page gallery for equale height
-	$(".gallery").mason({
-		itemSelector: '.gallery--item',
-		ratio: 1.32,
-		sizes: [
-		[1, 1]
-		],
-		promoted: [
-		['gallery--item-high', 1, 2],
-		['gallery--item-quadro', 1, 1],
-		['gallery--item-long', 2, 1]
-		],
-		columns: [
-		[0,870,2],
-		[870,1300,3],
-		[1300,1680,4]
-		],
-		filler: {
-			itemSelector: '.gallery--item-quadro',
-			filler_class: 'custom_filler',
-			keepDataAndEvents: false
-		},
-		layout: 'fluid',
-		gutter: 5
-	});
+	// $(".gallery").mason({
+	// 	itemSelector: '.gallery--item',
+	// 	ratio: 1.32,
+	// 	sizes: [
+	// 	[1, 1]
+	// 	],
+	// 	promoted: [
+	// 	['gallery--item-high', 1, 2],
+	// 	['gallery--item-quadro', 1, 1],
+	// 	['gallery--item-long', 2, 1]
+	// 	],
+	// 	columns: [
+	// 	[0,870,2],
+	// 	[870,1300,3],
+	// 	[1300,1680,4]
+	// 	],
+	// 	filler: {},
+	// 	layout: 'fluid',
+	// 	gutter: 5
+	// });
+	// var wall = new Freewall('.gallery');
+	// wall.reset({
+	// 	selector: '.gallery--item',
+	// 	cellW: 100,
+	// 	cellH: 'auto',
+	// 	// fixSize: 0,
+	// 	gutterX: 10,
+	// 	gutterY: 10,
+	// 	onResize: function (){
+	// 		wall.fitZone();
+	// 	}
+	// })
+	// wall.fitZone();
+	// $(window).trigger("resize");
 
 	// page #16 & #8 catalogue
 	$('.js-reverse').click(function(){
@@ -85,9 +107,6 @@ $(function() {
 	}
 	);
 	wow.init();
-
-	// 14 page header
-	$('.page-parallax_interior').addClass('animated');
 
 	// magnific popup. href must start from #popup--{id}
 	$("a[href^='#popup--']").magnificPopup({
@@ -165,6 +184,14 @@ $(function() {
 			768 : {items: 5}
 		}
 	});
+	$('.owl-visualiser').owlCarousel({
+		// items: 10,
+		nav: true,
+		margin: 2,
+		loog: false,
+		dots: false,
+		autoWidth: true
+	});
 
 	// smooth scroll to #top
 	$("a[href^='#top']").click(function(){
@@ -232,6 +259,57 @@ $(function() {
 
 	// placeholder mask for input phone
 	$(".js-phone-placeholder").mask("+7 (999) 999-99-99");
+
+	// visualiser
+	$('.owl-visualiser--thumbnail').click(function(){
+		$('.owl-visualiser--thumbnail').removeClass('clicked');
+		$(this).addClass('clicked');
+	})
+	$('.scroll-exit').click(function(){
+		if ( $(this).parent().hasClass('scroll-effects') ) {
+			$('.scroll-effects').toggle();
+			$('.visualiser--one_function-other').toggleClass('opened');
+		}
+		else if ( $(this).parent().hasClass('scroll-interior') ) {
+			$('.scroll-interior').toggle();
+			$('.visualiser--one_function-other_interior').toggleClass('opened');
+		}
+		else if ( $(this).parent().hasClass('scroll-bookmark') ) {
+			$('.scroll-bookmark').toggle();
+			$('.visualiser--one_function-favourite').toggleClass('opened');
+		}
+		$(this).parent().hide();
+	});
+	$('.scroll--item').click(function(){
+		$(this).parent().find('.scroll--item').removeClass('clicked');
+		$(this).toggleClass('clicked');
+		return false;
+	});
+	$('.visualiser--one_function-other').click(function(){
+		$('.scroll-effects').toggle();
+		$(this).toggleClass('opened');
+	});
+	$('.visualiser--one_function-other_interior').click(function(){
+		$('.scroll-interior').toggle();
+		$(this).toggleClass('opened');
+	});
+	$('.visualiser--one_function-favourite').click(function(){
+		$('.scroll-bookmark').toggle();
+		$(this).toggleClass('opened');
+	});
+	$('.visualiser--menu_button').click(function(){
+		$(this).toggleClass('active');
+		$('.scroll').hide();
+		$('.visualiser--one_function').removeClass('opened');
+		$('.visualiser--functions').toggleClass('opened');
+	});
+	$('.add_to_bookmark').click(function(){
+		$('.add_to_bookmark__popup').show(300, function(){
+			setTimeout(function(){
+				$('.add_to_bookmark__popup').hide(300);
+			}, 1000);
+		});
+	});
 
 });
 

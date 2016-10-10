@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>11c Where buy</title>
+	<title>04 Визуализатор</title>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -22,7 +22,7 @@
 	<style>@@include('header.min.css')</style>
 	
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,700|Roboto+Condensed:300,700|Roboto:300,500,700|Lobster&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300,400,600,700|Roboto+Condensed:300,700|Roboto:300,500,700|Lobster&subset=cyrillic" rel="stylesheet">
 
 	<!-- Load sprite.svg -->
 	<script>!function(a,b){"use strict";var c="img/sprite.symbol.svg",d=1;if(!b.createElementNS||!b.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var f,g,e="localStorage"in a&&null!==a.localStorage,h=function(){b.body.insertAdjacentHTML("afterbegin",g)},i=function(){b.body?h():b.addEventListener("DOMContentLoaded",h)};if(e&&localStorage.getItem("inlineSVGrev")==d&&(g=localStorage.getItem("inlineSVGdata")))return i(),!0;try{f=new XMLHttpRequest,f.open("GET",c,!0),f.onload=function(){f.status>=200&&f.status<400&&(g=f.responseText,i(),e&&(localStorage.setItem("inlineSVGdata",g),localStorage.setItem("inlineSVGrev",d)))},f.send()}catch(j){}}(window,document);</script>
@@ -157,81 +157,323 @@
 	<!--  -->
 	<main class="main">
 
-		<nav class="breadcrump container-fluid container-lg-static">
-			<ul>
-				<li><a href="#">Главная</a></li>
-				<li>Где купить</li>
-			</ul>
-		</nav>
-
-		<article class="container-fluid container-lg-static">
-			<div id="map_big"></div>
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_UZtFriSt4MRiJnc6SuGzpMeiKY94igo&callback=initMap" async defer></script>
-			<script>
-				function initMap() {
-					var styleArray = [{"fearureType":"all","elementType":"labels.text","stylers":[{"visibility":"on"},{"color":"#868080"},{"weight":0.1}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":56}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}];
-					var map = new google.maps.Map(document.getElementById('map_big'), {
-						center: {lat: 55.7499093, lng: 37.61179},
-						scrollwheel: false,
-						styles: styleArray,
-						zoom: 8,
-						zoomControl: true,
-						mapTypeControl: false,
-						scaleControl: false,
-						streetViewControl: true,
-						rotateControl: false
-					});
-					var image = 'img/39_geomarker.png';
-					var marker = new google.maps.Marker({
-						position: {lat: 55.7499093, lng: 37.61179},
-						label: "1",
-						icon: image,
-						map: map
-					});
-				}
-			</script>
-
-
-			<div class="row">
-				<div class="col-lg-7">
-					<div class="place_panel">
-						<div class="place_panel--info">
-							<div class="place_panel--number">01</div>
-							<h1 class="place_panel--head">Центр Декоративных материалов "Стена-Клавэль"</h1>
-							<h2 class="place_panel--address">127550, г. Москва, ул. Прянишникова, 31 А</h2>
-							<div class="place_panel--phones">
-								<a href="tel:+74999778766">+7 (499) 977-8766</a>
-								<a href="tel:+74999778766">+7 (499) 977-8766</a>
-								<a href="tel:+74999778766">+7 (499) 977-8766</a>
-								<a href="tel:+74999778766">+7 (499) 977-8766</a>
-							</div>
-							<p class="place_panel--time">Пн-пт     9-00 - 17-30 <br>Сб         10-00 -16-00</p>
-						</div>
-						<div class="place_panel--buttons">
-							<a href="#" class="btn btn--send">Отправить сообщение</a>
-							<a href="#" class="btn btn--send">Обратный звонок</a>
-						</div>
-					</div>
-					<div class="place--text">
-						<p>Генеральный дилер производителя. С 1997 года оказываем услуги на рынке декоративных покрытий для интерьеров и фасадов. </p>
-						<p>Самый широкий ассортимент  готовых эффектов. От натуральных венецианских штукатурок до флоковых покрытий и шелковых красок.</p>
-						<p>Подбор по визуализатору про, демонстрационным выкрасам, каталогам с реальными образцами  - цвета, фактуры, функциональных характеристик в соответствие с назначением помещения..</p>
-						<p>Более 15 лет опыта в ненесении венецианских штукатурок, всех типов фактурных штукатурок в том числе с применением объемных трафаретов,, флоков , мозаичных красок, </p>
-						<p>Кроме того, в продаже имеются фасадные краски и штукатурки, позволяющие получать различные декоративные эффекты при проведении наружных отделочных работ. С Центром «Стена» любые стены станут как новые!    www.stena.ru</p>
-					</div>
+		<section class="visualizer">
+			<div class="visualizer--container">
+				<div class="visualizer--top">
+					<i class="icon--clavel"></i>
+					<h1 class="visualiser--head">Sabbia Micro Silver  AR1235</h1>
+					<i class="icon--florenta"></i>
+					<button class="add_to_bookmark add_to_bookmark-mobile"><i class="visualiser--add"></i></button>
 				</div>
-				<div class="col-lg-5 place-col">
-					<div class="img-bordered">
-						<img src="img/demo/page-where-buy/thumbnail.jpg" alt="">
-						<a href="#" class="next-link"></a>
+				<div class="visualiser--app">
+
+					<div class="visualiser--app_inner"> 
+						<picture>
+							<source srcset="img/demo/visualiser/preview-480.png" media="(max-width: 900px)" />
+							<img src="img/demo/visualiser/preview.png" alt="">
+						</picture>
+						<div class="add_to_bookmark__popup">Эффект AR1356 успешно добавлен</div>
+						<div class="visualiser--free_area">
+							<div class="scroll scroll-effects">
+								<div class="scroll--head-mobile">Интерьеры</div>
+								<button class="scroll-exit"></button>
+								<a href="#" class="scroll--item scroll--item-small">
+									<img src="img/demo/visualiser/scroll-small.jpg" alt="">
+									<div class="scroll--head">Grange Metal Dark Silver GM01</div>
+								</a>
+								<a href="#" class="scroll--item scroll--item-small">
+									<img src="img/demo/visualiser/scroll-small.jpg" alt="">
+									<div class="scroll--head">Grange Metal Dark Silver GM01</div>
+								</a>
+								<a href="#" class="scroll--item scroll--item-small">
+									<img src="img/demo/visualiser/scroll-small.jpg" alt="">
+									<div class="scroll--head">Grange Metal Dark Silver GM01</div>
+								</a>
+								<a href="#" class="scroll--item scroll--item-small">
+									<img src="img/demo/visualiser/scroll-small.jpg" alt="">
+									<div class="scroll--head">Grange Metal Dark Silver GM01</div>
+								</a>
+								<a href="#" class="scroll--item scroll--item-small">
+									<img src="img/demo/visualiser/scroll-small.jpg" alt="">
+									<div class="scroll--head">Grange Metal Dark Silver GM01</div>
+								</a>
+								<a href="#" class="scroll--item scroll--item-small">
+									<img src="img/demo/visualiser/scroll-small.jpg" alt="">
+									<div class="scroll--head">Grange Metal Dark Silver GM01</div>
+								</a>
+							</div>
+							<div class="scroll scroll-interior">
+								<div class="scroll--head-mobile">Эффекты</div>
+								<button class="scroll-exit"></button>
+								<a href="#" class="scroll--item">
+									<img src="img/demo/visualiser/scroll-big.jpg" alt="">
+									<div class="scroll--head">Интерьер 01 - Гостинная</div>
+								</a>
+								<a href="#" class="scroll--item">
+									<img src="img/demo/visualiser/scroll-big.jpg" alt="">
+									<div class="scroll--head">Интерьер 01 - Гостинная Инт ерьер 01 - Гостин ная Инте рьер 01 - Гост инная Гостинн ая Интер ьер 01 - Гостинная </div>
+								</a>
+								<a href="#" class="scroll--item">
+									<img src="img/demo/visualiser/scroll-big.jpg" alt="">
+									<div class="scroll--head">Интерьер 01 - Гостинная</div>
+								</a>
+								<a href="#" class="scroll--item">
+									<img src="img/demo/visualiser/scroll-big.jpg" alt="">
+									<div class="scroll--head">Интерьер 01 - Гостинная</div>
+								</a>
+								<a href="#" class="scroll--item">
+									<img src="img/demo/visualiser/scroll-big.jpg" alt="">
+									<div class="scroll--head">Интерьер 01 - Гостинная</div>
+								</a>
+							</div>
+							<div class="scroll scroll-bookmark">
+								<div class="scroll--head-mobile">Закладки</div>
+								<button class="scroll-exit"></button>
+								<div class="scroll--item scroll--item-common">
+									<a href="#"><img src="img/demo/visualiser/scroll.jpg" alt=""></a>
+									<div class="scroll--head">AR1405</div>
+									<a href="#" class="scroll--item_delete"></a>
+								</div>
+								<div class="scroll--item scroll--item-common">
+									<a href="#"><img src="img/demo/visualiser/scroll.jpg" alt=""></a>
+									<div class="scroll--head">AR1405</div>
+									<a href="#" class="scroll--item_delete"></a>
+								</div>
+								<div class="scroll--item scroll--item-common">
+									<a href="#"><img src="img/demo/visualiser/scroll.jpg" alt=""></a>
+									<div class="scroll--head">AR1405</div>
+									<a href="#" class="scroll--item_delete"></a>
+								</div>
+								<div class="scroll--item scroll--item-common">
+									<a href="#"><img src="img/demo/visualiser/scroll.jpg" alt=""></a>
+									<div class="scroll--head">AR1405</div>
+									<a href="#" class="scroll--item_delete"></a>
+								</div>
+								<div class="scroll--item scroll--item-common">
+									<a href="#"><img src="img/demo/visualiser/scroll.jpg" alt=""></a>
+									<div class="scroll--head">AR1405</div>
+									<a href="#" class="scroll--item_delete"></a>
+								</div>
+								<div class="scroll--item scroll--item-common">
+									<a href="#"><img src="img/demo/visualiser/scroll.jpg" alt=""></a>
+									<div class="scroll--head">AR1405</div>
+									<a href="#" class="scroll--item_delete"></a>
+								</div>
+							</div>
+						</div>
+
+						<!-- start functions -->
+						<div class="visualiser--functions">
+							<div class="visualiser--one_function visualiser--one_function-other">
+								<i class="icon_visualiser icon_visualiser-other"></i>
+								<div class="icon_visualiser--text">Другие<br>эффекты</div>
+							</div>
+							<div class="visualiser--one_function visualiser--one_function-other_interior">
+								<i class="icon_visualiser icon_visualiser-other_interior"></i>
+								<div class="icon_visualiser--text">Другие<br>интерьеры</div>
+							</div>
+							<a href="#popup--visualiser" class="js-open-popup visualiser--one_function visualiser--one_function-smeta">
+								<i class="icon_visualiser icon_visualiser-smeta"></i>
+								<div class="icon_visualiser--text">Расчёт<br>сметы</div>
+							</a>
+							<div class="visualiser--one_function visualiser--one_function-description">
+								<i class="icon_visualiser icon_visualiser-description"></i>
+								<div class="icon_visualiser--text">Описание<br>продукта</div>
+							</div>
+							<div class="visualiser--one_function visualiser--one_function-technic">
+								<i class="icon_visualiser icon_visualiser-technic"></i>
+								<div class="icon_visualiser--text">Техника<br>нанесения</div>
+							</div>
+							<div class="visualiser--one_function visualiser--one_function-gallery">
+								<i class="icon_visualiser icon_visualiser-gallery"></i>
+								<div class="icon_visualiser--text">Галерея<br>интерьеров</div>
+							</div>
+							<div class="visualiser--one_function visualiser--one_function-cart">
+								<i class="icon_visualiser icon_visualiser-cart"></i>
+								<div class="icon_visualiser--text">Карточки<br>колеровки</div>
+							</div>
+							<div class="visualiser--one_function visualiser--one_function-favourite">
+								<i class="icon_visualiser icon_visualiser-favourite"></i>
+								<div class="icon_visualiser--add">83</div>
+								<div class="icon_visualiser--text">Посмотреть<br>закладки</div>
+							</div>
+						</div>
+						<!-- end functions -->
+
+
 					</div>
-					<div class="img-bordered--text">
-						<p><b>Проезд от м. Войковская</b><br>1 вагон из центра выход в сторону кинотеатра Варшава автобусы: 114,179,282,191 204, маршрутное такси: 132,114,282 до остановки Лихоборские бугры справа от остановки рядом со светофором указатель со стрелкой Академический проезд, с правой стороны здание НИИ Агрохимии сельского хозяйства на первом этаже магазин салон "СТЕНА"</p>
-						<p><b>Проезд от м. Войковская</b><br>1 вагон из центра выход в сторону кинотеатра Варшава автобусы: 114,179,282,191 204, маршрутное такси: 132,114,282 до остановки Лихоборские бугры справа от остановки рядом со светофором указатель со стрелкой Академический проезд, с правой стороны здание НИИ Агрохимии сельского хозяйства на первом этаже магазин салон "СТЕНА"</p>
+
+
+					<div class="visualiser--footer">
+						<div class="visualiser--menu">
+							<div class="visualiser--one_function visualiser--one_function-mobile visualiser--one_function-other">
+								<i class="icon_visualiser icon_visualiser-other"></i>
+							</div>
+							<button class="visualiser--menu_button"></button>
+							<a href="#" class="visualiser--pro">HD визуализатор PRO</a>
+						</div>
+						<div class="visualiser--slider">
+							<div class="owl-carousel owl-visualiser">
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail.png" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="visualiser--thumbnail">
+							<img src="img/demo/visualiser/thumbnail-big.png" alt="">
+						</div>
+						<div class="visualiser--extra">
+							<button class="visualiser--button visualiser--button-light">День</button>
+							<button class="visualiser--button visualiser--button-dark">Ночь</button>
+							<button class="add_to_bookmark"><i class="visualiser--add"></i><span class="add_to_bookmark--text">Добавить<br>в закладки</span></button>
+						</div>
 					</div>
 				</div>
 			</div>
-		</article>
+		</section>
 
 	</main>
 	<!--  -->
@@ -342,6 +584,63 @@
 	<!--  -->
 	<!-- Start popup -->
 	<!--  -->
+	<div id="popup--visualiser" class="white-popup white-popup--visualiser visualiser_smeta mfp-hide">
+		<div class="visualiser_smeta--main">
+			<div class="visualiser_smeta--header">
+				<div class="visualiser_smeta--head">Смета ТТ01002</div>
+				<div class="visualiser_smeta--right">
+					<div class="visualiser_smeta--area">348 кв.м.</div>
+					<div class="visualiser_smeta--order">Заказчик</div>
+					<div class="visualiser_smeta--object">Объект</div>
+				</div>
+			</div>
+			<div class="visualiser_smeta--img">
+				<img src="img/demo/visualiser/popup-big.png" alt="">
+			</div>
+			<div class="visualiser_smeta--table_row">
+				<div class="visualiser_smeta--tables">
+					<table class="visualiser_smeta--table_main">
+						<tr> <th>№</th>  <th>Артикул</th>   <th>Продукт</th>           <th>Фасовка</th><th>Цена</th>    <th>Кол-во</th><th>Стоимость</th> </tr>
+						<tr> <td>01</td> <td>0-182-012</td> <td>Enduit de Lissage</td> <td>5 kg</td> <td>1,420 руб.</td> <td><input type="number" value="4"></td> <td>5,670 руб.</td> </tr>
+						<tr> <td>01</td> <td>0-182-012</td> <td>Enduit de Lissage</td> <td>5 kg</td> <td>1,420 руб.</td> <td><input type="number" value="4"></td> <td>5,670 руб.</td> </tr>
+						<tr> <td>01</td> <td>0-182-012</td> <td>Enduit de Lissage</td> <td>5 kg</td> <td>1,420 руб.</td> <td><input type="number" value="4"></td> <td>5,670 руб.</td> </tr>
+						<tr> <td>01</td> <td>0-182-012</td> <td>Enduit de Lissage</td> <td>5 kg</td> <td>1,420 руб.</td> <td><input type="number" value="4"></td> <td>5,670 руб.</td> </tr>
+						<tr> <td>01</td> <td>0-182-012</td> <td>Enduit de Lissage</td> <td>5 kg</td> <td>1,420 руб.</td> <td><input type="number" value="4"></td> <td>5,670 руб.</td> </tr>
+						<tr> <td>01</td> <td>0-182-012</td> <td>Enduit de Lissage</td> <td>5 kg</td> <td>1,420 руб.</td> <td><input type="number" value="4"></td> <td>5,670 руб.</td> </tr>
+						<tr> <td>01</td> <td>0-182-012</td> <td>Enduit de Lissage</td> <td>5 kg</td> <td>1,420 руб.</td> <td><input type="number" value="4"></td> <td>5,670 руб.</td> </tr>
+						<tr> <td>01</td> <td>0-182-012</td> <td>Enduit de Lissage</td> <td>5 kg</td> <td>1,420 руб.</td> <td><input type="number" value="4"></td> <td>5,670 руб.</td> </tr>
+						<tr> <td>01</td> <td>0-182-012</td> <td>Enduit de Lissage</td> <td>5 kg</td> <td>1,420 руб.</td> <td><input type="number" value="4"></td> <td>5,670 руб.</td> </tr>
+					</table>
+					<table class="visualiser_smeta--table_footer">
+						<tr> <td>Доставка</td> <td>0 руб.</td> </tr>
+						<tr> <td>Работа</td> <td>23,870 руб.</td> </tr>
+						<tr> <td>Скидка 12%</td> <td>23,870 руб.</td> </tr>
+						<tr> <th>Итого</th> <th>23,870 руб.</th> </tr>
+						<tr> <th>Стоимость за кв. метр</th> <th>23,870 руб.</th> </tr>
+					</table>
+				</div>
+				<div class="visualiser_smeta--extra">
+					<div class="visualiser_smeta--extra_one" style="background: #B8D1B2; padding: 10px 0;">Грунтовочный слой</div>
+					<div class="visualiser_smeta--extra_one" style="background: #FFFDC7; padding: 10px 0;">Базовый слой</div>
+					<div class="visualiser_smeta--extra_one" style="background: #DCFFFC; padding: 5px 0;">Финишный слой</div>
+					<div class="visualiser_smeta--extra_one" style="background: #FFE9D7; padding: 10px 0;">Колоранты</div>
+				</div>
+			</div>
+		</div>
+		<div class="visualiser_smeta--sidebar">
+			<img src="img/demo/visualiser/popup.png" alt="" class="visualiser_smeta--img_small">
+			<div class="visualiser_smeta--color">Цвет: ТТ011</div>
+			<div class="visualiser_smeta--button_group">
+				<button class="visualiser_smeta--button">Визуализатор</button>
+				<button class="visualiser_smeta--button">Пересчитать</button>
+				<button class="visualiser_smeta--button">Отослать на e-mail</button>
+				<button class="visualiser_smeta--button">Добавить в корзину</button>
+			</div>
+		</div>
+	</div>
+
+
+
 	<div id="popup--mesage-success" class="white-popup white-popup--message mfp-hide">
 		<p class="t-center">Ваше сообщение успешно отправлено. Мы свяжемся с  Вами в течение рабочего дня</p>
 		<svg class="close-button--logo"><use xlink:href="#02_Logo"></use></svg>

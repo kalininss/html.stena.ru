@@ -2152,7 +2152,7 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	font-style: italic
 	text-align: center
 	span
-		background: #FACBCC
+		background: #E5E5E5
 		position: relative
 		z-index: 3
 		font-size: 21px
@@ -2208,15 +2208,33 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	margin-bottom: 30px
 	margin-left: -5px
 	margin-right: -5px
+	@include clearfix
+.gallery-md,
+.gallery-xs
+	display: none
+.gallery--fix_inner
+	position: relative
+	overflow: hidden
+.gallery--group
+	float: left
+	// padding: 5px
+	width: 50%
+	.gallery--item
+		width: 50%
 .gallery--item
 	float: left
+	width: 25%
+	padding: 5px
 	position: relative
 	overflow: hidden
 	height: 100%
+	// margin: 5px
 	img
 		transition: 0.5s
 		width: 100%
 		height: 100%
+
+.gallery--fix_inner
 	&:hover
 		.hover-lines
 			color: #fff
@@ -2261,7 +2279,8 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 				&:nth-of-type(3),
 				&:nth-of-type(4)
 					width: calc(100% - 66px)
-
+.gallery--item-long
+	width: 50%
 .hover-lines:hover
 	.hover-lines__text-top
 		top: 34px
@@ -2539,6 +2558,622 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	.panel-diller--city--outer
 		margin-left: 0
 		margin-right: 0
+
+
+
+// #04 VISUALISER
+.visualizer
+	background: #262626
+	padding: 50px 0 80px
+.visualizer--container
+	max-width: 1054px
+	padding: 0 15px
+	margin:  0 auto
+	position: relative
+.visualizer--top
+	@include clearfix
+.icon--clavel
+	display: inline-block
+	background: url(../img/sprite-visualiser.png) 0px 0px
+	width: 261px
+	height: 36px
+	float: left
+	margin-top: 5px
+.icon--florenta
+	display: inline-block
+	background: url(../img/sprite-visualiser.png) -262px 0px
+	width: 185px
+	height: 46px
+	float: right
+.visualiser--head
+	font-size: 22px
+	width: 100%
+	font-family: $f-head
+	font-weight: 300
+	color: #E5E5E5
+	position: absolute
+	top: 0
+	left: 0
+	text-align: center
+	margin: 10px 0 0
+.visualiser--app
+	margin-top: 20px
+
+.visualiser--footer
+	padding: 8px 15px 13px
+	background: #1C1C1C
+	display: flex
+	justify-content: space-between
+.visualiser--menu
+	display: inline-block
+.visualiser--menu_button
+	display: block
+	background: url(../img/sprite-visualiser.png) -898px -25px
+	width: 99px
+	height: 99px
+	cursor: pointer
+	border: none
+	&:focus
+		outline: none
+	&:hover,
+	&.active
+		background-position: -897px -124px
+.visualiser--pro
+	font-size: 12px
+	color: #B5B5B5
+	text-decoration: underline
+	font-weight: 500
+	display: block
+	width: 144px
+	margin-top: 28px
+	&:hover
+		text-decoration: none
+		color: #B5B5B5
+	&:before
+		content: ''
+		display: inline-block
+		vertical-align: baseline
+		margin-right: 5px
+		border-left: 8px solid #B5B5B5
+		border-top: 5px solid transparent
+		border-bottom: 5px solid transparent
+.visualiser--slider
+	width: 478px
+	margin-right: 12px
+.visualiser--thumbnail
+	margin-right: 12px
+	width: 250px
+.visualiser--extra
+	width: 152px
+.visualiser--button
+	cursor: pointer
+	font-size: 18px
+	font-family: $f-head
+	font-weight: 600
+	border-radius: 3px
+	padding: 6px 0
+	text-align: center
+	margin-bottom: 10px
+	width: 152px
+	border: none
+	&:before
+		content: ''
+		width: 5px
+		transition: 0.1s
+		height: 5px
+		display: inline-block
+		border-left: 0px solid transparent
+		border-top: 5px solid transparent
+		border-bottom: 5px solid transparent
+		margin-bottom: 1px
+	&:hover
+		&:before
+			border-left: 12px solid transparent
+			margin-right: 14px
+.visualiser--button-light
+	background: #F2F2E9
+	color: #575756
+	&:before
+		border-left-color: #575756
+	&:hover
+		background: #fff
+		&:before
+			border-left: 12px solid #575756
+.visualiser--button-dark
+	background: #555A61
+	color: #E3E8F6
+	&:before
+		border-left-color: #E3E8F6
+	&:hover
+		background: #434A51
+		&:before
+			border-left: 12px solid #E3E8F6
+
+
+
+.owl-carousel.owl-visualiser 
+	.owl-stage-outer
+		// overflow: visible
+		// padding: 9px
+		// margin: -9px
+		// background: #0f0
+	.owl-nav
+		.owl-prev,
+		.owl-next
+			width: 20px
+			height: 34px
+			font-size: 0
+			border-right: 20px solid #737373
+			border-top: 17px solid transparent
+			border-bottom: 17px solid transparent
+			opacity: 1
+			left: -32px
+			top: 50%
+			display: block !important
+			&:hover
+				border-right: 20px solid #E1E1E0
+		.owl-prev
+			margin-top: 0px
+		.owl-next
+			margin-top: -50px
+.owl-visualiser--item
+.owl-visualiser--thumbnail
+	width: 46px
+	height: 46px
+	margin-bottom: 2px
+	position: relative
+	cursor: pointer
+	&:hover
+		width: 64px
+		height: 64px
+		border: 4px solid #505050
+		margin-left: -9px
+		margin-top: -9px
+		margin-right: -9px
+		margin-bottom: -7px
+		position: relative
+		z-index: 2
+		.owl-visualiser--hidden
+			display: block,
+	&.clicked
+		border: 4px solid #505050
+
+.owl-visualiser--hidden
+	display: none
+	position: absolute
+	z-index: 2
+	background: #FDFAE4
+	padding: 13px 0
+	width: 96px
+	margin-left: -48px
+	left: 50%
+	border: 2px solid #333333
+	border-radius: 2px
+	font-size: 20px
+	font-family: $f-head
+	font-weight: 300
+	color: #333
+	top: -69px
+	z-index: 16
+	display: none
+	text-align: center
+	&:after
+		content: ''
+		background: url(../img/sprite-visualiser.png) -508px 0
+		width: 18px
+		height: 19px
+		position: absolute
+		bottom: -19px
+		left: 50%
+		margin-left: -9px
+
+.visualiser--app_inner
+	position: relative
+	overflow: hidden
+	> picture img
+		width: 100%
+.visualiser--functions
+	@include clearfix
+	background: rgba(0,0,0,.8)
+	position: absolute
+	bottom: -120px
+	width: 100%
+	padding: 5px 25px 10px
+	// max-height: 0
+	transition: 0.3s
+	overflow: hidden
+	border-top: 2px solid #C7C6C6
+	border-bottom: 2px solid #C7C6C6
+	&.opened
+		// transform: scale(1,1)
+		// max-height: 120px
+		bottom: 0
+.visualiser--one_function
+	float: left
+	margin-right: 40px
+	cursor: pointer
+	position: relative
+	height: 93px
+	&:hover,
+	&.opened
+		.icon_visualiser--text
+			text-shadow: 0 0 10px #3EADE3
+	&:focus
+		outline: none
+		text-decoration: none
+.icon_visualiser--text
+	line-height: 1
+	font-family: $f-head
+	font-weight: 600
+	font-size: 14px
+	color: #CBCED1
+.icon_visualiser--add
+	width: 21px
+	height: 21px
+	color: #536FA0
+	position: absolute
+	right: 27px
+	top: 14px
+	border-radius: 50%
+	font-size: 11px
+	font-family: $f-head
+	font-weight: 700
+	line-height: 20px
+	text-align: center
+	background: #CBCED1
+.icon_visualiser
+	display: inline-block
+	background: url(../img/sprite-visualiser.png)
+	height: 58px
+	width: 60px
+	margin-left: -10px
+.icon_visualiser-other
+	background-position: -30px -72px
+.icon_visualiser-other_interior
+	background-position: -139px -72px
+.icon_visualiser-smeta
+	background-position: -250px -72px
+.icon_visualiser-description
+	background-position: -362px -72px
+.icon_visualiser-technic
+	background-position: -472px -72px
+	margin-left: -15px
+.icon_visualiser-gallery
+	background-position: -587px -72px
+.icon_visualiser-cart
+	background-position: -698px -72px
+.icon_visualiser-favourite
+	background-position: -808px -72px
+	margin-left: -8px
+
+
+
+
+.visualiser--one_function-other
+	&:hover,
+	&.opened
+		i
+			background-position: -30px -144px
+.visualiser--one_function-other_interior
+	&:hover,
+	&.opened
+		i
+			background-position: -139px -144px
+.visualiser--one_function-smeta
+	&:hover,
+	&.opened
+		i
+			background-position: -250px -144px
+.visualiser--one_function-description
+	&:hover,
+	&.opened
+		i
+			background-position: -362px -144px
+.visualiser--one_function-technic
+	&:hover,
+	&.opened
+		i
+			background-position: -472px -144px
+.visualiser--one_function-gallery
+	&:hover,
+	&.opened
+		i
+			background-position: -587px -144px
+.visualiser--one_function-cart
+	&:hover,
+	&.opened
+		i
+			background-position: -698px -144px
+.visualiser--one_function-favourite
+	&:hover,
+	&.opened
+		i
+			background-position: -808px -144px
+		.icon_visualiser--add
+			box-shadow: 0 0 10px #3EADE3
+			background: #fff
+
+
+.visualiser--free_area
+	position: absolute
+	width: 100%
+	left: 0
+	top: 0
+	// background: green
+	height: calc(100% - 112px)
+
+.scroll
+	background: rgba(28,28,28,0.9)
+	overflow-y: scroll
+	padding: 15px
+	height: 100%
+	margin-right: 35px
+	display: none
+	float: left
+	position: relative
+.scroll--item
+	color: #A6A8AB
+	font-size: 12px
+	font-family: $f-head
+	font-weight: 300
+	display: block
+	margin-bottom: 10px
+	max-width: 179px
+	&.clicked 
+		color: #CBCED1
+		img
+			border: 2px solid #fff
+			margin: -2px
+			margin-right: -40px
+			max-width: 150%
+		&:hover,
+		&:focus
+			color: #CBCED1
+	&:hover,
+	&:focus
+		text-decoration: none
+		color: #A6A8AB
+.scroll--item-small
+	max-width: 197px
+	&.clicked 
+		img
+			margin-right: 3px
+			// margin-bottom: 2px
+	img
+		display: inline-block
+		vertical-align: middle
+		margin-right: 5px
+	.scroll--head
+		display: inline-block
+		vertical-align: middle
+		width: calc(100% - 65px)
+.scroll--item-common
+	padding-right: 38px
+	position: relative
+	.scroll--head
+		width: 107px
+	&:hover
+		.scroll--item_delete
+			opacity: 1
+
+.scroll--item_delete
+	content: ''
+	background: url(../img/sprite-visualiser.png) -543px 0
+	width: 12px
+	height: 19px
+	position: absolute
+	top: 12px
+	right: 0
+	opacity: 0
+	transition: 0.2s
+
+
+
+.visualiser--add
+	background: url(../img/sprite-visualiser.png) -580px 0
+	display: inline-block
+	vertical-align: middle
+	width: 70px
+	height: 57px
+	margin-left: -7px
+.add_to_bookmark
+	font-size: 14px
+	font-family: $f-head
+	font-weight: 600
+	color: #F5F5F5
+	display: block
+	margin-top: -10px
+	border: none
+	background: none
+	padding: 0
+	&:focus
+		outline: none
+	&:hover
+		color: #F5F5F5
+		text-decoration: none
+		i
+			background-position: -670px 0
+		.add_to_bookmark--text
+			text-shadow: 0 0 10px #3EADE3
+.add_to_bookmark-mobile
+	display: none
+.add_to_bookmark--text
+	display: inline-block
+	vertical-align: middle
+	line-height: 1
+	text-align: left
+.add_to_bookmark__popup
+	position: absolute
+	z-index: 10
+	color: #fff
+	background: rgba(0,0,0,0.8)
+	padding: 10px 0
+	text-align: center
+	top: 50%
+	width: 180px
+	left: 50%
+	margin-left: -90px
+	margin-top: -35px
+	display: none
+.visualiser--one_function-mobile
+	display: none
+.scroll-exit
+	position: absolute
+	border: none
+	background: none
+	right: 5px
+	top: 5px
+	z-index: 2
+	width: 20px
+	height: 20px
+	padding: 0
+	display: none
+	&:after,
+	&:before
+		position: absolute
+		height: 3px
+		width: 20px
+		content: ''
+		left: 50%
+		margin-left: -10px
+		top: 50%
+		margin-top: -1px
+		background: #fff
+	&:after
+		transform: rotate(45deg)
+	&:before
+		transform: rotate(-45deg)
+.scroll--head-mobile
+	display: none
+	font-size: 19px
+	font-family: $f-head
+	font-weight: 600
+	color: #D0D2D3
+
+
+
+
+// popups
+.white-popup--visualiser
+	max-width: 1010px
+	width: 100%
+.visualiser_smeta
+	@include clearfix
+.visualiser_smeta--main
+	width: 800px
+	float: left
+.visualiser_smeta--sidebar
+	width: calc(100% - 815px)
+	float: right
+	margin-top: 46px
+	height: 367px
+	position: relative
+.visualiser_smeta--header
+	margin-bottom: 10px
+.visualiser_smeta--head
+	font-size: 26px
+	color: #6D6E70
+	font-family: $f-head
+	font-weight: 600
+	display: inline-block
+.visualiser_smeta--right
+	float: right
+	margin-top: 5px
+.visualiser_smeta--area
+	display: inline-block
+	font-size: 20px
+	font-family: $f-head
+	font-weight: 600
+	margin-right: 10px
+.visualiser_smeta--order
+	display: inline-block
+	border: 1px solid #686868
+	padding: 7px 5px
+	padding-right: 30px
+	margin-right: 10px
+.visualiser_smeta--object
+	display: inline-block
+	border: 1px solid #686868
+	padding: 7px 5px
+	padding-right: 80px
+.visualiser_smeta--img
+.visualiser_smeta--table_row
+.visualiser_smeta--tables
+	max-width: calc(100% - 150px)
+	float: left
+.visualiser_smeta--table_main
+	border-spacing: 5px 10px
+	border-collapse: separate
+	text-align: left
+	input
+		border: none
+		outline: none
+		text-align: center
+		font-size: 15px
+		padding: 0
+		margin: 0
+	td, th
+		&:nth-child(1)
+			width: 5%
+		&:nth-child(2)
+			width: 15%
+		&:nth-child(3)
+			width: 30%
+		&:nth-child(4)
+			width: 13%
+			text-align: right
+		&:nth-child(5)
+			width: 20%
+			text-align: right
+		&:nth-child(6)
+			width: 20%
+			text-align: center
+		&:nth-child(7)
+			width: 20%
+			text-align: right
+.visualiser_smeta--table_footer
+	border-spacing: 0 10px
+	border-collapse: separate
+	text-align: left
+	width: 100%
+	td,
+	th
+		width: 50%
+		&:nth-child(2)
+			text-align: right
+.visualiser_smeta--extra
+	width: 124px
+	float: right
+	margin-top: 45px
+.visualiser_smeta--extra_one
+	font-size: 11px
+	font-family: $f-head
+	color: #5A5B5B
+	text-align: center
+
+.visualiser_smeta--img_small
+.visualiser_smeta--color
+	font-size: 16px
+	color: #5A5B5B
+	font-family: $f-head
+	margin-top: 5px
+.visualiser_smeta--button_group
+	position: absolute
+	bottom: 0
+.visualiser_smeta--button
+	font-size: 14px
+	background: #9A8479
+	text-align: center
+	width: 100%
+	color: #fff
+	font-family: $f-head
+	font-weight: 600
+	border: none
+	margin-top: 7px
+	padding: 8px 0
+	border-radius: 3px
+	&:focus
+		outline: none
 
 
 
