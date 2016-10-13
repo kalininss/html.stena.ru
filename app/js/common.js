@@ -109,7 +109,7 @@ $(function() {
 	wow.init();
 
 	// magnific popup. href must start from #popup--{id}
-	$("a[href^='#popup--']").magnificPopup({
+	$("*[href^='#popup--']").magnificPopup({
 		type: 'inline'
 	});
 

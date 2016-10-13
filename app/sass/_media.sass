@@ -243,19 +243,6 @@
 		border-spacing: 20px 5px
 	.popup--add_to_cart
 		margin-right: 0
-	.white-smeta_panel
-		padding-top: 10px
-		.smeta-panel
-			display: block
-			border: none
-			padding: 0
-		.smeta-panel__summary
-			color: #6D6E70
-		.smeta-panel__checkbox label
-			color: #A6A8AB
-		.btn_smeta
-			background: #9A8479
-			font-size: 20px !important
 	.page-parallax--breadcrump
 		display: none
 	.page-parallax--head
@@ -365,9 +352,23 @@
 		display: block
 	.gallery-large
 		display: none
-
-
-
+	.visualiser_smeta--main
+		width: 690px
+	.visualiser_smeta--sidebar
+		width: calc(100% - 700px)
+		height: 315px
+	.place_panel--info,
+	.place_panel--buttons
+		// width: 100%
+		max-width: none
+		float: none
+	.place_panel--buttons
+		.btn--send
+			display: inline-block
+			width: 250px
+	.place_panel--info
+		margin-right: 40px
+		margin-bottom: 20px
 
 @media only screen and (max-width : 1010px)
 	.smeta-price__descr
@@ -668,6 +669,63 @@
 		display: none
 	.gallery-xs
 		display: block
+	.visualiser_smeta--extra
+		display: none
+	.visualiser_smeta--tables
+		width: 100%
+		max-width: none
+	.visualiser_smeta--img
+		display: none
+	.visualiser_smeta--sidebar
+		width: 100%
+		float: none
+	.visualiser_smeta--main
+		float: none
+		width: 100%
+	.visualiser_smeta--header
+		position: absolute
+		top: 0
+		width: 100%
+		width: calc(100% - 100px)
+		left: 30px
+		right: 300px
+		margin-top: 10px
+	.visualiser_smeta--right
+		display: inline-block
+		float: none
+		margin-left: 20px
+	.visualiser_smeta--button_group
+		right: 0
+		top: 0
+		width: 150px
+	.visualiser_smeta--color
+		float: left
+		clear: left
+	.visualiser_smeta
+		position: relative
+	.visualiser_smeta--sidebar
+		height: auto
+		@include clearfix
+		min-height: 180px
+		margin-top: 0px
+	.visualiser_smeta--img_small
+		margin-top: 25px
+		float: left
+	.visualiser_smeta--order
+		position: absolute
+		left: 180px
+		top: 56px
+		width: calc(100% - 300px)
+	.visualiser_smeta--object
+		position: absolute
+		left: 180px
+		top: 106px
+		width: calc(100% - 300px)
+		height: 67px
+
+
+
+
 
 
 @media only screen and (max-width : 769px)
@@ -838,18 +896,6 @@
 		font-size: 50px
 	.page-parallax--text-small
 		font-size: 18px	
-	.place_panel--info,
-	.place_panel--buttons
-		// width: 100%
-		max-width: none
-		float: none
-	.place_panel--buttons
-		.btn--send
-			display: inline-block
-			width: 250px
-	.place_panel--info
-		margin-right: 40px
-		margin-bottom: 20px
 	.place--text
 		padding-right: 0
 	.scroll
@@ -1076,7 +1122,14 @@
 		.tabs
 			margin: 0 -10px
 			width: auto
-
+	.visualiser_smeta--button
+		font-size: 10px
+	.visualiser_smeta--button_group
+		width: 120px
+	.visualiser_smeta--order,
+	.visualiser_smeta--object
+		left: 170px
+		width: calc(100% - 250px)
 
 
 /* Extra Small Devices, Phones */
@@ -1382,7 +1435,7 @@
 	.hover-lines__text-top
 		font-size: 10px
 	.hover-lines__text-bottom
-		font-size: 8px
+		font-size: 14px
 	.img-bordered
 		margin-right: 40px
 	.next-link
@@ -1496,6 +1549,12 @@
 		margin: 5px 0 !important
 	h1
 		font-size: 32px
+
+
+
+@media only screen and (max-width : 360px)
+	.hover-lines__text-bottom
+		font-size: 9px
 
 
 /*==========  Mobile First  ==========*/

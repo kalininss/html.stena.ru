@@ -272,7 +272,7 @@
 								<i class="icon_visualiser icon_visualiser-other_interior"></i>
 								<div class="icon_visualiser--text">Другие<br>интерьеры</div>
 							</div>
-							<a href="#popup--visualiser" class="js-open-popup visualiser--one_function visualiser--one_function-smeta">
+							<a href="#popup--smeta_panel" class="js-open-popup visualiser--one_function visualiser--one_function-smeta">
 								<i class="icon_visualiser icon_visualiser-smeta"></i>
 								<div class="icon_visualiser--text">Расчёт<br>сметы</div>
 							</a>
@@ -585,6 +585,16 @@
 	<!-- Start popup -->
 	<!--  -->
 	<div id="popup--visualiser" class="white-popup white-popup--visualiser visualiser_smeta mfp-hide">
+		<div class="visualiser_smeta--sidebar">
+			<img src="img/demo/visualiser/popup.png" alt="" class="visualiser_smeta--img_small">
+			<div class="visualiser_smeta--color">Цвет: ТТ011</div>
+			<div class="visualiser_smeta--button_group">
+				<button class="visualiser_smeta--button">Визуализатор</button>
+				<button class="visualiser_smeta--button">Пересчитать</button>
+				<a href="#popup--email" class="visualiser_smeta--button">Отослать на e-mail</a>
+				<button class="visualiser_smeta--button">Добавить в корзину</button>
+			</div>
+		</div>
 		<div class="visualiser_smeta--main">
 			<div class="visualiser_smeta--header">
 				<div class="visualiser_smeta--head">Смета ТТ01002</div>
@@ -627,22 +637,40 @@
 				</div>
 			</div>
 		</div>
-		<div class="visualiser_smeta--sidebar">
-			<img src="img/demo/visualiser/popup.png" alt="" class="visualiser_smeta--img_small">
-			<div class="visualiser_smeta--color">Цвет: ТТ011</div>
-			<div class="visualiser_smeta--button_group">
-				<button class="visualiser_smeta--button">Визуализатор</button>
-				<button class="visualiser_smeta--button">Пересчитать</button>
-				<button class="visualiser_smeta--button">Отослать на e-mail</button>
-				<button class="visualiser_smeta--button">Добавить в корзину</button>
+	</div>
+
+	<div id="popup--smeta_panel" class="white-popup white-smeta_panel mfp-hide">
+		<form class="smeta-panel">
+			<label class="label_area" for="n1">Площадь</label>
+			<input class="input_area" type="number" name="n1" id="n1" value="56">
+			<span class="smeta-panel__label-after">кв. метров</span>
+			<div class="smeta-panel__checkbox">
+				<input class="smeta-checkbox" type="checkbox" id="ch1" name="ch1">
+				<label for="ch1">Доставка на объект</label>
 			</div>
-		</div>
+			<div class="smeta-panel__checkbox">
+				<input class="smeta-checkbox" type="checkbox" id="ch2" name="ch2">
+				<label for="ch2">Нанесение специалистами компании Стена</label>
+			</div>
+			<div class="smeta-panel__summary">Итого: <span class="summary__span"><span class="text-bold">18 165</span> руб.</span></div>
+			<a href="#popup--visualiser" class="btn btn_smeta">Подробная смета</a>
+		</form>
+	</div>
+
+	<div id="popup--email" class="white-popup white-popup--form mfp-hide">
+		<form>
+			<input type="email" id="call-back--email" name="call-back--email" placeholder="Email">
+			<div class="t-center">
+				<!-- <a href="#popup--mesage-success" class="submit-recall">Отправить</a> -->
+				<input href="#popup--mesage-success" type="submit" value="Отправить" class="submit-recall">
+			</div>
+		</form>
 	</div>
 
 
 
 	<div id="popup--mesage-success" class="white-popup white-popup--message mfp-hide">
-		<p class="t-center">Ваше сообщение успешно отправлено. Мы свяжемся с  Вами в течение рабочего дня</p>
+		<p class="t-center">Смета успешно отправлена на указанный e-mail</p>
 		<svg class="close-button--logo"><use xlink:href="#02_Logo"></use></svg>
 	</div>
 

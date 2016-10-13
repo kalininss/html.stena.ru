@@ -2726,7 +2726,8 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	&:hover
 		width: 64px
 		height: 64px
-		border: 4px solid #505050
+		// border: 4px solid #505050
+		box-shadow: 0 0 0 4px #505050
 		margin-left: -9px
 		margin-top: -9px
 		margin-right: -9px
@@ -2736,7 +2737,8 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 		.owl-visualiser--hidden
 			display: block,
 	&.clicked
-		border: 4px solid #505050
+		box-shadow: 0 0 0 4px #505050
+		z-index: 1
 
 .owl-visualiser--hidden
 	display: none
@@ -3084,6 +3086,7 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	font-size: 20px
 	font-family: $f-head
 	font-weight: 600
+	color: #6D6E70
 	margin-right: 10px
 .visualiser_smeta--order
 	display: inline-block
@@ -3165,6 +3168,7 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	background: #9A8479
 	text-align: center
 	width: 100%
+	display: block
 	color: #fff
 	font-family: $f-head
 	font-weight: 600
@@ -3174,7 +3178,33 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	border-radius: 3px
 	&:focus
 		outline: none
-
+.white-smeta_panel
+	padding-top: 10px
+	.smeta-panel
+		display: block
+		border: none
+		padding: 0
+	.smeta-panel__summary
+		color: #6D6E70
+	.smeta-panel__checkbox label
+		color: #A6A8AB
+	.btn_smeta
+		// background: #9A8479
+		font-size: 20px !important
+		padding: 10px 0
+#popup--email
+	.mfp-close
+		display: none
+	.submit-recall
+		width: 100%
+		margin-bottom: 0
+		margin-top: 0
+		// display: block
+	// padding-top: 60px
+.close-button--logo
+	margin-left: auto
+	margin-right: auto
+	display: block
 
 
 
