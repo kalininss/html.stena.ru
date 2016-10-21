@@ -66,9 +66,7 @@ gulp.task('libs', function() {
 		'app/libs/wow/dist/wow.min.js',
 		'app/libs/picturefill/dist/picturefill.min.js',
 		'app/libs/nouislider/nouislider.min.js',
-		'app/libs/enquire/dist/enquire.min.js',
-		// 'app/libs/MasonJS/dist/mason.min.js'
-		'app/libs/freewall/jquery.nested.js'
+		'app/libs/enquire/dist/enquire.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())

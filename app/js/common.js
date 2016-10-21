@@ -1,64 +1,20 @@
 $(function() {
 
+
+	// Hello, my skype: adidas-kss
+
+
 	// 14 page header
 	$('.page-parallax_interior').addClass('animated');
 
 
 	// page 11 where to buy
-	$('.not-found--close').click(function(){
-		$(this).parent().slideUp(300);
-	});
+	$('.not-found--close').click(function(){  $(this).parent().slideUp(300);  });
 
-	// $('.gallery').nested({
-	// 	selector: '.gallery--item',
-	// 	minWidth: 300,
-	// 	minColumn: 4,
-	// 	gutter: 10,
-	//   resizeToFit: true,
-	//   resizeToFitOptions: { 
-	//     resizeAny: true
-	//   }
-	// });
-	// page gallery for equale height
-	// $(".gallery").mason({
-	// 	itemSelector: '.gallery--item',
-	// 	ratio: 1.32,
-	// 	sizes: [
-	// 	[1, 1]
-	// 	],
-	// 	promoted: [
-	// 	['gallery--item-high', 1, 2],
-	// 	['gallery--item-quadro', 1, 1],
-	// 	['gallery--item-long', 2, 1]
-	// 	],
-	// 	columns: [
-	// 	[0,870,2],
-	// 	[870,1300,3],
-	// 	[1300,1680,4]
-	// 	],
-	// 	filler: {},
-	// 	layout: 'fluid',
-	// 	gutter: 5
-	// });
-	// var wall = new Freewall('.gallery');
-	// wall.reset({
-	// 	selector: '.gallery--item',
-	// 	cellW: 100,
-	// 	cellH: 'auto',
-	// 	// fixSize: 0,
-	// 	gutterX: 10,
-	// 	gutterY: 10,
-	// 	onResize: function (){
-	// 		wall.fitZone();
-	// 	}
-	// })
-	// wall.fitZone();
-	// $(window).trigger("resize");
 
 	// page #16 & #8 catalogue
-	$('.js-reverse').click(function(){
-		$(this).find('.ui_order').toggleClass('reverse');
-	});
+	$('.js-reverse').click(function(){  $(this).find('.ui_order').toggleClass('reverse');  });
+
 
 	// page #12 plus button
 	$('.mega_plus').click(function(){
@@ -70,24 +26,17 @@ $(function() {
 		}
 	});
 
-	// page #6, rotate panels
-	$('.js-rotate').click(function(){
-		$(this).closest('.rotate').toggleClass('rotated');
-	});
-	$('.rotate-item').on( {
-		'mouseenter':function() { $(this).find('.rotate').fadeIn(300); }
-	});
-	$('.rotate').on( {
-		'mouseleave':function() { $(this).fadeOut(300).removeClass('rotated');}
-	});
 
-	// фильтр по цене
-	try {
-		loadJS();
-		startRange();
-	} catch (err) {
-		// функция находится в файле 08_vybor_pokrytia.html
-	}
+	// page #6, rotate panels
+	$('.js-rotate').click(function(){$(this).closest('.rotate').toggleClass('rotated');});
+	$('.rotate-item').on({'mouseenter':function(){  $(this).find('.rotate').fadeIn(300);  }});
+	$('.rotate').on({'mouseleave':function(){  $(this).fadeOut(300).removeClass('rotated');  }});
+
+
+	// функции находятся на самих страницах для удобства, здесь они пытаются вызваться. Чтобы не вылетало ошибок, мы их ловим и пропускаем
+	try {loadJS();} catch (err) {} // фильтр по цене
+	try	{startRange();} catch (err) {} // функция находится в файле 08_vybor_pokrytia.html
+
 
 	// tabs on page 7
 	$(".tab_item").not(":first").hide();
@@ -96,22 +45,73 @@ $(function() {
 		$(".tab_item").hide().eq($(this).index()).fadeIn(0)
 	}).eq(0).addClass("active");
 
-	// wow js activate for animation
-	var wow = new WOW(
-	{
-		boxClass:     'wow',      
-		animateClass: 'animated', 
-		offset:       50,         
-		mobile:       false,       
-		live:         true
-	}
-	);
-	wow.init();
 
 	// magnific popup. href must start from #popup--{id}
 	$("*[href^='#popup--']").magnificPopup({
 		type: 'inline'
 	});
+
+
+	// Search button at the .topline
+	$(".open-collapse-search").click(function(){
+		$(this).next().addClass("opened");
+		$("#to-focus").focus();
+	});
+	$(".collapsed-search__submit-btn").click(function(){
+		if ( $(this).prev().val() == '' ) {
+			$(this).parent().removeClass("opened");
+			return false;
+		}
+	});
+
+
+	// open next
+	$(".js-open-next").click(function(){
+		$(this).next().toggleClass('opened');
+	});
+
+
+	// Open scroll-topline menu
+	$(".js-open-scroll-menu").click(function(){
+		$(".scroll-menu").toggleClass("opened");
+	});
+	$(".bg-dark").click(function(){
+		$(".scroll-menu").removeClass("opened");
+	});
+	$(window).scroll(function() {
+		if ( $("body").scrollTop() > 540 ) {
+			$(".topline-scroll").addClass("opened");
+		}
+		else {
+			$(".topline-scroll").removeClass("opened");
+			$(".scroll-menu").removeClass("opened");
+			$("header").removeClass("no-transform");
+		}
+	});
+
+
+	// Open search form in scroll topline
+	$(".js-open-scroll-search").click(function(){
+		$(".scroll-search").toggleClass("opened");
+		$(this).find(".icon-plus").toggleClass("icon-plus__animate-minus");
+		$("#to-focus2").focus();
+		return false;
+	});
+
+
+  // безобидный плюсик
+	$('.b-plus').click(function(){  $(this).toggleClass('active');  return false; 	});
+	
+
+
+
+
+	    ////////////////////////////////////  
+	 	 //                                //
+	  // 	     АКТИВАЦИЯ СЛАЙДЕРОВ      //     
+	 //                                //
+	////////////////////////////////////	
+
 
 	// front slider
 	$(".owl-header-front").owlCarousel({
@@ -185,64 +185,24 @@ $(function() {
 		}
 	});
 	$('.owl-visualiser').owlCarousel({
-		// items: 10,
 		nav: true,
-		margin: 2,
-		loog: false,
+		margin: 0,
 		dots: false,
-		autoWidth: true
+		autoWidth: true,
+		slideBy: 'page'
 	});
 
-	// smooth scroll to #top
-	$("a[href^='#top']").click(function(){
-		$("html:not(:animated),body:not(:animated)").animate({scrollTop: 0}, 500);
-		return false;
-	});
 
-	// Search button at the .topline
-	$(".open-collapse-search").click(function(){
-		$(this).next().addClass("opened");
-		$("#to-focus").focus();
-	});
-	$(".collapsed-search__submit-btn").click(function(){
-		if ( $(this).prev().val() == '' ) {
-			$(this).parent().removeClass("opened");
-			return false;
-		}
-	});
 
-	// open next
-	$(".js-open-next").click(function(){
-		$(this).next().toggleClass('opened');
-	});
 
-	// Open scroll-topline menu
-	$(".js-open-scroll-menu").click(function(){
-		$(".scroll-menu").toggleClass("opened");
-	});
-	$(".bg-dark").click(function(){
-		$(".scroll-menu").removeClass("opened");
-	});
-	$(window).scroll(function() {
-		if ( $("body").scrollTop() > 540 ) {
-			$(".topline-scroll").addClass("opened");
-			// $("header").addClass("no-transform");
-		}
-		else {
-			$(".topline-scroll").removeClass("opened");
-			$(".scroll-menu").removeClass("opened");
-			$("header").removeClass("no-transform");
-		}
-	});
 
-	// Open search form in scroll topline
-	$(".js-open-scroll-search").click(function(){
-		$(".scroll-search").toggleClass("opened");
-		$(this).find(".icon-plus").toggleClass("icon-plus__animate-minus");
-		$("#to-focus2").focus();
-		return false;
-	});
-	
+	    ////////////////////////////////////  
+	 	 //                                //
+	  // 	ВИЗУАЛЬНЫЕ ЭФФЕКТЫ И ПЛАГИНЫ  //     // ПАРАЛЛАКС, ПЛАВНЫЙ СКРОЛЛ И т.д.
+	 //                                //
+	////////////////////////////////////	
+
+
 	// parallax
 	function activateParallax () {
 		var st = $(window).scrollTop() / 20;
@@ -254,55 +214,81 @@ $(function() {
 	$(window).bind('resize', activateParallax);
 	$(window).bind('scroll', activateParallax);
 	$(window).bind("orientationchange", activateParallax);
-	
+
 	$.scrollSpeed(100, 800); // smooth scroll
+	$(".js-phone-placeholder").mask("+7 (999) 999-99-99"); // placeholder mask for input phone
 
-	// placeholder mask for input phone
-	$(".js-phone-placeholder").mask("+7 (999) 999-99-99");
 
-	// visualiser
+	// плагин отслеживает, когда пользователь доскроллит до нашего элемента и тогда запустит анимацию
+	var wow = new WOW(
+	{
+		boxClass:     'wow',      
+		animateClass: 'animated', 
+		offset:       50,   // отступ для анимации     
+		mobile:       false,    // на мобилках отключаем   
+		live:         true
+	}
+	);
+	wow.init(); // инициализация
+
+
+	// smooth scroll to #top
+	$("a[href^='#top']").click(function(){
+		$("html:not(:animated),body:not(:animated)").animate({scrollTop: 0}, 500);
+		return false;
+	});
+
+
+
+	    //////////////////  
+	 	 //              //
+	  // 	VISUALISER  //     // МНОГО КОДА ТОЛЬКО ДЛЯ ОДНОЙ СТРАНИЦЫ
+	 //              //
+	//////////////////	
+
+
+	// кнопки День/Ночь
+	$('.visualiser--button').click(function(){
+		$('.visualiser--button').removeClass('visualiser--button-hidden');
+		$(this).addClass('visualiser--button-hidden');
+	});
+	// безобидная и неважная функция выделения элементов border-ом
 	$('.owl-visualiser--thumbnail').click(function(){
 		$('.owl-visualiser--thumbnail').removeClass('clicked');
 		$(this).addClass('clicked');
-	})
-	$('.scroll-exit').click(function(){
-		if ( $(this).parent().hasClass('scroll-effects') ) {
-			$('.scroll-effects').toggle();
-			$('.visualiser--one_function-other').toggleClass('opened');
-		}
-		else if ( $(this).parent().hasClass('scroll-interior') ) {
-			$('.scroll-interior').toggle();
-			$('.visualiser--one_function-other_interior').toggleClass('opened');
-		}
-		else if ( $(this).parent().hasClass('scroll-bookmark') ) {
-			$('.scroll-bookmark').toggle();
-			$('.visualiser--one_function-favourite').toggleClass('opened');
-		}
-		$(this).parent().hide();
 	});
+	// безобидная и неважная функция выделения элементов border-ом
 	$('.scroll--item').click(function(){
 		$(this).parent().find('.scroll--item').removeClass('clicked');
 		$(this).toggleClass('clicked');
 		return false;
 	});
-	$('.visualiser--one_function-other').click(function(){
-		$('.scroll-effects').toggle();
-		$(this).toggleClass('opened');
-	});
-	$('.visualiser--one_function-other_interior').click(function(){
-		$('.scroll-interior').toggle();
-		$(this).toggleClass('opened');
-	});
-	$('.visualiser--one_function-favourite').click(function(){
-		$('.scroll-bookmark').toggle();
-		$(this).toggleClass('opened');
-	});
+	// открытие меню
 	$('.visualiser--menu_button').click(function(){
 		$(this).toggleClass('active');
+		$('.scroll').hide(); // скрываем всё
+		$('.visualiser--one_function').removeClass('opened'); // скрываем всё
+		$('.visualiser--functions').toggleClass('opened'); // выезд панели с функциями снизу
+	});
+
+
+	// универсальная функция открытия панелей по нажатию на пункты меню
+	$('.visualiser--one_function').click(function(){
+		var checkForOpened = $(this).hasClass('opened'); // проверка, если кликнули по открытой вкладке
+		$('.scroll').hide();
+		$('.visualiser--one_function').removeClass('opened'); // скрываем всё
+		if ( !checkForOpened ) { // если вкладка не было до этого открыта, то показываем её
+			var scrollTarget = $(this).attr('data-target');
+			$(scrollTarget).show();
+			$(this).addClass('opened');
+		} 
+	});
+	// и кнопка закрытия к ним
+	$('.scroll-exit').click(function(){
 		$('.scroll').hide();
 		$('.visualiser--one_function').removeClass('opened');
-		$('.visualiser--functions').toggleClass('opened');
 	});
+	// кнопка "добавить в закладки" - показывает уведомление и сразу скрывается
 	$('.add_to_bookmark').click(function(){
 		$('.add_to_bookmark__popup').show(300, function(){
 			setTimeout(function(){
@@ -311,7 +297,15 @@ $(function() {
 		});
 	});
 
+	// костыль, чтобы показывать всплывающие плашки при наведении вне области слайдера
+	$('.owl-visualiser--thumbnail img').mouseover(function(){
+		var text = $(this).next().text();
+		var position = $(this).parent().offset();
+		var positionParent = $('.visualiser--slider').offset();
+		$('.owl-visualiser--plashka').text(text).css('top', position.top - positionParent.top).css('left', position.left - positionParent.left).show();
+	}); // скрываем плашку
+	$('.owl-visualiser--thumbnail img').mouseout(function(){ 
+		$('.owl-visualiser--plashka').hide();
+	});
+
 });
-
-
-

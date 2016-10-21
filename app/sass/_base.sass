@@ -50,6 +50,21 @@
 	&:required:valid,
 	&:focus:required:invalid
 		color: #705F5A
+.grey_placeholder
+	&::-webkit-input-placeholder
+		color: #5A5B5B
+	&:-moz-placeholder
+		color: #5A5B5B
+	&::-moz-placeholder
+		color: #5A5B5B
+	&:-ms-input-placeholder
+		color: #5A5B5B
+	&:focus,
+	&:valid
+		color: #5A5B5B
+	&:required:valid,
+	&:focus:required:invalid
+		color: #705F5A
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: #EC1C24
@@ -97,6 +112,9 @@ body
 	line-height: 1.6
 	overflow-x: hidden
 	color: $c-default
+header
+	position: relative
+	z-index: 9
 
 .main
 	background: #fff

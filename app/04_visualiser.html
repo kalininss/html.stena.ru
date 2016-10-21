@@ -37,8 +37,63 @@
 -->
 <body class="common-page">
 
+	<!-- TOP LINE ON SCROLL -->
+	<div class="topline-scroll">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-2">
+					<a href="/" class="logo"><svg class="topline-scroll__logo"><use xlink:href="#02_Logo"></use></svg></a>
+				</div><!-- col -->
 
-	<header class="header">
+				<div class="col-xs-8">
+					<div class="topline-scroll__contact">
+						<a href="tel:+74999777007">+7 (499) 977-70-07</a>
+						<a href="#popup--call-back" class="js-open-popup link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
+							<p class="footer-phone-svg__text">Обратный звонок</p>
+						</a>
+					</div>
+				</div><!-- col -->
+
+				<div class="col-xs-2">
+					<svg class="topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
+				</div><!-- col -->
+
+			</div>
+		</div><!-- container-fluid -->
+	</div><!-- topline-scroll -->
+
+	<!-- BURGER MENU -->
+	<div class="scroll-menu">
+		<div class="scroll-menu__header">
+			<svg class="logo__svg"><use xlink:href="#03_Logo"></use></svg>
+			<svg class="scroll-menu--close js-open-scroll-menu"><use xlink:href="#48_Close"></use></svg>
+		</div>
+		<nav class="nav scroll-menu__nav">
+			<ul class="list">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">О компании</a></li>
+				<li><a href="#">Подбор покрытия</a></li>
+				<li><a href="#">Каталог</a></li>
+				<li><a href="#">Галерея интерьеров</a></li>
+				<li><a href="#">Услуги</a></li>
+				<li><a href="#">Где купить</a></li>
+				<li><a href="#" class="js-open-scroll-search">Поиск <i class="icon-plus"></i></a></li>
+				<form class="scroll-search">
+					<input id="to-focus2" class="scroll-search__input brown_placeholder" type="text" name="stop" autocomplete="off" required placeholder="Ваш запрос">
+					<button class="scroll-search__sumbit"><svg class="svg_10"><use xlink:href="#10_search"></use></svg></button>
+				</form>
+			</ul>
+		</nav>
+		<div class="scroll-menu__footer">
+			<a href="#popup--call-back" class="link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
+				<p class="footer-phone-svg__text">Обратный звонок</p>
+			</a>
+		</div>
+	</div>
+	<div class="bg-dark"></div><!-- фон при выдвижении меню -->
+
+
+	<header class="header header_visualiser">
 
 		<!-- TOP LINE -->
 		<div class="header__topline topline">
@@ -92,61 +147,6 @@
 			</div><!-- container-fluid -->
 		</div><!-- topline -->
 
-		<!-- TOP LINE ON SCROLL -->
-		<div class="topline-scroll">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-xs-2">
-						<a href="/" class="logo"><svg class="topline-scroll__logo"><use xlink:href="#02_Logo"></use></svg></a>
-					</div><!-- col -->
-
-					<div class="col-xs-8">
-						<div class="topline-scroll__contact">
-							<a href="tel:+74999777007">+7 (499) 977-70-07</a>
-							<a href="#popup--call-back" class="js-open-popup link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
-								<p class="footer-phone-svg__text">Обратный звонок</p>
-							</a>
-						</div>
-					</div><!-- col -->
-
-					<div class="col-xs-2">
-						<svg class="topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
-					</div><!-- col -->
-
-				</div>
-			</div><!-- container-fluid -->
-		</div><!-- topline-scroll -->
-
-		<!-- BURGER MENU -->
-		<div class="scroll-menu">
-			<div class="scroll-menu__header">
-				<svg class="logo__svg"><use xlink:href="#03_Logo"></use></svg>
-				<svg class="scroll-menu--close js-open-scroll-menu"><use xlink:href="#48_Close"></use></svg>
-			</div>
-			<nav class="nav scroll-menu__nav">
-				<ul class="list">
-					<li><a href="#">Главная</a></li>
-					<li><a href="#">О компании</a></li>
-					<li><a href="#">Подбор покрытия</a></li>
-					<li><a href="#">Каталог</a></li>
-					<li><a href="#">Галерея интерьеров</a></li>
-					<li><a href="#">Услуги</a></li>
-					<li><a href="#">Где купить</a></li>
-					<li><a href="#" class="js-open-scroll-search">Поиск <i class="icon-plus"></i></a></li>
-					<form class="scroll-search">
-						<input id="to-focus2" class="scroll-search__input brown_placeholder" type="text" name="stop" autocomplete="off" required placeholder="Ваш запрос">
-						<button class="scroll-search__sumbit"><svg class="svg_10"><use xlink:href="#10_search"></use></svg></button>
-					</form>
-				</ul>
-			</nav>
-			<div class="scroll-menu__footer">
-				<a href="#popup--call-back" class="link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
-					<p class="footer-phone-svg__text">Обратный звонок</p>
-				</a>
-			</div>
-		</div>
-		<div class="bg-dark"></div><!-- фон при выдвижении меню -->
-
 
 	</header>
 
@@ -162,67 +162,74 @@
 				<div class="visualizer--top">
 					<i class="icon--clavel"></i>
 					<h1 class="visualiser--head">Sabbia Micro Silver  AR1235</h1>
-					<i class="icon--florenta"></i>
+					<!-- <i class="icon--florenta"></i> -->
+					<img class="icon--florenta" src="img/demo/visualiser/florenta_viz.png" alt="">
 					<button class="add_to_bookmark add_to_bookmark-mobile"><i class="visualiser--add"></i></button>
 				</div>
 				<div class="visualiser--app">
 
 					<div class="visualiser--app_inner"> 
+						<div class="visualiser--xs_logos">
+							<div class="visualiser--xs_clavel"></div>
+							<div class="visualiser--xs_visualiser"></div>
+						</div>
 						<picture>
-							<source srcset="img/demo/visualiser/preview-480.png" media="(max-width: 900px)" />
-							<img src="img/demo/visualiser/preview.png" alt="">
+							<source srcset="img/demo/visualiser/visual_03_04.jpg" media="(min-width: 901px)" />
+							<!-- <img src="img/demo/visualiser/preview.png" alt=""> -->
+							<img src="img/demo/visualiser/visual_01_02.jpg" alt="">
 						</picture>
 						<div class="add_to_bookmark__popup">Эффект AR1356 успешно добавлен</div>
 						<div class="visualiser--free_area">
+							<svg class="visualiser_logo-menu logo-menu topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
 							<div class="scroll scroll-effects">
-								<div class="scroll--head-mobile">Интерьеры</div>
+								<div class="scroll--head-mobile">Эффекты</div>
 								<button class="scroll-exit"></button>
 								<a href="#" class="scroll--item scroll--item-small">
-									<img src="img/demo/visualiser/scroll-small.jpg" alt="">
+									<img src="img/demo/visualiser/scroll_effect.jpg" alt="">
 									<div class="scroll--head">Grange Metal Dark Silver GM01</div>
 								</a>
 								<a href="#" class="scroll--item scroll--item-small">
-									<img src="img/demo/visualiser/scroll-small.jpg" alt="">
+									<img src="img/demo/visualiser/scroll_effect.jpg" alt="">
 									<div class="scroll--head">Grange Metal Dark Silver GM01</div>
 								</a>
 								<a href="#" class="scroll--item scroll--item-small">
-									<img src="img/demo/visualiser/scroll-small.jpg" alt="">
+									<img src="img/demo/visualiser/scroll_effect.jpg" alt="">
 									<div class="scroll--head">Grange Metal Dark Silver GM01</div>
 								</a>
 								<a href="#" class="scroll--item scroll--item-small">
-									<img src="img/demo/visualiser/scroll-small.jpg" alt="">
+									<img src="img/demo/visualiser/scroll_effect.jpg" alt="">
 									<div class="scroll--head">Grange Metal Dark Silver GM01</div>
 								</a>
 								<a href="#" class="scroll--item scroll--item-small">
-									<img src="img/demo/visualiser/scroll-small.jpg" alt="">
+									<img src="img/demo/visualiser/scroll_effect.jpg" alt="">
 									<div class="scroll--head">Grange Metal Dark Silver GM01</div>
 								</a>
 								<a href="#" class="scroll--item scroll--item-small">
-									<img src="img/demo/visualiser/scroll-small.jpg" alt="">
+									<img src="img/demo/visualiser/scroll_effect.jpg" alt="">
 									<div class="scroll--head">Grange Metal Dark Silver GM01</div>
 								</a>
 							</div>
 							<div class="scroll scroll-interior">
-								<div class="scroll--head-mobile">Эффекты</div>
+								<div class="scroll--head-mobile">Интерьеры</div>
 								<button class="scroll-exit"></button>
 								<a href="#" class="scroll--item">
-									<img src="img/demo/visualiser/scroll-big.jpg" alt="">
+									<img src="img/demo/visualiser/scroll_scene.jpg" alt="">
 									<div class="scroll--head">Интерьер 01 - Гостинная</div>
 								</a>
 								<a href="#" class="scroll--item">
-									<img src="img/demo/visualiser/scroll-big.jpg" alt="">
+									<img src="img/demo/visualiser/scroll_scene.jpg" alt="">
 									<div class="scroll--head">Интерьер 01 - Гостинная Инт ерьер 01 - Гостин ная Инте рьер 01 - Гост инная Гостинн ая Интер ьер 01 - Гостинная </div>
 								</a>
 								<a href="#" class="scroll--item">
-									<img src="img/demo/visualiser/scroll-big.jpg" alt="">
+									<img src="img/demo/visualiser/scroll_scene.jpg" alt="">
 									<div class="scroll--head">Интерьер 01 - Гостинная</div>
 								</a>
 								<a href="#" class="scroll--item">
-									<img src="img/demo/visualiser/scroll-big.jpg" alt="">
+									<img src="img/demo/visualiser/scroll_scene.jpg" alt="">
 									<div class="scroll--head">Интерьер 01 - Гостинная</div>
 								</a>
 								<a href="#" class="scroll--item">
-									<img src="img/demo/visualiser/scroll-big.jpg" alt="">
+									<img src="img/demo/visualiser/scroll_scene.jpg" alt="">
 									<div class="scroll--head">Интерьер 01 - Гостинная</div>
 								</a>
 							</div>
@@ -230,32 +237,32 @@
 								<div class="scroll--head-mobile">Закладки</div>
 								<button class="scroll-exit"></button>
 								<div class="scroll--item scroll--item-common">
-									<a href="#"><img src="img/demo/visualiser/scroll.jpg" alt=""></a>
+									<a href="#"><img src="img/demo/visualiser/scroll_bookmark.jpg" alt=""></a>
 									<div class="scroll--head">AR1405</div>
 									<a href="#" class="scroll--item_delete"></a>
 								</div>
 								<div class="scroll--item scroll--item-common">
-									<a href="#"><img src="img/demo/visualiser/scroll.jpg" alt=""></a>
+									<a href="#"><img src="img/demo/visualiser/scroll_bookmark.jpg" alt=""></a>
 									<div class="scroll--head">AR1405</div>
 									<a href="#" class="scroll--item_delete"></a>
 								</div>
 								<div class="scroll--item scroll--item-common">
-									<a href="#"><img src="img/demo/visualiser/scroll.jpg" alt=""></a>
+									<a href="#"><img src="img/demo/visualiser/scroll_bookmark.jpg" alt=""></a>
 									<div class="scroll--head">AR1405</div>
 									<a href="#" class="scroll--item_delete"></a>
 								</div>
 								<div class="scroll--item scroll--item-common">
-									<a href="#"><img src="img/demo/visualiser/scroll.jpg" alt=""></a>
+									<a href="#"><img src="img/demo/visualiser/scroll_bookmark.jpg" alt=""></a>
 									<div class="scroll--head">AR1405</div>
 									<a href="#" class="scroll--item_delete"></a>
 								</div>
 								<div class="scroll--item scroll--item-common">
-									<a href="#"><img src="img/demo/visualiser/scroll.jpg" alt=""></a>
+									<a href="#"><img src="img/demo/visualiser/scroll_bookmark.jpg" alt=""></a>
 									<div class="scroll--head">AR1405</div>
 									<a href="#" class="scroll--item_delete"></a>
 								</div>
 								<div class="scroll--item scroll--item-common">
-									<a href="#"><img src="img/demo/visualiser/scroll.jpg" alt=""></a>
+									<a href="#"><img src="img/demo/visualiser/scroll_bookmark.jpg" alt=""></a>
 									<div class="scroll--head">AR1405</div>
 									<a href="#" class="scroll--item_delete"></a>
 								</div>
@@ -263,12 +270,13 @@
 						</div>
 
 						<!-- start functions -->
+						<!-- Аттрибут "data-target" - указывает панель с каким классом выдвинуть из указанных выше -->
 						<div class="visualiser--functions">
-							<div class="visualiser--one_function visualiser--one_function-other">
+							<div data-target=".scroll-effects" class="visualiser--one_function visualiser--one_function-other">
 								<i class="icon_visualiser icon_visualiser-other"></i>
 								<div class="icon_visualiser--text">Другие<br>эффекты</div>
 							</div>
-							<div class="visualiser--one_function visualiser--one_function-other_interior">
+							<div data-target=".scroll-interior" class="visualiser--one_function visualiser--one_function-other_interior">
 								<i class="icon_visualiser icon_visualiser-other_interior"></i>
 								<div class="icon_visualiser--text">Другие<br>интерьеры</div>
 							</div>
@@ -292,7 +300,7 @@
 								<i class="icon_visualiser icon_visualiser-cart"></i>
 								<div class="icon_visualiser--text">Карточки<br>колеровки</div>
 							</div>
-							<div class="visualiser--one_function visualiser--one_function-favourite">
+							<div data-target=".scroll-bookmark" class="visualiser--one_function visualiser--one_function-favourite">
 								<i class="icon_visualiser icon_visualiser-favourite"></i>
 								<div class="icon_visualiser--add">83</div>
 								<div class="icon_visualiser--text">Посмотреть<br>закладки</div>
@@ -306,167 +314,190 @@
 
 					<div class="visualiser--footer">
 						<div class="visualiser--menu">
-							<div class="visualiser--one_function visualiser--one_function-mobile visualiser--one_function-other">
+							<div data-target=".scroll-effects" class="visualiser--one_function visualiser--one_function-mobile visualiser--one_function-other">
 								<i class="icon_visualiser icon_visualiser-other"></i>
 							</div>
 							<button class="visualiser--menu_button"></button>
 							<a href="#" class="visualiser--pro">HD визуализатор PRO</a>
 						</div>
 						<div class="visualiser--slider">
+							<div class="owl-visualiser--plashka">text</div>
 							<div class="owl-carousel owl-visualiser">
 								<div class="owl-visualiser--item">
 									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-								</div>
-								<div class="owl-visualiser--item">
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-								</div>
-								<div class="owl-visualiser--item">
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-								</div>
-								<div class="owl-visualiser--item">
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-								</div>
-								<div class="owl-visualiser--item">
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-								</div>
-								<div class="owl-visualiser--item">
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-								</div>
-								<div class="owl-visualiser--item">
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-								</div>
-								<div class="owl-visualiser--item">
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-								</div>
-								<div class="owl-visualiser--item">
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-								</div>
-								<div class="owl-visualiser--item">
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-								</div>
-								<div class="owl-visualiser--item">
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
-									</div>
-								</div>
-								<div class="owl-visualiser--item">
-									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
 										<div class="owl-visualiser--hidden">RV1235</div>
 									</div>
 									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
 										<div class="owl-visualiser--hidden">RV1235</div>
 									</div>
 									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
 										<div class="owl-visualiser--hidden">RV1235</div>
 									</div>
 								</div>
 								<div class="owl-visualiser--item">
 									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
 									</div>
 									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
 									</div>
 									<div class="owl-visualiser--thumbnail">
-										<img src="img/demo/visualiser/thumbnail.png" alt="">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+								</div>
+								<div class="owl-visualiser--item">
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
+									</div>
+									<div class="owl-visualiser--thumbnail">
+										<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
+										<div class="owl-visualiser--hidden">RV1235</div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="visualiser--thumbnail">
-							<img src="img/demo/visualiser/thumbnail-big.png" alt="">
+							<img src="img/demo/visualiser/thumbnail-big.jpg" alt="">
 						</div>
 						<div class="visualiser--extra">
-							<button class="visualiser--button visualiser--button-light">День</button>
+							<button class="visualiser--button visualiser--button-light visualiser--button-hidden">День</button>
 							<button class="visualiser--button visualiser--button-dark">Ночь</button>
 							<button class="add_to_bookmark"><i class="visualiser--add"></i><span class="add_to_bookmark--text">Добавить<br>в закладки</span></button>
 						</div>
@@ -585,33 +616,50 @@
 	<!-- Start popup -->
 	<!--  -->
 	<div id="popup--visualiser" class="white-popup white-popup--visualiser visualiser_smeta mfp-hide">
-		<div class="visualiser_smeta--sidebar">
-			<img src="img/demo/visualiser/popup.png" alt="" class="visualiser_smeta--img_small">
-			<div class="visualiser_smeta--color">Цвет: ТТ011</div>
-			<div class="visualiser_smeta--button_group">
-				<button class="visualiser_smeta--button">Визуализатор</button>
-				<button class="visualiser_smeta--button">Пересчитать</button>
-				<a href="#popup--email" class="visualiser_smeta--button">Отослать на e-mail</a>
-				<button class="visualiser_smeta--button">Добавить в корзину</button>
-			</div>
-		</div>
+
 		<div class="visualiser_smeta--main">
 			<div class="visualiser_smeta--header">
 				<div class="visualiser_smeta--head">Смета ТТ01002</div>
 				<div class="visualiser_smeta--right">
 					<div class="visualiser_smeta--area">348 кв.м.</div>
-					<div class="visualiser_smeta--order">Заказчик</div>
-					<div class="visualiser_smeta--object">Объект</div>
+					<input class="visualiser_smeta--order grey_placeholder" type="text" placeholder="Заказчик">
+					<textarea class="visualiser_smeta--object grey_placeholder" placeholder="Объект"></textarea>
+					<!-- <div class="visualiser_smeta--order">Заказчик</div> -->
+					<!-- <div class="visualiser_smeta--object">Объект</div> -->
 				</div>
 			</div>
-			<div class="visualiser_smeta--img">
-				<img src="img/demo/visualiser/popup-big.png" alt="">
+		</div>
+
+		<div class="visualiser_smeta--combo-wrapper">
+			<div class="visualiser_smeta--sidebar">
+				<img src="img/demo/visualiser/thumbnail-big.jpg" alt="" class="visualiser_smeta--img_small">
+				<div class="visualiser_smeta--color">Цвет: ТТ011</div>
+				<div class="visualiser_smeta--button_group">
+					<button class="visualiser_smeta--button">Визуализатор</button>
+					<button class="visualiser_smeta--button">Пересчитать</button>
+					<a href="#popup--email" class="visualiser_smeta--button">Отослать на e-mail</a>
+					<button class="visualiser_smeta--button">Добавить в корзину</button>
+				</div>
+			</div>
+			<div class="visualiser_smeta--main">
+				<div class="visualiser_smeta--img">
+					<img src="img/demo/visualiser/visual_03_04.jpg" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div class="visualiser_smeta--main">
+			<div class="visualiser_smeta--extra">
+			<div class="visualiser_smeta--extra_one" style="background: #B8D1B2; padding: 33px 0;">Грунтовочный слой</div>
+				<div class="visualiser_smeta--extra_one" style="background: #FFFDC7; padding: 20px 0;">Базовый слой</div>
+				<div class="visualiser_smeta--extra_one" style="background: #DCFFFC; padding: 8px 0;">Финишный слой</div>
+				<div class="visualiser_smeta--extra_one" style="background: #FFE9D7; padding: 32px 0;">Колоранты</div>
 			</div>
 			<div class="visualiser_smeta--table_row">
 				<div class="visualiser_smeta--tables">
 					<table class="visualiser_smeta--table_main">
 						<tr> <th>№</th>  <th>Артикул</th>   <th>Продукт</th>           <th>Фасовка</th><th>Цена</th>    <th>Кол-во</th><th>Стоимость</th> </tr>
-						<tr> <td>01</td> <td>0-182-012</td> <td>Enduit de Lissage</td> <td>5 kg</td> <td>1,420 руб.</td> <td><input type="number" value="4"></td> <td>5,670 руб.</td> </tr>
+						<tr> <td>01</td> <td>0-182-012</td> <td>Sabbia Micro Platinum</td> <td>5 kg</td> <td>453,670 руб.</td> <td><input type="number" value="4"></td> <td>453,670 руб.</td> </tr>
 						<tr> <td>01</td> <td>0-182-012</td> <td>Enduit de Lissage</td> <td>5 kg</td> <td>1,420 руб.</td> <td><input type="number" value="4"></td> <td>5,670 руб.</td> </tr>
 						<tr> <td>01</td> <td>0-182-012</td> <td>Enduit de Lissage</td> <td>5 kg</td> <td>1,420 руб.</td> <td><input type="number" value="4"></td> <td>5,670 руб.</td> </tr>
 						<tr> <td>01</td> <td>0-182-012</td> <td>Enduit de Lissage</td> <td>5 kg</td> <td>1,420 руб.</td> <td><input type="number" value="4"></td> <td>5,670 руб.</td> </tr>
@@ -628,12 +676,6 @@
 						<tr> <th>Итого</th> <th>23,870 руб.</th> </tr>
 						<tr> <th>Стоимость за кв. метр</th> <th>23,870 руб.</th> </tr>
 					</table>
-				</div>
-				<div class="visualiser_smeta--extra">
-					<div class="visualiser_smeta--extra_one" style="background: #B8D1B2; padding: 10px 0;">Грунтовочный слой</div>
-					<div class="visualiser_smeta--extra_one" style="background: #FFFDC7; padding: 10px 0;">Базовый слой</div>
-					<div class="visualiser_smeta--extra_one" style="background: #DCFFFC; padding: 5px 0;">Финишный слой</div>
-					<div class="visualiser_smeta--extra_one" style="background: #FFE9D7; padding: 10px 0;">Колоранты</div>
 				</div>
 			</div>
 		</div>
