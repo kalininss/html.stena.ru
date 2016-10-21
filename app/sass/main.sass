@@ -2617,7 +2617,6 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	border: none
 	&:focus
 		outline: none
-	&:hover,
 	&.active
 		background-position: -897px -124px
 .visualiser--pro
@@ -2844,43 +2843,35 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 
 
 .visualiser--one_function-other
-	&:hover,
 	&.opened
 		i
 			background-position: -30px -144px
 .visualiser--one_function-other_interior
-	&:hover,
 	&.opened
 		i
 			background-position: -139px -144px
 .visualiser--one_function-smeta
-	&:hover,
 	&.opened
 		text-decoration: none
 		i
 			background-position: -250px -144px
 .visualiser--one_function-description
-	&:hover,
 	&.opened
 		i
 			background-position: -362px -144px
 .visualiser--one_function-technic
-	&:hover,
 	&.opened
 		i
 			background-position: -472px -144px
 .visualiser--one_function-gallery
-	&:hover,
 	&.opened
 		i
 			background-position: -587px -144px
 .visualiser--one_function-cart
-	&:hover,
 	&.opened
 		i
 			background-position: -698px -144px
 .visualiser--one_function-favourite
-	&:hover,
 	&.opened
 		i
 			background-position: -808px -144px
@@ -2906,13 +2897,15 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	display: none
 	float: left
 	position: relative
+.scroll--head
+	margin-top: 7px
 .scroll--item
 	color: #A6A8AB
 	font-size: 12px
 	font-family: $f-head
 	font-weight: 300
 	display: block
-	margin-bottom: 10px
+	margin-bottom: 15px
 	max-width: 179px
 	&.clicked 
 		color: #CBCED1
@@ -2932,15 +2925,23 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	max-width: 197px
 	&.clicked 
 		img
-			margin-right: 1px
+			margin-right: 2px
+			// margin-left: 0
+			// margin-right: 0
+			width: 62px
+			height: 62px
+			margin-top: -3px
 	img
 		display: inline-block
 		vertical-align: middle
 		margin-right: 5px
+		width: 55px
+		height: 55px
 	.scroll--head
 		display: inline-block
 		vertical-align: middle
 		width: calc(100% - 65px)
+		margin-top: 0
 .scroll--item-common
 	padding-right: 38px
 	position: relative
@@ -3241,8 +3242,9 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 .visualiser--xs_logos
 	position: absolute
 	z-index: 0
-	right: -20px
-	top: 0px
+	right: -22px
+	// margin-right: -530px
+	top: -8px
 	transform: scale(0.4264)
 	display: none
 .visualiser--xs_clavel
