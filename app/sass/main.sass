@@ -255,15 +255,14 @@ main
 .s-front-text
 	text-align: center
 .front-h1
-	font-size: 72px
-	font-family: $f-default
-	font: lighter 72px $f-default
+	font: 300 54px $f-default
 	line-height: 1.2
 	color: #4C6591
 .front-p
+	text-align: left
 	color: #404041
 	font: lighter 22px $f-default
-	margin: 2em 0
+	// margin: 2em 0
 .input-button__submit
 	float: right
 	background: none
@@ -339,21 +338,40 @@ section
 	left: 0 !important
 .panel_right,
 .panel_left
-	background: rgba(0,0,0,0.4)
+	// background: rgba(0,0,0,0.4)
 	display: inline-block
 	float: right
 	text-align: right
 	color: #fff
-	padding: 25px 60px 25px 95px
+	padding: 25px 0
+	position: relative
+	z-index: 2
+.s-parallax
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		width: 100%
+		top: 0
+		height: 100%
+		display: block
+		z-index: 1
+		background: rgba(0,0,0,0.4)
 .panel_left
 	float: left
 	text-align: left
+.panel_left
+	padding-left: 60px
+	padding-right: 95px
+.panel_right
+	padding-right: 60px
+	padding-left: 95px
 .panel__head
 	display: inline-block
 	font-size: 64px
 	text-transform: uppercase
 .panel__descr
-	font-weight: 500
+	font-weight: 300
 	font-size: 36px
 div.gm-style div div div div div div div
 	color: #fff !important
@@ -381,6 +399,7 @@ div.gm-style div div div div div div div
 .s-front-contact
 	background: #D8D8D8
 	padding-bottom: 28px
+	line-height: 1.6
 .input-button__input
 	float: left
 	width: 80%
@@ -497,6 +516,7 @@ footer
 		color: #80A0B7
 .diller-login
 	color: #fff
+	cursor: pointer
 	&:hover,
 	&:focus
 		text-decoration: none
@@ -737,7 +757,10 @@ a[href^="https://maps.google.com/maps?ll="]
 		float: left
 		background: #D0D2D3
 		font-weight: 600
+		font: $f-head
 		text-align: center
+		font-size: 22px
+		color: #6D6E70
 		padding: 18px 0
 		margin: 0 5px
 		cursor: pointer
@@ -857,8 +880,14 @@ a[href^="https://maps.google.com/maps?ll="]
 .smeta__head
 	font-weight: 300
 	font-size: 24px
-	margin: 0 0 10px
+	margin: 0
 	line-height: 1
+	color: #6D6E70
+.smeta--articul
+	font-size: 11px
+	font-family: $f-head
+	font-weight: 300
+	color: #6D6E70
 .smeta__prices
 	font-weight: 300
 	font-size: 16px
@@ -869,7 +898,7 @@ a[href^="https://maps.google.com/maps?ll="]
 	color: $c-accent
 	font-size: 32px
 	font-weight: 500
-	float: right
+	// float: right
 .smeta__value
 	font-weight: 24
 	font-weight: 500
@@ -920,16 +949,16 @@ input[type="checkbox"]
 	margin-bottom: 0
 	margin-top: 10px
 	border-radius: 3px
-	background: #E25D77
+	background: #999090
 	color: #fff
 	border: none
 	&:hover,
 	&:focus
-		background: #DB4B6C
+		background: #999090
 		color: #fff
 		text-decoration: none
 	&:active
-		background: #E25D77
+		background: #999090
 .smeta-panel__summary
 	font-size: 22px
 	font-weight: 300
@@ -960,8 +989,12 @@ input[type="checkbox"]
 	font-size: 18px
 	vertical-align: middle
 	margin: 0
+.smeta-icon__visualisator + .smeta-icon__text
+	vertical-align: bottom
+	br
+		display: none
 .smeta-icons
-	margin: 16px 0 18px
+	margin: 20px 0 19px
 	@include clearfix
 	i
 		display: inline-block
@@ -1047,11 +1080,11 @@ input[type="checkbox"]
 .one_mobile_smeta_icon--calculator
 	background: url(../img/mobile-smeta-icon.png) 0px 0px 
 .one_mobile_smeta_icon--visualisator
-	background: url(../img/mobile-smeta-icon.png) -163px 0px 
+	background: url(../img/mobile-smeta-icon.png) -33px 0px 
 .one_mobile_smeta_icon--camera
-	background: url(../img/mobile-smeta-icon.png) -326px 0px 
+	background: url(../img/mobile-smeta-icon.png) -66px 0px 
 .one_mobile_smeta_icon--favourite
-	background: url(../img/mobile-smeta-icon.png) -489px 0px 
+	background: url(../img/mobile-smeta-icon.png) -99px 0px 
 .mobile-smeta-icons
 	display: flex
 	justify-content: space-between
@@ -1108,7 +1141,7 @@ input[type="checkbox"]
 	background: #EFEFEF
 	border: 1px solid #8C8C8C
 
-.owl-carousel .owl-item img
+.owl-carousel .owl-item picture
 	height: 100%
 .effect--round_shadow
 	position: relative
@@ -1198,10 +1231,12 @@ input[type="checkbox"]
 	margin-right: 10px
 	margin-top: -3px
 .ol-li__inner
-	background: #FACBCC
+	// background: #FACBCC
 	color: #fff
 	display: inline-block 
 	line-height: 1
+.smeta--articul_sm
+	display: none
 .instruction
 	list-style-type: none
 	margin: 0
@@ -1651,20 +1686,26 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	line-height: 1.2
 	font-size: 0
 	display: inline-block
-	margin-left: 99px
+	margin-left: 16px
 	vertical-align: middle
 	color: $c-default
 	&:last-child
 		margin-right: 65px
+.input_price:nth-child(1)
+	margin-left: 99px
 .input_price--label
 	border-radius: 3px 0 0 3px
 	border: 1px solid $c-head
 	padding: 0 6px
 	display: inline-block
-	font-size: 14px
+	font-size: 21px
+	font-family: $f-add-2
+	font-weight: 300
 	background: #D0D2D3
-	line-height: 19px
+	line-height: 30px
+	height: 30px
 	text-transform: lowercase
+	vertical-align: top
 .input_price--input
 	border-radius: 0 3px 3px 0
 	border: 1px solid $c-default
@@ -1673,13 +1714,18 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	line-height: 19px
 	padding: 0 0 0 8px
 	border-left: none
-	font-size: 14px
+	font-family: $f-add-2
+	font-size: 18px
+	height: 30px
 	margin-bottom: 0
+	vertical-align: top
 .input_price--value
 	font-size: 14px
 	text-transform: lowercase
 	display: inline-block
 	margin-left: 10px
+	vertical-align: bottom
+	margin-bottom: 5px
 
 .noUi-horizontal
 	border: none
@@ -1691,22 +1737,22 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	width: 0
 	height: 0
 	background: none
-	border-left: 8px solid #fff
-	border-top: 4px solid transparent
-	border-bottom: 4px solid transparent
+	border-right: 14px solid #fff
+	border-top: 7px solid transparent
+	border-bottom: 7px solid transparent
 	position: absolute
 	left: 50%
-	margin-left: -3px
+	margin-left: -7px
 	top: 50%
-	margin-top: -4px
+	margin-top: -7px
 .noUi-horizontal .noUi-handle
 	border: none
 	border-radius: 2px
 	background: #404041
-	width: 15px
-	height: 15px
+	width: 28px
+	height: 28px
 	left: -7px
-	top: -5px
+	top: -12px
 .noUi-target
 	box-shadow: none
 	border-radius: 0
@@ -1715,12 +1761,13 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 .noUi-handle-lower:before
 	transform: rotate
 	border-left: none
-	margin-left: -4px
-	border-right: 8px solid #fff
+	margin-left: -6px
+	border-left: 14px solid #fff
+	border-right: none
 .multiply_range--outer
 	margin-top: 10px
 	border: 1px solid $c-default
-	padding: 9px 12px
+	padding: 16px 29px 16px 15px
 	width: 284px
 	margin-left: 99px
 
@@ -1733,6 +1780,7 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	label
 		font-size: 12px
 		font-weight: normal
+		font-family: $f-add-2
 	input[type="checkbox"].styled-checkbox + label::before
 		margin-right: 5px
 		width: 13px
@@ -1740,8 +1788,12 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 		background-size: 7px
 		vertical-align: middle
 		margin-bottom: 3px
-
-
+.where_buy--title
+	font-size: 22px
+	font-weight: 300
+	color: #515151
+	text-align: right
+	margin: -30px 0 10px
 .unreal_select
 	position: relative
 	user-select: none
@@ -1929,7 +1981,7 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	width: calc(100% - 326px)
 	display: inline-block
 	vertical-align: top
-	border-spacing: 20px 10px
+	border-spacing: 5px 10px
 	border-collapse: separate
 	margin-bottom: 10px
 	table-layout: fixed
@@ -1945,25 +1997,25 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 		text-align: center
 	td:nth-child(1),
 	th:nth-child(1)
-		width: 1%
+		min-width: 20px
 	td:nth-child(2),
 	th:nth-child(2)
 		width: 15%
 	td:nth-child(3),
 	th:nth-child(3)
-		width: 30%
+		min-width: 165px
 	td:nth-child(4),
 	th:nth-child(4)
 		width: 10%
 	td:nth-child(5),
 	th:nth-child(5)
-		width: 18%
+		min-width: 90px
 	td:nth-child(6),
 	th:nth-child(6)
 		width: 15%
 	td:nth-child(7),
 	th:nth-child(7)
-		width: 15%
+		min-width: 90px
 
 
 
@@ -2442,7 +2494,7 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	max-width: 100%
 	max-width: calc(100% - 300px)
 	display: inline-block
-	float: left
+	// float: left
 	color: #515151
 	position: relative
 .place_panel--head
@@ -2472,7 +2524,8 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	font-weight: 300
 .place_panel--buttons
 	width: 250px
-	float: right
+	margin-top: 20px
+	// float: right
 	.btn--send
 		margin-left: 0
 		margin-bottom: 10px
@@ -3258,7 +3311,28 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	width: 121px
 	height: 36px
 	margin-top: 5px
-
+.place_row
+	position: relative
+	border-bottom: 4px solid #999090
+	margin-top: 20px
+	padding-bottom: 10px
+	&:last-of-type
+		border-bottom: none
+.mega_plus--place
+	position: absolute
+	right: 15px
+	top: 0
+	margin-top: 0
+	z-index: 3
+.container-place
+	padding-bottom: 100px
+.col-hidden-place
+	display: none
+.auth-header
+	font-weight: 300
+	text-align: center
+	font-size: 30px
+	color: #58595B
 
 
 

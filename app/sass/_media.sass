@@ -140,18 +140,22 @@
 		font-size: 14px
 	.smeta-icons
 		border-bottom: 1px solid $c-default
-		padding-bottom: 20px
+		padding-bottom: 14px
+		position: relative
+		padding-top: 59px
+		margin: 10px 0
+	.smeta__prices
+		margin-top: 0
 	.smeta-icon:nth-child(1)
-		display: block
-		width: 100%
-		margin-bottom: 15px
-	.page-effect-06 .tabs
-		display: none
-	.product-tabs .tab_item.tab-stars,
-	.product-tabs .tab_item.area-3d 
-		display: none !important
-	.page-effect-06
-		border-top: 1px solid $c-default
+		display: inline-block
+		// width: 100%
+		// margin-bottom: 15px
+		// position: absolute
+		// bottom: 0
+	.smeta-icon:nth-child(2)
+		position: absolute
+		top: 0
+		left: 0
 	h6
 		font-size: 16px
 	.manager_subhead
@@ -239,7 +243,31 @@
 		padding-right: 15px
 	.popup--table
 		width: calc(100% - 296px)
-		border-spacing: 20px 5px
+		border-spacing: 5px 5px
+		td:nth-child(6),
+		th:nth-child(6)
+			text-align: center
+		td:nth-child(1),
+		th:nth-child(1)
+			min-width: 15px
+		td:nth-child(2),
+		th:nth-child(2)
+			width: 12%
+		td:nth-child(3),
+		th:nth-child(3)
+			min-width: 140px
+		td:nth-child(4),
+		th:nth-child(4)
+			width: 10%
+		td:nth-child(5),
+		th:nth-child(5)
+			min-width: 70px
+		td:nth-child(6),
+		th:nth-child(6)
+			width: 50px
+		td:nth-child(7),
+		th:nth-child(7)
+			min-width: 70px
 	.popup--add_to_cart
 		margin-right: 0
 	.page-parallax--breadcrump
@@ -380,8 +408,46 @@
 		padding-right: 15px
 	.owl-visualiser--plashka
 		display: none !important
+	.article__h1
+		font-size: 36px
+		margin: 10px 0
+	.where_buy--title
+		padding-right: 115px
+	.stars.col-md-3
+		padding: 0
+	.smeta-icon
+		margin-right: 9px
+		vertical-align: middle
+		float: none
+	.place_row
+		margin-right: 115px
+	.mega_plus
+		right: 0
+	.place_panel--info
+		margin-right: 70px
+	.owl-header-front--text
+		font-size: 44px
+		max-width: 400px
+	.owl-header-front--inner
+		margin-top: 70px
+	.front-h1
+		font-size: 42px
+	.front-p
+		font-size: 20px
+	.product-tabs .tab
+		font-size: 12px
+
+
+@media only screen and (max-width : 1200px)
+	.owl-header-front--text
+		font-size: 36px
+		max-width: 350px
+
+
 
 @media only screen and (max-width : 1010px)
+	.smeta-icon__text
+		font-size: 11px
 	.smeta-price__descr
 		max-width: 150px
 		display: inline-block
@@ -389,10 +455,6 @@
 		vertical-align: middle
 	.mobile-message
 		font-size: 9px
-	.smeta-icon
-		margin-right: 25px
-	.smeta-icon__text
-		font-size: 11px
 	.my-col-4-5
 		width: calc(100% - 580px)
 	.my-col-7-5
@@ -403,8 +465,6 @@
 		width: calc(100% - 540px)
 	.my-col-7-5
 		width: 535px
-	.product-tabs .tab
-		font-size: 12px
 	.popup--table
 		font-size: 12px
 	.page-parallax--text
@@ -422,6 +482,8 @@
 		display: inline-block
 		vertical-align: top
 		// margin-top: 13px
+	.smeta-icons
+		padding-top: 47px
 
 
 
@@ -481,16 +543,22 @@
 	.smeta-icon
 		vertical-align: bottom
 	.smeta__prices
-		float: left
-		width: 50%
-		padding-left: 15px
+		float: right
+		// width: 50%
+		// padding-left: 15px
+		max-width: 50%
 		&:nth-child(3n)
 			padding-right: 15px
 			padding-left: 0
+			float: left
+	.smeta__price
+		display: inline-block
+		vertical-align: middle
 	.smeta-price__descr
 		display: inline-block
-		width: 152px
+		max-width: 152px
 		line-height: 1.2
+		vertical-align: middle
 	.smeta-icons
 		border: none
 	.my-col-4-5
@@ -570,8 +638,6 @@
 			margin: 0 7px
 			&.active
 				margin: 0
-	.article__h1
-		margin: 20px 0
 	.filter--label
 		float: left
 	.unreal_select:not(.unreal_select-simple)
@@ -753,18 +819,95 @@
 	.visualiser_smeta--button
 		font-size: 12px
 		margin-top: 10px
-
+	.where_buy--title
+		width: 50%
+		// float: right
+		position: absolute
+		right: 80px
+		font-size: 18px
+		margin-top: -40px
+		text-align: left
+		padding-right: 0
+	.breadcrump_11c
+		display: block
+	.panel_left
+		padding-left: 60px
+		padding-right: 0
+	.panel_right
+		padding-right: 60px
+		padding-left: 0
+	.smeta__price
+		font-size: 25px
+	.page-effect-06 .tabs
+		display: none
+	.product-tabs .tab_item.tab-stars,
+	.product-tabs .tab_item.area-3d 
+		display: none !important
+	.page-effect-06
+		border-top: 1px solid $c-default
+	.smeta-icons
+		padding-top: 0
+	.smeta-icon
+		float: left
+	.smeta-icon:nth-child(2)
+		position: static
+	.smeta--articul
+		display: none
+	.smeta__head_sm
+		font-size: 22px
+		max-width: 300px
+	.smeta--articul_sm
+		display: block
+		float: right
+		clear: right
+	.smeta__prices:nth-child(2n)
+		float: left
+	.tab-head
+		font-size: 24px
+	.tab-slider__head
+		font-size: 20px
+	h3
+		font-size: 24px
+	.place_row
+		margin-right: 65px
+	.front-h1
+		font-size: 38px
+	.front-p
+		font-size: 18px
+	.owl-header-front--text
+		font-size: 44px
+		max-width: 400px
+	.popup--table
+		td:nth-child(1),
+		th:nth-child(1)
+			min-width: 0
+			// width: 20%
+		td:nth-child(2),
+		th:nth-child(2)
+			width: 12%
+		td:nth-child(3),
+		th:nth-child(3)
+			min-width: 0
+			width: 20%
+		td:nth-child(4),
+		th:nth-child(4)
+			width: 10%
+		td:nth-child(5),
+		th:nth-child(5)
+			min-width: 0
+			width: 20%
+		td:nth-child(6),
+		th:nth-child(6)
+			min-width: 0
+			width: 20%
+		td:nth-child(7),
+		th:nth-child(7)
+			min-width: 0
+			width: 20%
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
-	.panel_right,
-	.panel_left
-		width: 100%
-		float: none
-		padding-left: 0
-		padding-right: 0
-		font-size: 28px
 	.row_bottom,
 	.social-links
 		text-align: center
@@ -793,8 +936,6 @@
 		background-image: url(../img/sotrudn_480.jpg)
 		background-size: cover
 		background-position: center center
-	.panel_left, .panel_right
-		margin: 20px 0
 	.topline
 		position: static
 		background: #2F4259
@@ -811,7 +952,7 @@
 		font-size: 38px
 	.h1_small
 		font-size: 28px
-		margin-top: 25px
+		// margin-top: 25px
 	h2
 		font-size: 24px
 	.product-tabs .tab_item
@@ -899,6 +1040,8 @@
 		margin-left: 0
 	.input_price
 		margin-left: 0
+		&:nth-child(1)
+			margin-left: 0
 		&:last-child
 			margin-right: 40px
 	.multiply_range--outer
@@ -921,26 +1064,6 @@
 		font-size: 18px	
 	.place--text
 		padding-right: 0
-	// .scroll
-	// 	margin-right: 10px
-	// 	padding: 5px
-	// .scroll--item
-	// 	max-width: 160px
-	// .scroll--item-small
-	// 	max-width: 85px
-	// .scroll--head
-	// 	font-size: 10px
-	// .scroll--item-small .scroll--head
-	// 	display: block
-	// 	width: 100%
-	// .scroll--item-common
-	// 	padding-right: 20px
-	// 	margin-right: 5px
-	// 	max-width: 100px
-	// .scroll--item.clicked img
-	// 	max-width: 144px
-	// .scroll--item_delete
-	// 	top: 7px
 	.icon--clavel
 		display: inline-block
 		vertical-align: middle
@@ -958,12 +1081,24 @@
 		vertical-align: middle
 		margin-top: 4px
 		width: calc(100% - 261px - 205px)
-		
+	.smeta-icon
+		margin-right: 10px
+
 
 @media only screen and (max-width : 762px)
 	.visualiser--free_area
 		height: calc(100% - 205px)
+	.smeta__head_sm
+		max-width: 200px
+		margin-top: 15px
+	.smeta--articul_sm
+		width: 100%
 
+
+@media only screen and (max-width : 600px)
+	.owl-header-front--text
+		font-size: 36px
+		max-width: 350px
 
 
 @media only screen and (max-width : 639px)
@@ -1003,34 +1138,8 @@
 	.comment
 		padding: 30px 20px
 		background-image: none
-	.mobile-message,
-	.smeta-icons,
-	.img-top-panel,
-	.smeta__prices
-		display: none
-	.smeta__head
-		display: inline-block
-		margin-bottom: 0
-		vertical-align: middle
-		width: calc(100% - 150px)
-	.smeta-price_mobile
-		float: right
-		display: inline-block
-	.smeta
-		line-height: 50px
-		margin: 20px 0
-	.article_smeta
-		margin-bottom: 0
-	.mobile-smeta-icons
-		display: flex
-		& > *
-			display: inline-block
 	.greeting
 		margin: 20px 0 10px
-	.smeta-icons__sm
-		display: none !important
-	.smeta__head_sm
-		display: none !important
 	.filter--select:not(.unreal_select-simple)
 		display: none
 	.filter--tabs:not(.filter--tabs-simple)
@@ -1090,7 +1199,15 @@
 		display: none
 	.visualiser--head
 		width: calc(100% - 261px - 90px)
-	
+	.smeta-icons__sm
+		.smeta-icon__text
+			font-size: 12px
+	.smeta__head_sm
+		font-size: 20px
+		max-width: 150px
+	.smeta-price__descr
+		max-width: 108px
+		font-size: 11px
 
 
 @media only screen and (max-width : 610px)
@@ -1202,12 +1319,9 @@
 		margin-bottom: 15px
 	.front-h1
 		font-size: 34px
-		text-align: left
 	.front-p
 		font-size: 18px
 		text-align: left
-	.article__h1
-		margin-top: 25px
 	.addToCart-button
 		width: 135px
 		line-height: 1.2
@@ -1225,20 +1339,6 @@
 		margin: 20px 0 0
 	.smeta
 		margin-bottom: 0
-	.mobile-smeta-icons
-		& > *
-			width: 55px
-			height: 58px
-			background-size: 300px
-			max-width: 100%
-	.one_mobile_smeta_icon--calculator
-		background-position: 0px 0px
-	.one_mobile_smeta_icon--visualisator
-		background-position: -82px 0px
-	.one_mobile_smeta_icon--camera
-		background-position: -163px 0px
-	.one_mobile_smeta_icon--favourite
-		background-position: -245px 0px
 	.col-tab-slider,
 	.manager_subhead
 		display: none
@@ -1277,7 +1377,7 @@
 			padding-left: 0
 		.tab
 			margin: 0 5px
-			font-size: 14px
+			font-size: 16px
 			&.active
 				padding-left: 5px
 				padding-right: 5px
@@ -1290,11 +1390,21 @@
 		width: 100%
 	.filter--checkbox
 		float: left
-		min-width: calc(50% - 4px)
-		margin-right: 4px
+		// min-width: calc(25% - 4px)
+		min-width: 0
+		margin-right: 16px
 		&:nth-child(2n)
-			margin-right: 0
-			min-width: 50%
+			// margin-right: 0
+			// min-width: 50%
+	.filter--checkbox-list_full
+		.filter--checkbox input[type=checkbox].styled-checkbox+label::before
+			margin-right: 2px
+		.filter--checkbox
+			min-width: calc(50% - 4px)
+			margin-right: 4px
+			&:nth-child(2n)
+				min-width: 50%
+				margin-right: 0
 	.filter--checkbox-list
 		@include clearfix
 	.cabinet--button
@@ -1592,6 +1702,134 @@
 		margin-top: 0
 	.visualiser--add
 		margin-right: 5px
+	.where_buy--title
+		position: static
+		margin-top: 10px
+		width: 100%
+	.breadcrump_11c
+		display: none
+	.panel_right,
+	.panel_left
+		margin: 20px 0
+		width: 100%
+		float: none
+		padding-left: 0
+		padding-right: 0
+		font-size: 28px
+	.front-page 
+		.topline
+			background: $bg-accent
+			position: static
+	.mobile-smeta-icons
+		display: flex
+		margin-top: 8px
+		& > *
+			display: inline-block
+			width: 33px
+			height: 35px
+			max-width: 100%
+	.mobile-message,
+	.smeta-icons,
+	.img-top-panel,
+	.smeta__prices
+		display: none
+	.smeta__head
+		display: inline-block
+		margin-bottom: 0
+		vertical-align: middle
+		width: calc(100% - 150px)
+	.smeta-price_mobile
+		float: right
+		display: inline-block
+	.smeta
+		line-height: 50px
+		margin: 20px 0
+	.article_smeta
+		margin-bottom: 0
+	.smeta-icons__sm
+		display: none !important
+	.smeta__head_sm
+		display: none !important
+	.article_smeta
+		font-family: $f-default
+		font-size: 15px
+		font-weight: 500
+		margin-top: 10px
+	.smeta__head,
+	.smeta-price_mobile
+		margin-top: 0
+	.smeta__head
+		font-size: 12px
+		display: block
+		width: 60%
+		vertical-align: top
+		display: inline-block
+		float: left
+	.smeta--articul
+		font-size: 9px
+		display: block
+		line-height: 1.2
+		width: 60%
+		vertical-align: top
+		display: inline-block
+		float: left
+	.smeta
+		position: relative
+		margin: 10px 0
+		@include clearfix
+	.smeta-price_mobile
+		position: absolute
+		top: -17px
+		right: 0
+	.effect-page__text
+		font-size: 14px
+	.tab-head
+		font-size: 14px
+		font-weight: 500
+	.tab-article
+		font-size: 11px
+	h3
+		font-size: 14px
+		font-weight: 500
+	.p_big
+		font-size: 14px
+	.instruction p
+		font-size: 14px
+	.comment
+		font-size: 14px
+	.place_panel--number
+		left: 0
+	.place_panel--info
+		padding-left: 40px
+	.place_row
+		margin-right: 45px
+	.place_panel--info
+		margin-right: 40px
+	.place_panel--address
+		display: none
+	.place_panel--head
+		font-weight: 300
+	.place_row
+		margin-right: 0
+	.place_panel--info-second
+		margin-right: 0
+		padding-left: 0
+	.owl-header-front--text
+		font-size: 25px
+		max-width: 240px
+	.owl-header-front--inner
+		margin-top: 20px
+	.front-h1
+		font-size: 30px
+	.effect-list__info
+		position: relative
+	.effect-price
+		position: absolute
+		right: 0
+	.effect-list__head
+		width: 100%
+		padding-right: 130px
+		max-width: 100%
 
 @media only screen and (max-width : 450px)
 	.topline-scroll__contact a
@@ -1704,7 +1942,16 @@
 		left: 65.5%
 	.addToCart-button
 		&:hover
-			background: #DB4B6C
+			background: #777
+			color: #fff
+			text-decoration: none
+			img
+				width: 12px
+				margin-right: 6px
+	.btn_smeta,
+	a.owl-header-front--button
+		&:hover
+			background: #777
 			color: #fff
 			text-decoration: none
 			img
@@ -1770,7 +2017,10 @@
 			.icon_visualiser--add
 				box-shadow: 0 0 10px #3EADE3
 				background: #fff
-
+	.smeta-icon
+		margin-right: 10px
+	.smeta-icons i
+		margin-right: 0
 
 	
 /* Large Devices, Wide Screens */

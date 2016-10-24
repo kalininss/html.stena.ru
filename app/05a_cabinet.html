@@ -24,6 +24,8 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300,400,600,700|Roboto+Condensed:300,400|Roboto:300,300i,500,700|Lobster&subset=cyrillic" rel="stylesheet">
 
+	<!-- удалить строку ниже в продакшне, код принудительно чистит localstorage, чтобы загрузить новую версию svg спрайта -->
+	<script>localStorage.clear();</script>
 	<!-- Load sprite.svg -->
 	<script>!function(a,b){"use strict";var c="img/sprite.symbol.svg",d=1;if(!b.createElementNS||!b.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var f,g,e="localStorage"in a&&null!==a.localStorage,h=function(){b.body.insertAdjacentHTML("afterbegin",g)},i=function(){b.body?h():b.addEventListener("DOMContentLoaded",h)};if(e&&localStorage.getItem("inlineSVGrev")==d&&(g=localStorage.getItem("inlineSVGdata")))return i(),!0;try{f=new XMLHttpRequest,f.open("GET",c,!0),f.onload=function(){f.status>=200&&f.status<400&&(g=f.responseText,i(),e&&(localStorage.setItem("inlineSVGdata",g),localStorage.setItem("inlineSVGrev",d)))},f.send()}catch(j){}}(window,document);</script>
 	<link rel="stylesheet" href="css/main.min.css">
@@ -37,60 +39,60 @@
 -->
 <body class="common-page">
 
-		<!-- TOP LINE ON SCROLL -->
-		<div class="topline-scroll">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-xs-2">
-						<a href="/" class="logo"><svg class="topline-scroll__logo"><use xlink:href="#02_Logo"></use></svg></a>
-					</div><!-- col -->
+	<!-- TOP LINE ON SCROLL -->
+	<div class="topline-scroll">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-2">
+					<a href="/" class="logo"><svg class="topline-scroll__logo"><use xlink:href="#02_Logo"></use></svg></a>
+				</div><!-- col -->
 
-					<div class="col-xs-8">
-						<div class="topline-scroll__contact">
-							<a href="tel:+74999777007">+7 (499) 977-70-07</a>
-							<a href="#popup--call-back" class="js-open-popup link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
-								<p class="footer-phone-svg__text">Обратный звонок</p>
-							</a>
-						</div>
-					</div><!-- col -->
+				<div class="col-xs-8">
+					<div class="topline-scroll__contact">
+						<a href="tel:+74999777007">+7 (499) 977-70-07</a>
+						<a href="#popup--call-back" class="js-open-popup link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
+							<p class="footer-phone-svg__text">Обратный звонок</p>
+						</a>
+					</div>
+				</div><!-- col -->
 
-					<div class="col-xs-2">
-						<svg class="topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
-					</div><!-- col -->
+				<div class="col-xs-2">
+					<svg class="topline-scroll__menu-btn js-open-scroll-menu"><use xlink:href="#49_Menu"></use></svg>
+				</div><!-- col -->
 
-				</div>
-			</div><!-- container-fluid -->
-		</div><!-- topline-scroll -->
-
-		<!-- BURGER MENU -->
-		<div class="scroll-menu">
-			<div class="scroll-menu__header">
-				<svg class="logo__svg"><use xlink:href="#03_Logo"></use></svg>
-				<svg class="scroll-menu--close js-open-scroll-menu"><use xlink:href="#48_Close"></use></svg>
 			</div>
-			<nav class="nav scroll-menu__nav">
-				<ul class="list">
-					<li><a href="#">Главная</a></li>
-					<li><a href="#">О компании</a></li>
-					<li><a href="#">Подбор покрытия</a></li>
-					<li><a href="#">Каталог</a></li>
-					<li><a href="#">Галерея интерьеров</a></li>
-					<li><a href="#">Услуги</a></li>
-					<li><a href="#">Где купить</a></li>
-					<li><a href="#" class="js-open-scroll-search">Поиск <i class="icon-plus"></i></a></li>
-					<form class="scroll-search">
-						<input id="to-focus2" class="scroll-search__input brown_placeholder" type="text" name="stop" autocomplete="off" required placeholder="Ваш запрос">
-						<button class="scroll-search__sumbit"><svg class="svg_10"><use xlink:href="#10_search"></use></svg></button>
-					</form>
-				</ul>
-			</nav>
-			<div class="scroll-menu__footer">
-				<a href="#popup--call-back" class="link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
-					<p class="footer-phone-svg__text">Обратный звонок</p>
-				</a>
-			</div>
+		</div><!-- container-fluid -->
+	</div><!-- topline-scroll -->
+
+	<!-- BURGER MENU -->
+	<div class="scroll-menu">
+		<div class="scroll-menu__header">
+			<svg class="logo__svg"><use xlink:href="#03_Logo"></use></svg>
+			<svg class="scroll-menu--close js-open-scroll-menu"><use xlink:href="#48_Close"></use></svg>
 		</div>
-		<div class="bg-dark"></div><!-- фон при выдвижении меню -->
+		<nav class="nav scroll-menu__nav">
+			<ul class="list">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">О компании</a></li>
+				<li><a href="#">Подбор покрытия</a></li>
+				<li><a href="#">Каталог</a></li>
+				<li><a href="#">Галерея интерьеров</a></li>
+				<li><a href="#">Услуги</a></li>
+				<li><a href="#">Где купить</a></li>
+				<li><a href="#" class="js-open-scroll-search">Поиск <i class="icon-plus"></i></a></li>
+				<form class="scroll-search">
+					<input id="to-focus2" class="scroll-search__input brown_placeholder" type="text" name="stop" autocomplete="off" required placeholder="Ваш запрос">
+					<button class="scroll-search__sumbit"><svg class="svg_10"><use xlink:href="#10_search"></use></svg></button>
+				</form>
+			</ul>
+		</nav>
+		<div class="scroll-menu__footer">
+			<a href="#popup--call-back" class="link-nohover"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
+				<p class="footer-phone-svg__text">Обратный звонок</p>
+			</a>
+		</div>
+	</div>
+	<div class="bg-dark"></div><!-- фон при выдвижении меню -->
 
 
 	<header class="header">
@@ -200,162 +202,162 @@
 						<div class="order_panel--row">
 							<div class="order-text order-text__date">06/06/2015</div>
 							<div class="order-text">Смета RV104/02</div>
-							<a href="#" class="b-plus"></a>
+							<a href="#" class="b-plus js-open-order"></a>
 							<a href="#" class="btn btn--send">Отправить</a>
 							<div class="pull-right">
 								<div class="order-text order-text_price">25 783 руб.</div>
 								<a href="#" class="b-plus b-plus_exit"></a>
 							</div>
 						</div>
-					</div>
-				</div>
+						<!-- </div> -->
+						<!-- </div> -->
 
-				<div class="cart">
-					<div class="cart--header">
-						<div class="cart--title">Артикул</div>
-						<div class="cart--title">Наименование товара</div>
-						<div class="cart--title">Фасовка</div>
-						<div class="cart--title">Цена</div>
-						<div class="cart--title">Количество</div>
-						<div class="cart--title">Сумма</div>
-						<div class="cart--title">Сравнить</div>
-					</div>
-
-					<!-- start row -->
-					<div class="cart--row">
-						<div class="cart--articul">0-186-003</div>
-						<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
-						<div class="cart--other">
-							<a href="#" class="cart--name">Intuel</a>
-							<div class="cart--weight">5 кг</div>
-							<div class="cart--price">3 496 руб.</div>
-							<div class="cart--count">
-								<input class="cart--input" type="number" name="n1" id="n1" value="1">
-								<label for="n1">шт.</label>
+						<div class="cart">
+							<div class="cart--header">
+								<div class="cart--title">Артикул</div>
+								<div class="cart--title">Наименование товара</div>
+								<div class="cart--title">Фасовка</div>
+								<div class="cart--title">Цена</div>
+								<div class="cart--title">Количество</div>
+								<div class="cart--title">Сумма</div>
+								<div class="cart--title">Сравнить</div>
 							</div>
-							<div class="cart--summ">3 496 руб.</div>
-							<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch1" id="ch1"><label for="ch1"></label></div>
-							<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
-							<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы</div>
-						</div>
-					</div>
-					<!-- end row -->
 
-					<!-- start row -->
-					<div class="cart--row">
-						<div class="cart--articul">0-186-003</div>
-						<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
-						<div class="cart--other">
-							<a href="#" class="cart--name">Intuel</a>
-							<div class="cart--weight">5 958 кг</div>
-							<div class="cart--price">96 руб.</div>
-							<div class="cart--count">
-								<input class="cart--input" type="number" name="n2" id="n2" value="2">
-								<label for="n2">шт.</label>
+							<!-- start row -->
+							<div class="cart--row">
+								<div class="cart--articul">0-186-003</div>
+								<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
+								<div class="cart--other">
+									<a href="#" class="cart--name">Intuel</a>
+									<div class="cart--weight">5 кг</div>
+									<div class="cart--price">3 496 руб.</div>
+									<div class="cart--count">
+										<input class="cart--input" type="number" name="n1" id="n1" value="1">
+										<label for="n1">шт.</label>
+									</div>
+									<div class="cart--summ">3 496 руб.</div>
+									<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch1" id="ch1"><label for="ch1"></label></div>
+									<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
+									<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы</div>
+								</div>
 							</div>
-							<div class="cart--summ">3 496 руб.</div>
-							<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch2" id="ch2" checked><label for="ch2"></label></div>
-							<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
-							<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы</div>
-						</div>
-					</div>
-					<!-- end row -->
+							<!-- end row -->
 
-					<!-- start row -->
-					<div class="cart--row">
-						<div class="cart--articul">0-186-003</div>
-						<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
-						<div class="cart--other">
-							<a href="#" class="cart--name">Intuel</a>
-							<div class="cart--weight">5 кг</div>
-							<div class="cart--price">6 руб.</div>
-							<div class="cart--count">
-								<input class="cart--input" type="number" name="n3" id="n3" value="98">
-								<label for="n3">шт.</label>
+							<!-- start row -->
+							<div class="cart--row">
+								<div class="cart--articul">0-186-003</div>
+								<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
+								<div class="cart--other">
+									<a href="#" class="cart--name">Intuel</a>
+									<div class="cart--weight">5 958 кг</div>
+									<div class="cart--price">96 руб.</div>
+									<div class="cart--count">
+										<input class="cart--input" type="number" name="n2" id="n2" value="2">
+										<label for="n2">шт.</label>
+									</div>
+									<div class="cart--summ">3 496 руб.</div>
+									<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch2" id="ch2" checked><label for="ch2"></label></div>
+									<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
+									<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы</div>
+								</div>
 							</div>
-							<div class="cart--summ">9 323 496 руб.</div>
-							<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch3" id="ch3"><label for="ch3"></label></div>
-							<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
-							<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы Декоративное покрытие с эффектом стен ручной работы Декоративное покрытие с эффектом стен ручной работы Декоративное покрытие с эффектом стен ручной работы</div>
-						</div>
-					</div>
-					<!-- end row -->
+							<!-- end row -->
 
-					<!-- start row -->
-					<div class="cart--row">
-						<div class="cart--articul">0-186-003</div>
-						<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
-						<div class="cart--other">
-							<a href="#" class="cart--name">Intuel</a>
-							<div class="cart--weight">5 кг</div>
-							<div class="cart--price">1 243 496 руб.</div>
-							<div class="cart--count">
-								<input class="cart--input" type="number" name="n4" id="n4" value="1">
-								<label for="n4">шт.</label>
+							<!-- start row -->
+							<div class="cart--row">
+								<div class="cart--articul">0-186-003</div>
+								<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
+								<div class="cart--other">
+									<a href="#" class="cart--name">Intuel</a>
+									<div class="cart--weight">5 кг</div>
+									<div class="cart--price">6 руб.</div>
+									<div class="cart--count">
+										<input class="cart--input" type="number" name="n3" id="n3" value="98">
+										<label for="n3">шт.</label>
+									</div>
+									<div class="cart--summ">9 323 496 руб.</div>
+									<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch3" id="ch3"><label for="ch3"></label></div>
+									<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
+									<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы Декоративное покрытие с эффектом стен ручной работы Декоративное покрытие с эффектом стен ручной работы Декоративное покрытие с эффектом стен ручной работы</div>
+								</div>
 							</div>
-							<div class="cart--summ">3 496 руб.</div>
-							<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch4" id="ch4" checked><label for="ch4"></label></div>
-							<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
-							<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы</div>
+							<!-- end row -->
+
+							<!-- start row -->
+							<div class="cart--row">
+								<div class="cart--articul">0-186-003</div>
+								<div class="cart--img"><img src="img/page-cabinet/product.png" alt=""></div>
+								<div class="cart--other">
+									<a href="#" class="cart--name">Intuel</a>
+									<div class="cart--weight">5 кг</div>
+									<div class="cart--price">1 243 496 руб.</div>
+									<div class="cart--count">
+										<input class="cart--input" type="number" name="n4" id="n4" value="1">
+										<label for="n4">шт.</label>
+									</div>
+									<div class="cart--summ">3 496 руб.</div>
+									<div class="cart--compare"><input class="styled-checkbox" type="checkbox" name="ch4" id="ch4" checked><label for="ch4"></label></div>
+									<div class="cart--remove"><a href="#" class="b-plus b-plus_exit"></a></div>
+									<div class="cart--decsr">Декоративное покрытие с эффектом стен ручной работы</div>
+								</div>
+							</div>
+							<!-- end row -->
+
+							<p class="cart--footer"><span class="cart--footer-summ">Итого: </span><span>453 346 руб.</span></p>
+
 						</div>
-					</div>
-					<!-- end row -->
 
-					<p class="cart--footer"><span class="cart--footer-summ">Итого: </span><span>453 346 руб.</span></p>
-
-				</div>
-
-				<div class="order_panel">
-					<div class="order_panel--table clearfix">
+						<!-- <div class="order_panel"> -->
+						<!-- <div class="order_panel--table clearfix"> -->
 
 						<div class="order_panel--row">
 							<div class="order-text order-text__date">06/06/2015</div>
 							<div class="order-text">Смета RV104/02</div>
-							<a href="#" class="b-plus"></a>
+							<a href="#" class="b-plus js-open-order"></a>
 							<a href="#" class="btn btn--send">Отправить</a>
 							<div class="pull-right">
 								<div class="order-text order-text_price">25 783 руб.</div>
 								<a href="#" class="b-plus b-plus_exit"></a>
 							</div>
 						</div>
-					
+						
 						<div class="order_panel--row">
 							<div class="order-text order-text__date">06/06/2015</div>
 							<div class="order-text">Смета RV104/02</div>
-							<a href="#" class="b-plus"></a>
+							<a href="#" class="b-plus js-open-order"></a>
 							<a href="#" class="btn btn--send">Отправить</a>
 							<div class="pull-right">
 								<div class="order-text order-text_price">25 783 руб.</div>
 								<a href="#" class="b-plus b-plus_exit"></a>
 							</div>
 						</div>
-					
+						
 						<div class="order_panel--row">
 							<div class="order-text order-text__date">06/06/2015</div>
 							<div class="order-text">Смета RV104/02</div>
-							<a href="#" class="b-plus"></a>
+							<a href="#" class="b-plus js-open-order"></a>
 							<a href="#" class="btn btn--send">Отправить</a>
 							<div class="pull-right">
 								<div class="order-text order-text_price">25 783 руб.</div>
 								<a href="#" class="b-plus b-plus_exit"></a>
 							</div>
 						</div>
-					
+						
 						<div class="order_panel--row">
 							<div class="order-text order-text__date">06/06/2015</div>
 							<div class="order-text">Смета RV104/02</div>
-							<a href="#" class="b-plus"></a>
+							<a href="#" class="b-plus js-open-order"></a>
 							<a href="#" class="btn btn--send">Отправить</a>
 							<div class="pull-right">
 								<div class="order-text order-text_price">25 783 руб.</div>
 								<a href="#" class="b-plus b-plus_exit"></a>
 							</div>
 						</div>
-					
+						
 						<div class="order_panel--row">
 							<div class="order-text order-text__date">06/06/2015</div>
 							<div class="order-text">Смета RV104/02</div>
-							<a href="#" class="b-plus"></a>
+							<a href="#" class="b-plus js-open-order"></a>
 							<a href="#" class="btn btn--send">Отправить</a>
 							<div class="pull-right">
 								<div class="order-text order-text_price">25 783 руб.</div>

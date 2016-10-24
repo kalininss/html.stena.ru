@@ -4,6 +4,11 @@ $(function() {
 	// Hello, my skype: adidas-kss
 
 
+	// 5a
+	$('.js-open-order').click(function(){
+		$(this).closest('.order_panel--row').next().slideToggle(300);
+	});
+
 	// 14 page header
 	$('.page-parallax_interior').addClass('animated');
 
@@ -17,7 +22,7 @@ $(function() {
 
 
 	// page #12 plus button
-	$('.mega_plus').click(function(){
+	$('.js-open-hidden-info').click(function(){
 		var temp = $(this);
 		if (!temp.hasClass('started')) {
 			$(this).toggleClass('clicked').addClass('started').closest('.section_service').find('.hidden_info').slideToggle(500, function(){
@@ -27,10 +32,21 @@ $(function() {
 	});
 
 
+	// page #11c plus button
+	$('.js-open-place').click(function(){
+		var temp = $(this);
+		if (!temp.hasClass('started')) {
+			$(this).toggleClass('clicked').addClass('started').closest('.place_row').find('.col-hidden-place').slideToggle(500, function(){
+				temp.removeClass('started');
+			});
+		}
+	});
+
+
 	// page #6, rotate panels
 	$('.js-rotate').click(function(){$(this).closest('.rotate').toggleClass('rotated');});
-	$('.rotate-item').on({'mouseenter':function(){  $(this).find('.rotate').fadeIn(300);  }});
-	$('.rotate').on({'mouseleave':function(){  $(this).fadeOut(300).removeClass('rotated');  }});
+	$('.rotate-item').on({'mouseenter':function(){  $(this).find('.rotate').fadeIn(0);  }});
+	$('.rotate').on({'mouseleave':function(){  $(this).fadeOut(0).removeClass('rotated');  }});
 
 
 	// функции находятся на самих страницах для удобства, здесь они пытаются вызваться. Чтобы не вылетало ошибок, мы их ловим и пропускаем

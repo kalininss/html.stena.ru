@@ -25,6 +25,8 @@
 	<!-- Доп. шрифт open-sans: 600, подключается здесь и на 7 странице --> <!-- todo: одинаковые шрифты на всех страницах -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300,400,400i,600,700|Roboto+Condensed:300,400|Roboto:300,300i,500,700,900|Lobster&subset=cyrillic" rel="stylesheet">
 
+	<!-- удалить строку ниже в продакшне, код принудительно чистит localstorage, чтобы загрузить новую версию svg спрайта -->
+	<script>localStorage.clear();</script>
 	<!-- Load sprite.svg -->
 	<script>!function(a,b){"use strict";var c="img/sprite.symbol.svg",d=1;if(!b.createElementNS||!b.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var f,g,e="localStorage"in a&&null!==a.localStorage,h=function(){b.body.insertAdjacentHTML("afterbegin",g)},i=function(){b.body?h():b.addEventListener("DOMContentLoaded",h)};if(e&&localStorage.getItem("inlineSVGrev")==d&&(g=localStorage.getItem("inlineSVGdata")))return i(),!0;try{f=new XMLHttpRequest,f.open("GET",c,!0),f.onload=function(){f.status>=200&&f.status<400&&(g=f.responseText,i(),e&&(localStorage.setItem("inlineSVGdata",g),localStorage.setItem("inlineSVGrev",d)))},f.send()}catch(j){}}(window,document);</script>
 	<link rel="stylesheet" href="css/main.min.css">
@@ -139,7 +141,7 @@
 								<svg class="svg_06"><use xlink:href="#08_favorites"></use></svg>
 								<span class="img-button_favorites__text">23</span>
 							</a>
-							<a href="#" class="extra__item img-button img-button_personal">
+							<a href="#popup--sign_up_cabinet" class="extra__item img-button img-button_personal">
 								<svg class="svg_06"><use xlink:href="#42_Personal"></use></svg>
 							</a>
 						</div>
@@ -151,34 +153,66 @@
 
 		<!-- SLIDER -->
 		<div class="header__slider owl-header-front owl-carousel" style="display: block;">
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
-			<picture>
-				<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 480px)" />
-				<source srcset="img/owl-header-front/baner_01_900.jpg" media="(max-width: 900px)" />
-				<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1370px)" />
-				<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1371px)" />
-				<img src="img/owl-header-front/baner_01_900.jpg" alt="">
-			</picture>
+			<div class="item">
+				<picture>
+					<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 900px)" />
+					<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1360px)" />
+					<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1361px)" />
+					<img src="img/owl-header-front/baner_01_900.jpg" alt="">
+				</picture>
+				<div class="owl-header-front--inner container-fluid container-lg-static">
+					<div class="owl-header-front--text">Средиземноморское покрытие на натуральных волокнах с эффектом</div>
+					<a href="#" class="owl-header-front--button btn"><img src="img/svg/51_Arrow_white.svg">Подробнее</a>
+				</div>
+			</div>
+			<div class="item">
+				<picture>
+					<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 900px)" />
+					<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1360px)" />
+					<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1361px)" />
+					<img src="img/owl-header-front/baner_01_900.jpg" alt="">
+				</picture>
+				<div class="owl-header-front--inner container-fluid container-lg-static">
+					<div class="owl-header-front--text">Средиземноморское покрытие на натуральных волокнах с эффектом</div>
+					<a href="#" class="owl-header-front--button btn"><img src="img/svg/51_Arrow_white.svg">Подробнее</a>
+				</div>
+			</div>
+			<div class="item">
+				<picture>
+					<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 900px)" />
+					<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1360px)" />
+					<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1361px)" />
+					<img src="img/owl-header-front/baner_01_900.jpg" alt="">
+				</picture>
+				<div class="owl-header-front--inner container-fluid container-lg-static">
+					<div class="owl-header-front--text">Средиземноморское покрытие на натуральных волокнах с эффектом</div>
+					<a href="#" class="owl-header-front--button btn"><img src="img/svg/51_Arrow_white.svg">Подробнее</a>
+				</div>
+			</div>
+			<div class="item">
+				<picture>
+					<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 900px)" />
+					<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1360px)" />
+					<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1361px)" />
+					<img src="img/owl-header-front/baner_01_900.jpg" alt="">
+				</picture>
+				<div class="owl-header-front--inner container-fluid container-lg-static">
+					<div class="owl-header-front--text">Средиземноморское покрытие на натуральных волокнах с эффектом</div>
+					<a href="#" class="owl-header-front--button btn"><img src="img/svg/51_Arrow_white.svg">Подробнее</a>
+				</div>
+			</div>
+			<div class="item">
+				<picture>
+					<source srcset="img/owl-header-front/baner_01_480.jpg" media="(max-width: 900px)" />
+					<source srcset="img/owl-header-front/baner_01_1360.jpg" media="(max-width: 1360px)" />
+					<source srcset="img/owl-header-front/baner_01_1920.jpg" media="(min-width: 1361px)" />
+					<img src="img/owl-header-front/baner_01_900.jpg" alt="">
+				</picture>
+				<div class="owl-header-front--inner container-fluid container-lg-static">
+					<div class="owl-header-front--text">Средиземноморское покрытие на натуральных волокнах с эффектом</div>
+					<a href="#" class="owl-header-front--button btn"><img src="img/svg/51_Arrow_white.svg">Подробнее</a>
+				</div>
+			</div>
 		</div><!-- owl-carousel -->
 
 	</header>
@@ -280,9 +314,8 @@
 
 		<section class="s-front-text">
 			<div class="container-fluid container-lg-static">
-				<h1 class="front-h1">Декоративная штукатурка и материалы для отделки стен</h1>
-				<p class="front-p">Специализация нашей компании - продажа и декоративная отделка фасадов и интерьеров современными французскими декоративными покрытиями Clavel. <br>Работая на рынке с 1995 года, мы накопили достаточно опыта, чтобы предлагать нашим заказчикам декоративную отделку в лучших мировых традициях , но с применением современных технологий.</p>
-				<p class="front-p">Компания «Стена-Клавель» занимается проектированием, производством и строительством деревянных домов из клееного бруса.  «Стена-Клавель» строит частные дома и коттеджные поселки, по индивидуальным и типовым проектам. Вы можете заказать как отдельные виды услуг, так и деревянный дом под ключ: фундамент, стены, окна, кровля, электрика, инженерные системы.</p>
+				<h1 class="front-h1">ПОЧЕМУ ДЕКОРАТИВНЫЕ ПОКРЫТИЯ?</h1>
+				<p class="front-p">1. Красиво и современно. Как, впрочем было всегда. Но сейчас декоративные штукатурки осуществили столь серьезный качественный прорыв  в технологиях и рецептурах, что все самые модные и трендовые архитектурные эффекты достигаются именно ими и зачастую только ими<br>2. Самый широкий диапазон эффектов - от классических романских рецетрур на известковом тесте 2-летней выдержки , до суперсовременных синтетических венецианских штукатурок с металлизированным пигментом.<br>3. Диапазон оттенков гораздо шире, чем у плитки и обоев. <br>4. Прочность, выше натурального камня ( для указанных эффектов)<br>5. Бесшовность текстуры. Отпечаток работы мастера в интреьере - инвестиции в старину.<br>6. Трехмерность. Объмный интерьеный дизайн позволяет создавать интерьерные акценты<br>7. Экономичнсть. Дешевле плитки. Дороже обоев.</p>
 			</div>
 		</section>
 
@@ -488,15 +521,15 @@
 					<div class="diller-offer">
 						<h4>Вы торгуете товарами для ремонта?</h4>
 						<p>Приглашаеем региональных дилеров, дизайнеров интерьера, архитекторов присоединиться к нашей дилерской программе</p>
-						<a href="#" class="btn footer-button">Стать дилером <svg><use xlink:href="#45_Arrow"></use></svg></a>
+						<a href="#popup--become-diler" class="btn footer-button">Стать дилером <svg><use xlink:href="#45_Arrow"></use></svg></a>
 					</div>
 				</div>
 				<div class="col-md-5 t-right xs-text-center">
-					<a href="#" class="btn diller-login">
+					<div href="#popup--sign_up_diler" class="btn diller-login">
 						<svg><use xlink:href="#46_Man"></use></svg>
 						<p>Вход для дилеров</p>
 						<a href="#top" id="to-top"><svg><use xlink:href="#11_up"></use></svg></a>
-					</a>
+					</div>
 					<div class="footer__info">
 						<p><a href="#" class="link_reverse">Карта сайта</a></p>
 						<p>Салон на Нахимовском: г. Москва, м. "Нахимовский пр-т", <br>Нахимовский пр-т, д.24, ТВК "СтройСити", пав. Б-9  <br>Тел.: (495) 280-37-70, (499)51-43-043, <br>(926) 359-39-66, (926) 392-22-50</p>
@@ -506,10 +539,10 @@
 			</div>
 			<div class="row row_bottom">
 				<div class="col-sm-4">
-					<a href="#" class="link-nohover visible-lg-block"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
+					<a href="#popup--call-back" class="js-open-popup link-nohover visible-lg-block"><svg class="footer-phone-svg"><use xlink:href="#44_Phone"></use></svg>
 						<p class="footer-phone-svg__text">Обратный звонок</p>
 					</a>
-					<a href="#" class="btn footer-button hidden-lg">Стать дилером <svg><use xlink:href="#45_Arrow"></use></svg></a>
+					<a href="#popup--become-diler" class="btn footer-button hidden-lg">Стать дилером <svg><use xlink:href="#45_Arrow"></use></svg></a>
 				</div>
 				<div class="col-sm-4 col-sm-push-4">
 					<div class="social-links">
@@ -552,8 +585,89 @@
 	<!-- Start popup -->
 	<!--  -->
 	<div id="popup--mesage-success" class="white-popup white-popup--message mfp-hide">
-		<p class="t-center">Ваше сообщение успешно отправлено. Мы свяжемся с  Вами в течение рабочего дня</p>
+		<p class="t-center">Ваше сообщение успешно отправлено. Мы свяжемся с  Вами в течение нескольких дней</p>
 		<svg class="close-button--logo"><use xlink:href="#02_Logo"></use></svg>
+	</div>
+
+	<div id="popup--become-diler" class="white-popup white-popup--form mfp-hide">
+		<h3 class="accent-header accent-header_small t-center">Стать дилером</h3>
+		<h4 class="t-center">Отправьте эту форму и мы свяжемся с вами</h4>
+		<form>
+			<input type="text" id="t10" name="t10" placeholder="Имя *" required>
+			<input type="text" id="t11" name="t11" placeholder="Фамилия">
+			<input type="email" name="e12" id="e12" placeholder="Email *" required>
+			<input type="text" id="t13" name="t13" placeholder="Название организации">
+			<input type="text" id="t14" name="t14" placeholder="Телефон *" class="js-phone-placeholder" required>
+			<input type="text" id="t15" name="t15" placeholder="Город *" required>
+			<textarea name="m16" id="m16" rows="5"></textarea>
+			<div class="t-center">
+				<!-- атрибут href надо будет убрать на продакшне -->
+				<input href="#popup--mesage-success" type="submit" value="Перезвонить" class="submit-recall">
+			</div>
+		</form>
+	</div>
+
+	<div id="popup--sign_up_diler" class="white-popup white-popup--form mfp-hide">
+		<h3 class="auth-header">Регистрация кабинета дилера</h3>
+		<h4 class="t-center">( Только для дилеров, имеющих дилерский договор )</h4>
+		<form>
+			<input type="text" id="t10" name="t10" placeholder="Название компании" required>
+			<input type="text" id="t10" name="t10" placeholder="Имя" required>
+			<input type="text" id="t11" name="t11" placeholder="Фамилия">
+			<input type="text" id="t15" name="t15" placeholder="Город" required>
+			<input type="email" name="e12" id="e12" placeholder="Email" required>
+			<input type="text" id="t14" name="t14" placeholder="Телефон *" class="js-phone-placeholder" required>
+			<input type="password" name="" id="" placeholder="Пароль">
+			<input type="password" placeholder="Пароль еще раз">
+			<div class="t-center">
+				<!-- атрибут href надо будет убрать на продакшне -->
+				<input href="#popup--mesage-success" type="submit" value="Войти" class="submit-recall">
+			</div>
+			<a href="#">Уже зарегистрированы?</a><br>
+			<a href="#popup--sign_in_diler">Войдите здесь</a>
+		</form>
+	</div>
+
+	<div id="popup--sign_up_cabinet" class="white-popup white-popup--form mfp-hide">
+		<h3 class="auth-header">Регистрация кабинета</h3>
+		<form>
+			<input type="email" name="e12" id="e12" placeholder="Email" required>
+			<input type="password" name="" id="" placeholder="Пароль">
+			<input type="password" placeholder="Пароль еще раз">
+			<div class="t-center">
+				<!-- атрибут href надо будет убрать на продакшне -->
+				<input href="#popup--mesage-success" type="submit" value="Войти" class="submit-recall">
+			</div>
+			<a href="#">Уже зарегистрированы?</a><br>
+			<a href="#popup--sign_in_diler">Войдите здесь</a>
+		</form>
+	</div>
+
+	<div id="popup--sign_in_diler" class="white-popup white-popup--form mfp-hide">
+		<h4 class="t-center">Имя пользователя, либо пароль введены неверно</h4>
+		<h3 class="auth-header">Вход для дилеров</h3>
+		<form>
+			<input type="email" name="e12" id="e12" placeholder="Email" required>
+			<input type="password" name="" id="" placeholder="Пароль">
+			<div class="t-center">
+				<!-- атрибут href надо будет убрать на продакшне -->
+				<input href="#popup--mesage-success" type="submit" value="Войти" class="submit-recall">
+			</div>
+			<a href="#popup--find_pass">Восстановить пароль?</a><br>
+			<a href="#popup--sign_up_diler">Зарегистрировать кабинет?</a>
+		</form>
+	</div>
+
+	<div id="popup--find_pass" class="white-popup white-popup--form mfp-hide">
+		<h4 class="t-center">Пользователя с таким e-mail не существует</h4>
+		<form>
+			<input type="email" name="e12" id="e12" placeholder="Email" required>
+			<input type="password" name="" id="" placeholder="Пароль">
+			<div class="t-center">
+				<!-- атрибут href надо будет убрать на продакшне -->
+				<input href="#popup--mesage-success" type="submit" value="Выслать пароль" class="submit-recall">
+			</div>
+		</form>
 	</div>
 
 	<div id="popup--call-back" class="white-popup white-popup--form mfp-hide">

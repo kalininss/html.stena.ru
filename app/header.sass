@@ -175,7 +175,7 @@ body > svg
 		height: auto
 		display: none
 		max-width: 100%
-	picture:first-of-type img
+	.item:first-of-type picture img
 		display: block
 .owl-loaded
 	img
@@ -324,7 +324,7 @@ select
 			text-decoration: none
 .addToCart-button
 	border-radius: 3px
-	background: #E15E78
+	background: #999090
 	color: #fff
 	padding: 3px 0
 	font-size: 18px
@@ -340,6 +340,29 @@ select
 		transition: 0.3s
 		vertical-align: middle
 		margin-top: -3px
+	&:hover,
+	&:active
+		background: #999090
+	&:focus
+		text-decoration: none
+		color: #fff
+		background: #999090
+.btn_smeta,
+.owl-header-front--inner a.owl-header-front--button
+	img
+		display: inline-block
+		width: 0
+		transition: 0.3s
+		vertical-align: middle
+		margin-top: -3px
+	&:hover,
+	&:active
+		background: #999090
+	&:focus
+		text-decoration: none
+		color: #fff
+		background: #999090
+
 .outer-addToCart
 	margin-top: 25px
 .product-table
@@ -394,6 +417,7 @@ select
 	font-weight: 300
 	text-transform: uppercase
 	color: #fff
+	margin-top: 35px
 .page-parallax--text
 	font-size: 24px
 	font-weight: 300
@@ -418,3 +442,37 @@ select
 	height: 38px
 .article-full_map
 	background: #3F464C
+.owl-header-front--text
+	font-family: $f-head-2
+	font-weight: 300
+	color: #fff
+	font-size: 44px
+	max-width: 430px
+	text-shadow: 0 0  10px #000, 0 0  10px #000
+.owl-header-front--inner
+	position: absolute
+	z-index: 2
+	top: 0
+	left: 0
+	right: 0
+	margin-top: 140px
+.owl-header-front--button
+	background: #774639
+	color: #fff
+	text-decoration: none
+	width: 160px
+	font-family: $f-head
+	font-weight: 400
+	font-size: 18px
+	padding: 9px 0
+	border-radius: 3px
+	text-align: center
+	margin-top: 10px
+	&:hover,
+	&:active,
+	&:focus
+		background: #774639 !important
+		color: #fff
+		text-decoration: none
+.cart
+	display: none
