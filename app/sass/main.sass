@@ -891,7 +891,7 @@ a[href^="https://maps.google.com/maps?ll="]
 .smeta__prices
 	font-weight: 300
 	font-size: 16px
-	margin: 3px 0
+	margin: 10px 0
 	@include clearfix
 	line-height: 38px
 .smeta__price
@@ -1145,9 +1145,16 @@ input[type="checkbox"]
 	height: 100%
 .effect--round_shadow
 	position: relative
+.h3-fix
+	font-size: 26px
+	font-family: $f-default
+	font-weight: 300
+	color: #404041
+	margin: 0.5em 0 0.3em
 .effect--round_shadow:after
 	background-image: url(../img/shadow-effect.png)
 	background-size: 148px
+	background-size: cover
 	position: absolute
 	bottom: -13px
 	content: ''
@@ -1212,12 +1219,16 @@ input[type="checkbox"]
 .tab-head
 	font-size: 32px
 	font-weight: 300
+	margin: 0 0 15px 
 .tab-article
 	font-size: 12px
 	font-weight: 300
 .tab-slider__head
 	color: #888
 	font-size: 26px
+	margin: 20px 0 10px
+.col-tab-slider
+	margin-bottom: 10px
 .ol-li
 	display: inline-block
 	border-radius: 50px
@@ -2778,6 +2789,8 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	padding: 5px
 	position: relative
 	cursor: pointer
+	img
+		height: 100%
 	&.clicked
 		z-index: 0
 		padding: 5px
@@ -3333,7 +3346,13 @@ input[type="checkbox"].styled-checkbox:checked + label::before
 	text-align: center
 	font-size: 30px
 	color: #58595B
-
+.smeta-price__descr
+	display: inline-block
+	font-weight: 300
+	font-size: 16px
+	margin: 0
+.smeta__price
+	float: right
 
 
 .b-plus:not(.b-plus_exit).active

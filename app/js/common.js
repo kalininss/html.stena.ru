@@ -46,7 +46,7 @@ $(function() {
 	// page #6, rotate panels
 	$('.js-rotate').click(function(){$(this).closest('.rotate').toggleClass('rotated');});
 	$('.rotate-item').on({'mouseenter':function(){  $(this).find('.rotate').fadeIn(0);  }});
-	$('.rotate').on({'mouseleave':function(){  $(this).fadeOut(0).removeClass('rotated');  }});
+	$('.rotate-item').on({'mouseleave':function(){  $(this).find('.rotate').fadeOut(0).removeClass('rotated');  }});
 
 
 	// функции находятся на самих страницах для удобства, здесь они пытаются вызваться. Чтобы не вылетало ошибок, мы их ловим и пропускаем
@@ -100,7 +100,7 @@ $(function() {
 		}
 		else {
 			$(".topline-scroll").removeClass("opened");
-			$(".scroll-menu").removeClass("opened");
+			// $(".scroll-menu").removeClass("opened");
 			$("header").removeClass("no-transform");
 		}
 	});
